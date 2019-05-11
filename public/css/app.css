@@ -10665,13 +10665,21 @@ h3 {
   /*color: $dark-blue;*/
 }
 
+h4 {
+  font-family: "Lobster", cursive;
+}
+
 body {
   padding-top: 50px;
   font-family: "Roboto", sans-serif;
 }
 
-.navbar-brand {
+.navbar .navbar-brand {
   font-family: "Lobster", cursive;
+}
+
+.main-content {
+  margin-top: 10px;
 }
 
 hr.divider {

@@ -1,0 +1,97 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Istok+Web:400,400i,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic');
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+h1, h2, h3 {
+  font-family: $font-lobster;
+  //font-weight: $font-weight-bold;
+  text-align: center;
+  /*color: $dark-blue;*/
+}
+
+h4 {
+  font-family: $font-lobster;
+}
+
+body {
+  padding-top: 50px;
+  font-family: $font-roboto;
+}
+
+footer {
+  //position: fixed;
+  //height: 100px;
+ // bottom: 0;
+ // width: 100%;
+}
+
+.navbar {
+  .navbar-brand {
+    font-family: $font-lobster;
+  }
+}
+
+.main-content {
+  margin-top: 10px;
+
+}
+
+hr.divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  overflow: visible; /* For IE */
+  padding: 0;
+  text-align: center;
+
+  &:after {
+    content: "\2666";
+    display: inline-block;
+    position: relative;
+    top: -19px;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: #f8fafc;
+  }
+}
+
+.brown-navbar {
+  //background-color: $light-brown;
+  //border-bottom: $light-brown2;
+}
+
+.top-container {
+  /*background-image: url('../images/xv.png');*/
+  //background-color: $light-brown;
+  margin-bottom: 30px;
+  .top-block {
+    padding: 2rem 1.5rem;
+    text-align: center;
+
+  }
+}
+
+.info-block {
+  margin-bottom: 30px;
+}
+
+.info-block-1 {
+  //background-color: #f6f7fa;
+  //padding: 35px 30px;
+  //background-image: url('../images/swirl.png');
+}
+
+.info-block-2 {
+  //background-color: $light-brown;
+  //padding: 35px 30px;
+
+}
+
+.info-block-1 {
+}
+
