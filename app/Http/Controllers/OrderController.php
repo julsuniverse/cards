@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Layout;
+
 class OrderController
 {
     public function index()
@@ -16,6 +18,7 @@ class OrderController
 
     public function selectOrder()
     {
-        return view('oder.select-order');
+        $layouts = Layout::all()->groupBy('theme_id');
+        return view('order.select-order')->with(compact('layouts'));
     }
 }
