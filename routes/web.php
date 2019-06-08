@@ -1,7 +1,7 @@
 <?php
+$language = App::getLocale();
 Route::group([
-    //'prefix' => '{language?}',
-    'prefix' => 'ru',
+    'prefix' => $language,
 ], function () {
     Route::get('/', 'PageController@index')->name('home');
 

@@ -8,7 +8,7 @@
                 <p class="font-weight-bold text-center">Для вас был создан Ваш персональный аккаунт, данные для входа были отправлены на введенный вами email.</p>
                 <div class="row text-center mt-3">
                     <div class="col-6">
-                        <a href="#" class="btn btn-danger">Войти в аккаунт</a>
+                        <a href="{{ route('login') }}" class="btn btn-danger">Войти в аккаунт</a>
                     </div>
                     <div class="col-6">
                         <a href="{{ route('home') }}" class="btn btn-outline-danger">Вернуться на главную</a>

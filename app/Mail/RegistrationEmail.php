@@ -13,14 +13,21 @@ class RegistrationEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    /** @var User $user */
     public $user;
 
+    /** @var string $password */
+    public $password;
+
     /**
-     * @return void
+     * RegistrationEmail constructor.
+     * @param User $user
+     * @param string $password
      */
-    public function __construct(User $user)
+    public function __construct(User $user, string $password)
     {
         $this->user = $user;
+        $this->password = $password;
     }
 
     /**
@@ -31,9 +38,9 @@ class RegistrationEmail extends Mailable
     public function build()
     {
         if (App::getLocale() == 'en') {
-            return $this->view('emails.en.registration')->with('user', $this->user);
+            return $this->view('emails.en.registration')->with(['user' => $this->user, 'password' => $this->password]);
         } else {
-            return $this->view('emails.ru.registration')->with('user', $this->user);
+            return $this->view('emails.ru.registration')->with(['user' => $this->user, 'password' => $this->password]);
         }
     }
 }

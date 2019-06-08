@@ -18,7 +18,7 @@ class Locale
      */
     public function handle(Request $request, Closure $next)
     {
-        $locale = $request->language;
+        $locale = $request->route()->getPrefix();
         if (!$locale || $locale == self::LOCALE_EN) {
             App::setLocale(self::LOCALE_EN);
         }

@@ -5,16 +5,18 @@ namespace App\Services;
 use App\Mail\RegistrationEmail;
 use App\Models\Order;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class OrderService
 {
     public function create(array $data)
     {
+        $password = str_random(8);
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'dob' => $data['date'],
-            'password' => '123456'
+            'password' => Hash::make($password)
         ]);
         Order::create([
             'user_id' => $user->id,
@@ -23,7 +25,6 @@ class OrderService
             'price' => $data['price']
         ]);
 
-        //TODO: send email to user
-        \Mail::to($user)->send(new RegistrationEmail($user));
+        \Mail::to($user)->send(new RegistrationEmail($user, $password));
     }
 }
