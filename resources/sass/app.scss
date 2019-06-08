@@ -12,7 +12,7 @@ h1, h2, h3 {
   //font-weight: $font-weight-bold;
   text-align: center;
   /*color: $dark-blue;*/
-  color: $bordo;
+  color: $bbc-red;
 }
 
 .logo {
@@ -26,7 +26,7 @@ h4 {
 body {
   padding-top: 50px;
   font-family: $font-roboto;
-  background-color: $bordo;
+  background-color: #fffbef;
 }
 
 footer {
@@ -44,7 +44,7 @@ footer {
 
 .main-content {
   margin-top: 45px;
-  background-color: $sand;
+  //background-color: $sand;
   border-radius: 10px;
   padding: 0 50px;
 
@@ -76,13 +76,18 @@ hr.divider {
 }
 
 .brown-navbar {
-  background-color: $sand !important;
+  background-color: $bbc-red !important;
+  a {
+    color: #fff !important;
+  }
 }
 
 .top-container {
-  /*background-image: url('../images/xv.png');*/
-  //background-color: $light-brown;
+  padding-bottom: 35px;
+  border-bottom: 1px solid $bbc-red;
+  background-color: #fff;
   margin-bottom: 30px;
+  padding-top: 20px;
   .top-block {
     padding: 2rem 1.5rem;
     text-align: center;
