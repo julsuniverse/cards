@@ -23,15 +23,32 @@
             <div class="accordion" id="layoutsAccordion">
                 @foreach($layouts as $layoutGroup)
                     <div class="mt-4"><hr class="divider"/></div>
-                    <h3 class="text-center">{{ $layoutGroup[0]->theme->name_ru }}</h3>
+                    <h3 class="text-center">
+                        @if(app()->getLocale() == 'en')
+                            {{ $layoutGroup[0]->theme->name }}
+                        @else
+                            {{ $layoutGroup[0]->theme->name_ru }}
+                        @endif
+                    </h3>
                     @foreach($layoutGroup as $layout)
                 <div class="card">
                     <div class="card-header" id="heading-{{$layout->id}}">
                         <p class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-{{$layout->id}}" aria-expanded="true" aria-controls="collapse-{{$layout->id}}">
-                                {{ $layout->name_ru }}
-                                @if($layout->price_uah)
-                                    <span class="badge badge-primary badge-pill">{{ $layout->price_uah }} грн</span>
+                                @if(app()->getLocale() == 'en')
+                                    {{ $layout->name }}
+                                @else
+                                    {{ $layout->name_ru }}
+                                @endif
+
+                                @if(app()->getLocale() == 'en')
+                                    @if($layout->price_uah)
+                                        <span class="badge badge-primary badge-pill">{{ $layout->price_usd }} $</span>
+                                    @endif
+                                @else
+                                    @if($layout->price_uah)
+                                        <span class="badge badge-primary badge-pill">{{ $layout->price_uah }} грн</span>
+                                    @endif
                                 @endif
                             </button>
                             <a href="{{ route('order.text-order', $layout) }}" class="btn btn-success float-right">Заказать</a>
