@@ -12,6 +12,11 @@ h1, h2, h3 {
   //font-weight: $font-weight-bold;
   text-align: center;
   /*color: $dark-blue;*/
+  color: $bordo;
+}
+
+.logo {
+
 }
 
 h4 {
@@ -21,6 +26,7 @@ h4 {
 body {
   padding-top: 50px;
   font-family: $font-roboto;
+  background-color: $bordo;
 }
 
 footer {
@@ -37,14 +43,21 @@ footer {
 }
 
 .main-content {
-  margin-top: 10px;
+  margin-top: 45px;
+  background-color: $sand;
+  border-radius: 10px;
+  padding: 0 50px;
 
+}
+
+.lead {
+  color: $bordo;
 }
 
 hr.divider {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   overflow: visible; /* For IE */
   padding: 0;
   text-align: center;
@@ -56,13 +69,14 @@ hr.divider {
     top: -19px;
     font-size: 1.5em;
     padding: 0 0.25em;
-    background: #f8fafc;
+    /*background: #f8fafc;*/
+    color: $bordo;
+    background: transparent;
   }
 }
 
 .brown-navbar {
-  //background-color: $light-brown;
-  //border-bottom: $light-brown2;
+  background-color: $sand !important;
 }
 
 .top-container {
@@ -76,22 +90,7 @@ hr.divider {
   }
 }
 
-.info-block {
-  margin-bottom: 30px;
-}
-
-.info-block-1 {
-  //background-color: #f6f7fa;
-  //padding: 35px 30px;
-  //background-image: url('../images/swirl.png');
-}
-
-.info-block-2 {
-  //background-color: $light-brown;
-  //padding: 35px 30px;
-
-}
-
-.info-block-1 {
+.card-content {
+  margin-top: 15px;
 }
 

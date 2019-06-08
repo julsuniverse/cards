@@ -10663,6 +10663,7 @@ h3 {
   font-family: "Lobster", cursive;
   text-align: center;
   /*color: $dark-blue;*/
+  color: #8d1818;
 }
 
 h4 {
@@ -10672,6 +10673,7 @@ h4 {
 body {
   padding-top: 50px;
   font-family: "Roboto", sans-serif;
+  background-color: #8d1818;
 }
 
 .navbar .navbar-brand {
@@ -10679,13 +10681,20 @@ body {
 }
 
 .main-content {
-  margin-top: 10px;
+  margin-top: 45px;
+  background-color: #f8eed9;
+  border-radius: 10px;
+  padding: 0 50px;
+}
+
+.lead {
+  color: #8d1818;
 }
 
 hr.divider {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   overflow: visible;
   /* For IE */
   padding: 0;
@@ -10699,7 +10708,13 @@ hr.divider:after {
   top: -19px;
   font-size: 1.5em;
   padding: 0 0.25em;
-  background: #f8fafc;
+  /*background: #f8fafc;*/
+  color: #8d1818;
+  background: transparent;
+}
+
+.brown-navbar {
+  background-color: #f8eed9 !important;
 }
 
 .top-container {
@@ -10712,7 +10727,7 @@ hr.divider:after {
   text-align: center;
 }
 
-.info-block {
-  margin-bottom: 30px;
+.card-content {
+  margin-top: 15px;
 }
 

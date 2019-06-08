@@ -4,26 +4,62 @@
     <div class="row">
         <div class="col-12">
             <h1>Заказ консультации</h1>
+            @isset($layout)
+                <p class="text-center font-weight-light">{{ $layout->name_ru }}</p>
+            @endisset
         </div>
 
         <div class="col-8">
 
-            <form method="post" action="">
+            <form method="POST" action="{{ route('order.store') }}">
                 @csrf
+                @method('PUT')
                 <div class="form-group">
                     <label for="name">Введите Ваше имя</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Имя">
-                    <small id="emailHelp" class="form-text text-muted">Ваше имя и дата рождения должны быть настоящими, иначе смысл того что покажут карты не будет соответствовать Вашей личности. </small>
+                    <input type="text" class="form-control @if ($errors->has('name')) is-invalid @endif" id="name" name="name" placeholder="Имя" value="{{ old('name') }}">
+                    <small id="emailHelp" class="form-text text-muted">Ваше имя должно быть настоящим, иначе смысл того что покажут карты не будет соответствовать Вашей личности. </small>
+                    @if ($errors->has('name'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('name') }}
+                        </div>
+                    @endif
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Введите email">
+                    <input type="email" class="form-control @if ($errors->has('email')) is-invalid @endif" id="email" name="email" aria-describedby="emailHelp" placeholder="Введите email" value="{{ old('email') }}">
                     <small id="emailHelp" class="form-text text-muted">Ваш email не будет разглашаться.</small>
+                    @if ($errors->has('email'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('email') }}
+                        </div>
+                    @endif
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Введите дату рождения</label>
+                    <input type="date" class="form-control @if ($errors->has('date')) is-invalid @endif" id="date" name="date" placeholder="Дата рождения" value="{{ old('date') }}">
+                    <small id="dateHelp" class="form-text text-muted">Ваша дата рождения должны быть настоящими, иначе смысл того что покажут карты не будет соответствовать Вашей личности. </small>
+                    @if ($errors->has('date'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('date') }}
+                        </div>
+                    @endif
                 </div>
                 <div class="form-group">
                     <label class="form-check-label" for="text">Опишите понятно ситуацию, о которой хотите получить консультацию.  </label>
-                    <textarea class="form-control" name="text" id="text" rows="6"></textarea>
+                    <textarea class="form-control @if ($errors->has('text')) is-invalid @endif" name="text" id="text" rows="6">{{ old('text') }}</textarea>
+                    @if ($errors->has('text'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('text') }}
+                        </div>
+                    @endif
                 </div>
+
+                @isset($layout)
+                    <input type="hidden" name="layout" value="{{ $layout->id }}">
+                @endisset
+                <input type="hidden" name="price" value="@isset($layout->price_uah) {{ $layout->price_uah }} @else 300  @endisset">
+
                 <button type="submit" class="btn btn-outline-danger">Заказать</button>
             </form>
         </div>

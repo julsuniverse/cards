@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            <div class="card">
+            <div class="card card-content">
                 <h4 class="card-header">Пожалуйста, обратите внимание:</h4>
                 <div class="card-body">
                     <p class="card-text">- Если Вы хотите заказать консультацию на картах Таро или Ленорман, то опишите понятно ситуацию, о которой хотите получить консультацию.  </p>

@@ -11,7 +11,7 @@
 
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light brown-navbar fixed-top">
-        <a class="navbar-brand" href="#">Серебряная нить</a>
+        <a class="navbar-brand" href="{{ route('home') }}">Серебряная нить</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -19,16 +19,16 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto text-right">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#tarot">Таро</a>
+                    <a class="nav-link" href="{{ route('home') }}#tarot">Таро</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#lenorman">Ленорман</a>
+                    <a class="nav-link" href="{{ route('home') }}#lenorman">Ленорман</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#future">Прогноз будущего</a>
+                    <a class="nav-link" href="{{ route('home') }}#future">Прогноз будущего</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">Заказать консультацию</a>

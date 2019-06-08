@@ -34,7 +34,7 @@
                                     <span class="badge badge-primary badge-pill">{{ $layout->price_uah }} грн</span>
                                 @endif
                             </button>
-                            <a href="#" class="btn btn-success float-right">Заказать</a>
+                            <a href="{{ route('order.text-order', $layout) }}" class="btn btn-success float-right">Заказать</a>
                         </p>
                     </div>
 
