@@ -18,6 +18,7 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto text-right">
+
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ route('home') }}">{{ trans('menu.home') }}</a>
                 </li>
@@ -33,6 +34,12 @@
                 <li class="nav-item">
                     <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order') }}</a>
                 </li>
+
+                @if(Auth::user())
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ route('cabinet') }}"><i class="fa fa-user-circle" aria-hidden="true"></i> Личный кабинет</a>
+                    </li>
+                @endif
             </ul>
         </div>
     </nav>

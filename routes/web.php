@@ -10,6 +10,13 @@ Route::group([
     Route::get('/order/select', 'OrderController@selectOrder')->name('order.select-order');
     Route::put('/order/store', 'OrderController@store')->name('order.store');
     Route::get('/order/success', 'OrderController@success')->name('order.success');
+
+    Route::group([
+        'middleware' => 'auth',
+        'prefix' => 'cabinet'
+    ], function () {
+        Route::get('/', 'User\CabinetController@index')->name('cabinet');
+    });
 });
 
 Auth::routes();

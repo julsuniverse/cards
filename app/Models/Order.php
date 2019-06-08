@@ -11,6 +11,11 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Order extends Model
 {
+    const STATUS_NEW = 'new';
+    const STATUS_PROCESSING = 'processing';
+    const STATUS_WAITING_FOR_PAYMENT = 'waiting';
+    const STATUS_READY = 'ready';
+
     /** @inheritdoc */
     protected $guarded = [];
 }
