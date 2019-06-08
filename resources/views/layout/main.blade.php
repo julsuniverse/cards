@@ -11,7 +11,7 @@
 
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light brown-navbar fixed-top">
-        <a class="navbar-brand" href="{{ route('home') }}">Серебряная нить</a>
+        <a class="navbar-brand" href="{{ route('home') }}">{{ trans('menu.name') }}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -19,19 +19,19 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto text-right">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ route('home') }}">{{ trans('menu.home') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}#tarot">Таро</a>
+                    <a class="nav-link" href="{{ route('home') }}#tarot">{{ trans('menu.tarot') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}#lenorman">Ленорман</a>
+                    <a class="nav-link" href="{{ route('home') }}#lenorman">{{ trans('menu.lenorman') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}#future">Прогноз будущего</a>
+                    <a class="nav-link" href="{{ route('home') }}#future">{{ trans('menu.future') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">Заказать консультацию</a>
+                    <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order') }}</a>
                 </li>
             </ul>
         </div>
