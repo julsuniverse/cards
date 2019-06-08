@@ -1,6 +1,7 @@
 <?php
 Route::group([
-    'prefix' => '{language?}',
+    //'prefix' => '{language?}',
+    'prefix' => 'ru',
 ], function () {
     Route::get('/', 'PageController@index')->name('home');
 
@@ -10,3 +11,5 @@ Route::group([
     Route::put('/order/store', 'OrderController@store')->name('order.store');
     Route::get('/order/success', 'OrderController@success')->name('order.success');
 });
+
+Auth::routes();

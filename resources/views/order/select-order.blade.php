@@ -42,7 +42,7 @@
                                 @endif
 
                                 @if(app()->getLocale() == 'en')
-                                    @if($layout->price_uah)
+                                    @if($layout->price_usd)
                                         <span class="badge badge-primary badge-pill">{{ $layout->price_usd }} $</span>
                                     @endif
                                 @else

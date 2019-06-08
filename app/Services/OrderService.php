@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Mail\RegistrationEmail;
 use App\Models\Order;
 use App\Models\User;
 
@@ -23,5 +24,6 @@ class OrderService
         ]);
 
         //TODO: send email to user
+        \Mail::to($user)->send(new RegistrationEmail($user));
     }
 }
