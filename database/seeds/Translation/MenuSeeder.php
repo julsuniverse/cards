@@ -40,8 +40,23 @@ class MenuSeeder extends Seeder
         ]);
         LanguageLine::create([
             'group' => 'menu',
-            'key' => 'tarot',
-            'text' => ['en' => 'Tarot', 'ru' => ''],
+            'key' => 'login',
+            'text' => ['en' => 'Login', 'ru' => 'Войти'],
+        ]);
+        LanguageLine::create([
+            'group' => 'menu',
+            'key' => 'signup',
+            'text' => ['en' => 'Sign Up', 'ru' => 'Регистрация'],
+        ]);
+        LanguageLine::create([
+            'group' => 'menu',
+            'key' => 'profile',
+            'text' => ['en' => 'Profile', 'ru' => 'Личный кабинет'],
+        ]);
+        LanguageLine::create([
+            'group' => 'menu',
+            'key' => 'logout',
+            'text' => ['en' => 'Logout', 'ru' => 'Выйти'],
         ]);
     }
 }

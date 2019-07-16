@@ -17,6 +17,6 @@ Route::group([
     ], function () {
         Route::get('/', 'User\CabinetController@index')->name('cabinet');
     });
-});
 
-Auth::routes();
+    Auth::routes();
+});
