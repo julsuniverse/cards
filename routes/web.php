@@ -16,4 +16,12 @@ Route::group([
     Route::put('/{user}/change-password', 'User\CabinetController@changePassword')->name('cabinet.password');
 });
 
+Route::group([
+    'middleware' => ['auth','admin'],
+    'prefix' => 'dashboard'
+], function () {
+    Route::get('/', 'Dashboard\DashboardController@index')->name('dashboard.index');
+    Route::resource('layout', 'Dashboard\LayoutController');
+});
+
 Auth::routes();

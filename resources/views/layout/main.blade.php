@@ -50,6 +50,12 @@
                             @csrf
                         </form>
                     </li>
+
+                    @if(Auth::user()->role == 'admin')
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="{{ route('dashboard.index') }}">Dashboard</a>
+                        </li>
+                    @endif
                 @else
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user-circle" aria-hidden="true"></i> {{ trans('menu.login') }}</a>
