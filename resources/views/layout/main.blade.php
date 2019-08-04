@@ -60,7 +60,10 @@
     </nav>
 
     <main role="main" class="container main-content">
-        @yield('content')
+        <div class="underlayer">
+            @include('layout._errors')
+            @yield('content')
+        </div>
     </main>
 
     <!--<footer class="footer">

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\OrderRequest;
 use App\Models\Layout;
 use App\Services\OrderService;
-use Illuminate\Http\Request;
 
 class OrderController
 {
@@ -22,7 +21,7 @@ class OrderController
         return view('order.index');
     }
 
-    public function textOrder(Layout $layout = null)
+    public function textOrder($layout = null)
     {
         return view('order.text-order')->with(compact('layout'));
     }

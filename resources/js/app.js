@@ -12,3 +12,8 @@ const app = new Vue({
 $('#layoutsAccordion').collapse({
     toggle: true
 })
+
+$('#profile-tab a').on('click', function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+})

@@ -28,7 +28,14 @@ h4 {
 body {
   padding-top: 50px;
   font-family: $font-roboto;
-  background-color: #fffbef;
+ // background-color: #fffbef;
+  background-color: #f4ede5;
+}
+
+.underlayer {
+  padding: 30px;
+  //background-color: #f9f9f9;
+  background-color: #f8f5f3;
 }
 
 footer {
@@ -77,10 +84,22 @@ hr.divider {
   }
 }
 
+a, a.btn {
+  &:hover {
+    transition: 1s all;
+  }
+}
+
 .brown-navbar {
-  background-color: $bbc-red !important;
+  //background-color: $bbc-red !important;
+  background-color: #fff !important;
   a {
-    color: #fff !important;
+    //color: #fff !important;
+    color: $bbc-red !important;
+    &:hover {
+      color: $blue !important;
+      transition: 0.5s all;
+    }
   }
 }
 
