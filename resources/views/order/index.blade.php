@@ -27,7 +27,7 @@
 
                     <div class="mt-2">
                         <p>
-                            <a class="btn btn-danger" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 Нажмите, чтобы посмотреть подробную инструкцию
                             </a>
                         </p>

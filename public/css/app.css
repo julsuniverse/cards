@@ -13708,7 +13708,12 @@ h4 {
 body {
   padding-top: 50px;
   font-family: "Roboto", sans-serif;
-  background-color: #fffbef;
+  background-color: #f4ede5;
+}
+
+.underlayer {
+  padding: 30px;
+  background-color: #f8f5f3;
 }
 
 .navbar .navbar-brand {
@@ -13747,12 +13752,22 @@ hr.divider:after {
   background: transparent;
 }
 
+a:hover,
+a.btn:hover {
+  transition: 1s all;
+}
+
 .brown-navbar {
-  background-color: #bb1919 !important;
+  background-color: #fff !important;
 }
 
 .brown-navbar a {
-  color: #fff !important;
+  color: #bb1919 !important;
+}
+
+.brown-navbar a:hover {
+  color: #3490dc !important;
+  transition: 0.5s all;
 }
 
 .top-container {
