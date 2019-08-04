@@ -13701,6 +13701,10 @@ h3 {
   color: #bb1919;
 }
 
+.invalid-feedback {
+  display: inline-block;
+}
+
 h4 {
   font-family: "Lobster", cursive;
 }

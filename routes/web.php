@@ -13,6 +13,7 @@ Route::group([
 ], function () {
     Route::get('/', 'User\CabinetController@index')->name('cabinet');
     Route::put('/{user}/edit', 'User\CabinetController@edit')->name('cabinet.edit');
+    Route::put('/{user}/change-password', 'User\CabinetController@changePassword')->name('cabinet.password');
 });
 
 Auth::routes();

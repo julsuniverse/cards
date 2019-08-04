@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\UserInfoRequest;
+use App\Http\Requests\User\UserInfoRequest;
+use App\Http\Requests\User\UserPasswordRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class CabinetController extends Controller
 {
@@ -17,17 +19,35 @@ class CabinetController extends Controller
 
     public function edit(UserInfoRequest $request, User $user)
     {
-        dd($request->input());
         try {
             $user->update([
                 'name' => $request->name,
                 'dob' => $request->date,
                 'email' => $request->email,
-                'password' => $request->password ? $request->password : Auth::user()->getAuthPassword()
             ]);
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Something went wrong');
+            return redirect()->back()->with('error', __('messages.error.simple'));
         }
-        return redirect()->back()->with('success', 'Your personal information was updated');
+        return redirect()->back()
+            ->with([
+                'success' => __('messages.success.save-password'),
+                'tab' => 'info'
+            ]);
+    }
+
+    public function changePassword(UserPasswordRequest $request, User $user)
+    {
+        try {
+            $user->update([
+                'password' => $request->password ? Hash::make($request->password) : Auth::user()->getAuthPassword()
+            ]);
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', __('messages.error.simple'));
+        }
+        return redirect()->back()
+            ->with([
+                'success' => __('messages.success.save-password'),
+                'tab' => 'password'
+            ]);
     }
 }

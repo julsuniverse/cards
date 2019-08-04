@@ -37,16 +37,5 @@
         @endif
     </div>
 
-    <p class="font-weight-bold">Смена пароля</p>
-    <div class="form-group">
-        <label for="password">Новый Пароль</label>
-        <input name="password" type="password" class="form-control" id="password" placeholder="Password">
-    </div>
-
-    <div class="form-group">
-        <label for="password-repeat">Повторите пароль</label>
-        <input name="password_confirmation" type="password" class="form-control" id="password-repeat" placeholder="Password">
-    </div>
-
     <button type="submit" class="btn btn-primary">Сохранить</button>
 </form>

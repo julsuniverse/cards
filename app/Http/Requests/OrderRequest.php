@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\User;
 
 use Illuminate\Foundation\Http\FormRequest;
 
 /**
  * Class OrderRequest
- * @package App\Http\Requests
+ * @package App\Http\Requests\User
  */
 class OrderRequest extends FormRequest
 {
