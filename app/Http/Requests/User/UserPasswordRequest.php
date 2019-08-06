@@ -19,4 +19,12 @@ class UserPasswordRequest extends FormRequest
             'password' => 'required|string|min:6|confirmed',
         ];
     }
+
+    public function withValidator(\Illuminate\Validation\Validator $validator)
+    {
+        if ($validator->fails()) {
+            \Session::flash('error', 'Please fix all mentioned erros!');
+            \Session::flash('tab', 'password');
+        }
+    }
 }

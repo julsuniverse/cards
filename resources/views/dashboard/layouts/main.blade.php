@@ -28,9 +28,17 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user-circle" aria-hidden="true"></i> {{ trans('menu.login') }}</a>
-                </li>
+                    <a class="nav-link" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+                        {{ trans('menu.logout') }}
+                    </a>
 
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </li>
+                
             </ul>
         </div>
     </nav>

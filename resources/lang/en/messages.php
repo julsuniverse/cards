@@ -6,6 +6,7 @@ return [
         'save-password' => 'Your password was updated'
     ],
     'error' => [
-        'simple' => 'Something went wrong'
+        'simple' => 'Something went wrong',
+        'validation' => 'Please fix all mentioned errors!'
     ],
 ];

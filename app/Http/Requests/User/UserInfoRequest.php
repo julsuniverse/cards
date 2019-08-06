@@ -21,4 +21,12 @@ class UserInfoRequest extends FormRequest
             'date' => 'required|string|max:255',
         ];
     }
+
+    public function withValidator(\Illuminate\Validation\Validator $validator)
+    {
+        if ($validator->fails()) {
+            \Session::flash('error', 'Please fix all mentioned erros!');
+            \Session::flash('tab', 'info');
+        }
+    }
 }

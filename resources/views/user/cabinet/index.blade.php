@@ -1,6 +1,8 @@
 @extends('layout.main')
 
 @section('content')
+    {{ session('error')}}
+    {{ $errors->has('password') }}
     <h3 class="text-left">Добро пожаловать, {{ $user->name }}</h3>
     <div class="">
         <nav>

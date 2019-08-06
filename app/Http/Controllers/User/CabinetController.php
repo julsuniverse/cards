@@ -26,7 +26,10 @@ class CabinetController extends Controller
                 'email' => $request->email,
             ]);
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', __('messages.error.simple'));
+            return redirect()->back()->with([
+                'error' => __('messages.error.simple'),
+                'tab' => 'info'
+            ]);
         }
         return redirect()->back()
             ->with([
@@ -42,7 +45,11 @@ class CabinetController extends Controller
                 'password' => $request->password ? Hash::make($request->password) : Auth::user()->getAuthPassword()
             ]);
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', __('messages.error.simple'));
+            return back()
+                ->with([
+                    'error' => __('messages.error.simple'),
+                    'tab' => 'password'
+                ]);
         }
         return redirect()->back()
             ->with([
