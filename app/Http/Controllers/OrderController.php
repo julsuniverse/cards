@@ -21,7 +21,7 @@ class OrderController
         return view('order.index');
     }
 
-    public function textOrder($layout = null)
+    public function textOrder(Layout $layout = null)
     {
         return view('order.text-order')->with(compact('layout'));
     }

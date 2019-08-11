@@ -1,27 +1,35 @@
 @extends('layout.main')
-<div class="container-fluid top-container">
-    <div class="">
-        <div class="top-block">
-            <h1 class="display-3 logo">Серебряная нить</h1>
-            <p class="lead font-weight-bold">
-                КОНСУЛЬТАЦИИ на КАРТАХ ТАРО и ЛЕНОРМАН
-            </p>
-        </div>
-
-        <div class="row">
-            <div class="col-12 text-center">
-                <p class="mb-0 font-weight-bold">Здесь Вы можете заказать консультацию
-                    на картах Таро
-                    и картах оракула Ленорман
+<div class="container top-container">
+    <div class="row">
+        <div class="col-6">
+            <div class="top-block">
+                <h1 class="display-3 logo">{{ trans('menu.name') }}</h1>
+                <p class="lead font-weight-bold">
+                    КОНСУЛЬТАЦИИ на КАРТАХ ТАРО и ЛЕНОРМАН
                 </p>
-                <p class="font-weight-bold mt-0">Информация Вашего заказа конфиденциальна</p>
             </div>
-            <div class="col-6  text-center">
-                <a href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold">Консультация на картах ТАРО</a>
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0 font-weight-bold">
+                        Здесь Вы можете заказать консультацию
+                        <br>
+                        на картах Таро и картах оракула Ленорман
+                    </p>
+                    <p class="font-weight-bold mt-0">Информация Вашего заказа конфиденциальна</p>
+                </div>
+                <div class="top-block-buttons row">
+                    <div class="col-6  text-center">
+                        <a href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold">Консультация на картах <br> ТАРО</a>
+                    </div>
+                    <div class="col-6  text-center">
+                        <a href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold">Консультация на картах ЛЕНОРМАН</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-6  text-center">
-                <a href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold">Консультация на картах ЛЕНОРМАН</a>
-            </div>
+        </div>
+        <div class="col-6">
+            <img src="{{ asset('images/top-img.gif') }}" />
         </div>
     </div>
 </div>

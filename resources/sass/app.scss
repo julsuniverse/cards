@@ -33,7 +33,7 @@ body {
 }
 
 .underlayer {
-  padding: 30px;
+  padding: 10px 30px;
   //background-color: #f9f9f9;
   background-color: #f8f5f3;
 }
@@ -46,13 +46,17 @@ footer {
 }
 
 .navbar {
+  a {
+    font-size: 16px;
+  }
   .navbar-brand {
     font-family: $font-lobster;
+    font-size: 20px;
   }
 }
 
 .main-content {
-  margin-top: 45px;
+  //margin-top: 45px;
   //background-color: $sand;
   border-radius: 10px;
   padding: 0 50px;
@@ -92,7 +96,7 @@ a, a.btn {
 
 .brown-navbar {
   //background-color: $bbc-red !important;
-  background-color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.6196078431372549) !important;
   a {
     //color: #fff !important;
     color: $bbc-red !important;
@@ -104,15 +108,20 @@ a, a.btn {
 }
 
 .top-container {
-  padding-bottom: 35px;
-  border-bottom: 1px solid $bbc-red;
-  background-color: #fff;
-  margin-bottom: 30px;
-  padding-top: 20px;
+  //border-bottom: 1px solid #bb1919;
+  background-color: rgba(255, 255, 255, 0.24);
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 20px 50px 15px;
   .top-block {
-    padding: 2rem 1.5rem;
+    padding: 20px;
     text-align: center;
-
+  }
+  img {
+    max-width: 100%;
+  }
+  .top-block-buttons {
+    padding-top: 40px;
   }
 }
 
