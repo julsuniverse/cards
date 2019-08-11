@@ -22,6 +22,7 @@ Route::group([
 ], function () {
     Route::get('/', 'Dashboard\DashboardController@index')->name('dashboard.index');
     Route::resource('layout', 'Dashboard\LayoutController')->except('show');
+    Route::resource('theme', 'Dashboard\ThemeController')->except('show');
 });
 
 Auth::routes();
