@@ -21,7 +21,7 @@ Route::group([
     'prefix' => 'dashboard'
 ], function () {
     Route::get('/', 'Dashboard\DashboardController@index')->name('dashboard.index');
-    Route::resource('layout', 'Dashboard\LayoutController');
+    Route::resource('layout', 'Dashboard\LayoutController')->except('show');
 });
 
 Auth::routes();

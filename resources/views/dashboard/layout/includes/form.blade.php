@@ -48,7 +48,7 @@
 
             <div class="form-group">
                 <label class="form-check-label" for="text_ru">Описание</label>
-                <textarea class="form-control @if ($errors->has('text_ru')) is-invalid @endif" name="text_ru" id="text" rows="6">{{ old('text_ru', $layout->text_ru) }}</textarea>
+                <textarea class="form-control @if ($errors->has('text_ru')) is-invalid @endif" name="text_ru" id="text" rows="6">{{ old('text_ru', $layout->text_ru ?? '') }}</textarea>
                 @if ($errors->has('text_ru'))
                     <div class="invalid-feedback">
                         {{ $errors->first('text_ru') }}
@@ -58,7 +58,7 @@
 
             <div class="form-group">
                 <label class="form-check-label" for="text">Описание англ.</label>
-                <textarea class="form-control @if ($errors->has('text')) is-invalid @endif" name="text" id="text" rows="6">{{ old('text', $layout->text) }}</textarea>
+                <textarea class="form-control @if ($errors->has('text')) is-invalid @endif" name="text" id="text" rows="6">{{ old('text', $layout->text ?? '') }}</textarea>
                 @if ($errors->has('text'))
                     <div class="invalid-feedback">
                         {{ $errors->first('text') }}

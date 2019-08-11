@@ -27,7 +27,8 @@ class LayoutController extends Controller
      */
     public function create()
     {
-        //
+        $themes = Theme::orderBy('name_ru')->get();
+        return view('dashboard.layout.create')->with(compact('themes'));
     }
 
     /**
@@ -38,18 +39,12 @@ class LayoutController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        try {
+            Layout::create($request->input());
+        } catch (\DomainException $e) {
+            return back()->with('error', $e->getMessage());
+        }
+        return redirect(route('layout.index'))->with('success', 'Расклад был добавлен!');
     }
 
     /**
@@ -88,8 +83,9 @@ class LayoutController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Layout $layout)
     {
-        //
+        Layout::destroy($layout->id);
+        return redirect(route('layout.index'))->with('success', 'Расклад был удален!');
     }
 }
