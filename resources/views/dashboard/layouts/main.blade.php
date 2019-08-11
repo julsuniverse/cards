@@ -24,6 +24,10 @@
                 </li>
 
                 <li class="nav-item active">
+                    <a class="nav-link" href="{{ route('order.index') }}">Заказы</a>
+                </li>
+
+                <li class="nav-item active">
                     <a class="nav-link" href="{{ route('layout.index') }}">Расклады</a>
                 </li>
 

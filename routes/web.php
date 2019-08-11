@@ -24,6 +24,9 @@ Route::group([
     Route::resource('layout', 'Dashboard\LayoutController')->except('show');
     Route::resource('theme', 'Dashboard\ThemeController')->except('show');
     Route::get('/users', 'Dashboard\UserController@index')->name('user.index');
+    Route::get('/order', 'Dashboard\OrderController@index')->name('order.index');
+    Route::get('/order/{order}', 'Dashboard\OrderController@show')->name('order.show');
+    Route::get('/order/{order}/edit', 'Dashboard\OrderController@edit')->name('order.edit');
 });
 
 Auth::routes();
