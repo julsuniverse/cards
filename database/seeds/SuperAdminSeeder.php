@@ -11,10 +11,11 @@ class SuperAdminSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'admin_sveta',
-            'dob' => '24.01.1970',
+            'dob' => '24-01-1970',
             'email' => 'admin@silver-thread.com',
             'password' => Hash::make('secret'),
-            'role' => 'admin'
+            'role' => 'admin',
+            'created_at' => \Carbon\Carbon::create('2019', '08', '11', '19', '00')
         ]);
     }
 }

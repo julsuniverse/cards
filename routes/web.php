@@ -23,6 +23,7 @@ Route::group([
     Route::get('/', 'Dashboard\DashboardController@index')->name('dashboard.index');
     Route::resource('layout', 'Dashboard\LayoutController')->except('show');
     Route::resource('theme', 'Dashboard\ThemeController')->except('show');
+    Route::get('/users', 'Dashboard\UserController@index')->name('user.index');
 });
 
 Auth::routes();
