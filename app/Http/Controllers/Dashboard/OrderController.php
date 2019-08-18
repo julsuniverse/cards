@@ -20,4 +20,9 @@ class OrderController extends Controller
     {
         return view('dashboard.order.show')->with(compact('order'));
     }
+
+    public function edit(Order $order)
+    {
+
+    }
 }

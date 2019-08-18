@@ -24,19 +24,19 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('order.index') }}">Заказы</a>
+                    <a class="nav-link" href="{{ route('dashboard.order.index') }}">Заказы</a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('layout.index') }}">Расклады</a>
+                    <a class="nav-link" href="{{ route('dashboard.layout.index') }}">Расклады</a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('theme.index') }}">Темы</a>
+                    <a class="nav-link" href="{{ route('dashboard.theme.index') }}">Темы</a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('user.index') }}">Пользователи</a>
+                    <a class="nav-link" href="{{ route('dashboard.user.index') }}">Пользователи</a>
                 </li>
 
                 <li class="nav-item active">

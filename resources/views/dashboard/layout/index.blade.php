@@ -8,7 +8,7 @@
                     <div class="card-header">Расклады</div>
                     <div class="card-body">
                         <div class="d-flex flex-row mb-3">
-                            <a href="{{ route('layout.create') }}" class="btn btn-primary">Добавить расклад</a>
+                            <a href="{{ route('dashboard.layout.create') }}" class="btn btn-primary">Добавить расклад</a>
                         </div>
 
                         <table class="table table-bordered table-striped">
@@ -26,7 +26,7 @@
                             @foreach ($layouts as $layout)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><a href="{{ route('layout.edit', [$layout]) }}">{{ $layout->name_ru }}</a></td>
+                                    <td><a href="{{ route('dashboard.layout.edit', [$layout]) }}">{{ $layout->name_ru }}</a></td>
                                     <td>{{ $layout->theme->name }}</td>
                                     <td>{{ $layout->type }}</td>
                                     <td>{{ $layout->price_uah }}</td>

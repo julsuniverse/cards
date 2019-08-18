@@ -8,7 +8,7 @@
                     <div class="card-header">Создать тему</div>
                     <div class="card-body">
                         <div class="d-flex flex-row mb-3">
-                            <a href="{{ route('theme.index') }}" class="btn btn-secondary mr-1">Назад</a>
+                            <a href="{{ route('dashboard.theme.index') }}" class="btn btn-secondary mr-1">Назад</a>
                         </div>
                         @include('dashboard.theme.includes.form')
                     </div>

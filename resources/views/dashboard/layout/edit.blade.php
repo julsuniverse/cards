@@ -8,7 +8,7 @@
                     <div class="card-header">Редактировать расклад <b>"{{ $layout->name }}"</b></div>
                     <div class="card-body">
                         <div class="d-flex flex-row mb-3">
-                            <a href="{{ route('layout.index', [$layout]) }}" class="btn btn-secondary mr-1">Назад</a>
+                            <a href="{{ route('dashboard.layout.index', [$layout]) }}" class="btn btn-secondary mr-1">Назад</a>
                             @include('dashboard.layout.includes.delete')
                         </div>
 

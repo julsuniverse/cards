@@ -44,7 +44,7 @@ class LayoutController extends Controller
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
         }
-        return redirect(route('layout.index'))->with('success', 'Расклад был добавлен!');
+        return redirect(route('dashboard.layout.index'))->with('success', 'Расклад был добавлен!');
     }
 
     /**
@@ -74,7 +74,7 @@ class LayoutController extends Controller
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
         }
-        return redirect(route('layout.edit', [$layout]))->with('success', 'Расклад был обновлен!');
+        return redirect(route('dashboard.layout.edit', [$layout]))->with('success', 'Расклад был обновлен!');
     }
 
     /**
@@ -86,6 +86,6 @@ class LayoutController extends Controller
     public function destroy(Layout $layout)
     {
         Layout::destroy($layout->id);
-        return redirect(route('layout.index'))->with('success', 'Расклад был удален!');
+        return redirect(route('dashboard.layout.index'))->with('success', 'Расклад был удален!');
     }
 }

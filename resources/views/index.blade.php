@@ -20,10 +20,10 @@
                 </div>
                 <div class="top-block-buttons row">
                     <div class="col-6  text-center">
-                        <a href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold">Консультация на картах <br> ТАРО</a>
+                        <a href="{{ route('dashboard.order.index') }}" class="btn btn-outline-danger font-weight-bold">Консультация на картах <br> ТАРО</a>
                     </div>
                     <div class="col-6  text-center">
-                        <a href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold">Консультация на картах ЛЕНОРМАН</a>
+                        <a href="{{ route('dashboard.order.index') }}" class="btn btn-outline-danger font-weight-bold">Консультация на картах ЛЕНОРМАН</a>
                     </div>
                 </div>
             </div>

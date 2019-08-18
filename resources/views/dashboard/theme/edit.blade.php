@@ -8,7 +8,7 @@
                     <div class="card-header">Редактировать тему <b>"{{ $theme->name }}"</b></div>
                     <div class="card-body">
                         <div class="d-flex flex-row mb-3">
-                            <a href="{{ route('theme.index') }}" class="btn btn-secondary mr-1">Назад</a>
+                            <a href="{{ route('dashboard.theme.index') }}" class="btn btn-secondary mr-1">Назад</a>
                             @include('dashboard.theme.includes.delete')
                         </div>
 

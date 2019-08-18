@@ -1,4 +1,4 @@
-<form method="POST" action="{{ isset($theme) ? route('theme.update', [$theme]) : route('theme.store') }}">
+<form method="POST" action="{{ isset($theme) ? route('dashboard.theme.update', [$theme]) : route('dashboard.theme.store') }}">
     @csrf
     @isset($theme) @method('PUT') @endif
     <div class="row">

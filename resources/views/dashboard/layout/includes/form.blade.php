@@ -1,4 +1,4 @@
-<form method="POST" action="{{ isset($layout) ? route('layout.update', [$layout]) : route('layout.store') }}">
+<form method="POST" action="{{ isset($layout) ? route('dashboard.layout.update', [$layout]) : route('dashboard.layout.store') }}">
     @csrf
     @isset($layout) @method('PUT') @endif
     <div class="row">

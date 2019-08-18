@@ -8,7 +8,7 @@
                     <div class="card-header">Создать расклад</div>
                     <div class="card-body">
                         <div class="d-flex flex-row mb-3">
-                            <a href="{{ route('layout.index') }}" class="btn btn-secondary mr-1">Назад</a>
+                            <a href="{{ route('dashboard.layout.index') }}" class="btn btn-secondary mr-1">Назад</a>
                         </div>
                         @include('dashboard.layout.includes.form')
                     </div>

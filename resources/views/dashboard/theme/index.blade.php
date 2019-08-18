@@ -8,7 +8,7 @@
                     <div class="card-header">Темы раскладов</div>
                     <div class="card-body">
                         <div class="d-flex flex-row mb-3">
-                            <a href="{{ route('theme.create') }}" class="btn btn-primary">Добавить тему</a>
+                            <a href="{{ route('dashboard.theme.create') }}" class="btn btn-primary">Добавить тему</a>
                         </div>
 
                         <table class="table table-bordered table-striped">
@@ -24,7 +24,7 @@
                             @foreach ($themes as $theme)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><a href="{{ route('theme.edit', [$theme]) }}">{{ $theme->name_ru }}</a></td>
+                                    <td><a href="{{ route('dashboard.theme.edit', [$theme]) }}">{{ $theme->name_ru }}</a></td>
                                     <td>{{ $theme->name }}</td>
                                 </tr>
                             @endforeach

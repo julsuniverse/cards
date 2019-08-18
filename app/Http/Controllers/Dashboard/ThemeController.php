@@ -42,7 +42,7 @@ class ThemeController extends Controller
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
         }
-        return redirect(route('theme.index'))->with('success', 'Тема была добавлена!');
+        return redirect(route('dashboard.theme.index'))->with('success', 'Тема была добавлена!');
     }
 
     /**
@@ -71,7 +71,7 @@ class ThemeController extends Controller
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
         }
-        return redirect(route('theme.edit', [$theme]))->with('success', 'Тема была обновлена!');
+        return redirect(route('dashboard.theme.edit', [$theme]))->with('success', 'Тема была обновлена!');
     }
 
     /**
@@ -83,6 +83,6 @@ class ThemeController extends Controller
     public function destroy(Theme $theme)
     {
         Theme::destroy($theme->id);
-        return redirect(route('theme.index'))->with('success', 'Тема была удалена!');
+        return redirect(route('dashboard.theme.index'))->with('success', 'Тема была удалена!');
     }
 }

@@ -27,7 +27,9 @@
                             @foreach ($orders as $order)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $order->user->name }}</td>
+                                    <td>
+                                        {{ $order->user->name }}
+                                    </td>
                                     <td>{{ $order->user->dob }}</td>
                                     <td>{{ $order->layout->name_ru ?? '-' }}</td>
                                     <td>{{ $order->created_at->format('d.m.Y H:m') }}</td>
@@ -37,8 +39,8 @@
                                         {{ substr($order->description, 0, 100) }}
                                     </td>
                                     <td>
-                                        <a class="btn btn-outline-primary" href="{{route('order.show', $order)}}"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                        <a class="btn btn-outline-success" href="{{route('order.edit', $order)}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a class="btn btn-outline-primary" href="{{route('dashboard.order.show', $order)}}"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                        <a class="btn btn-outline-success" href="{{route('dashboard.order.edit', $order)}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
                             @endforeach

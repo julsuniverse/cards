@@ -8,8 +8,8 @@
                     <div class="card-header">Заказ</div>
                     <div class="card-body">
                         <div class="d-flex flex-row mb-3">
-                            <a href="{{ route('order.index') }}" class="btn btn-secondary mr-1">Назад</a>
-                            <a class="btn btn-outline-success" href="{{route('order.edit', $order)}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a href="{{ route('dashboard.order.index') }}" class="btn btn-secondary mr-1">Назад</a>
+                            <a class="btn btn-outline-success" href="{{route('dashboard.order.edit', $order)}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                         </div>
 
                         <table class="table table-bordered table-striped">
