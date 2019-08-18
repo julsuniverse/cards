@@ -38,9 +38,9 @@ class RegistrationEmail extends Mailable
     public function build()
     {
         if (App::getLocale() == 'en') {
-            return $this->view('emails.en.registration')->with(['user' => $this->user, 'password' => $this->password]);
+            return $this->markdown('emails.en.registration')->with(['user' => $this->user, 'password' => $this->password]);
         } else {
-            return $this->view('emails.ru.registration')->with(['user' => $this->user, 'password' => $this->password]);
+            return $this->markdown('emails.ru.registration')->with(['user' => $this->user, 'password' => $this->password]);
         }
     }
 }

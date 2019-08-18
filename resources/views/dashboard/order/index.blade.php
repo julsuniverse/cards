@@ -11,6 +11,7 @@
                         <table class="table table-bordered table-striped">
                             <thead>
                             <tr>
+                                <th></th>
                                 <th>#</th>
                                 <th>Пользователь</th>
                                 <th>Дата рождения</th>
@@ -27,13 +28,16 @@
                             @foreach ($orders as $order)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $order->id }}</td>
                                     <td>
                                         {{ $order->user->name }}
                                     </td>
                                     <td>{{ $order->user->dob }}</td>
                                     <td>{{ $order->layout->name_ru ?? '-' }}</td>
                                     <td>{{ $order->created_at->format('d.m.Y H:m') }}</td>
-                                    <td>{{ $order->status }}</td>
+                                    <td class="text-center">
+                                        <span class="badge {{ $order->status_class[$order->status] }}">{{ $order->status }}</span>
+                                    </td>
                                     <td>{{ $order->price }}</td>
                                     <td>
                                         {{ substr($order->description, 0, 100) }}

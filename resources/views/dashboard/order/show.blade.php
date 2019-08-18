@@ -54,6 +54,11 @@
                                 <th>Описание</th>
                                 <td>{{ $order->description }}</td>
                             </tr>
+
+                            <tr>
+                                <th>Ответ</th>
+                                <td>{{ $order->answer ?? 'Ответ еще не был дан' }}</td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>

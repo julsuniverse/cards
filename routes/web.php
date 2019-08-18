@@ -28,6 +28,7 @@ Route::group([
     Route::get('/order', 'Dashboard\OrderController@index')->name('order.index');
     Route::get('/order/{order}', 'Dashboard\OrderController@show')->name('order.show');
     Route::get('/order/{order}/edit', 'Dashboard\OrderController@edit')->name('order.edit');
+    Route::put('/order/{order}/update', 'Dashboard\OrderController@update')->name('order.update');
 });
 
 Auth::routes();

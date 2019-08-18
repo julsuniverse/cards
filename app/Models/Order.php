@@ -28,6 +28,14 @@ class Order extends Model
         'viewed',
     ];
 
+    public $status_class = [
+        'new' => 'badge-danger',
+        'processing' => 'badge-secondary',
+        'ready' => 'badge-warning',
+        'payed' => 'badge-primary',
+        'viewed' => 'badge-success',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
