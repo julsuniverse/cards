@@ -38,12 +38,22 @@
                 @endif
             </div>
 
-            <div class="form-group">
-                <label for="answer">Ответ</label>
-                <textarea class="form-control" id="answer" name="answer" rows="3" >
-                    {{ old('answer', $order->answer ?? '') }}
-                </textarea>
-            </div>
+
+
+            <editor inline-template
+                text="{{ old('answer', $order->answer ?? '') }}"
+            >
+                <div class="form-group">
+                    <label for="answer">Ответ</label>
+                    <froala
+                            v-if="config"
+                            :tag="'textarea'"
+                            :config="config"
+                            v-model="content"
+                            id="answer" name="answer"
+                    ></froala>
+                </div>
+            </editor>
         </div>
     </div>
 

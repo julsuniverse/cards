@@ -8,6 +8,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 @import "~font-awesome/scss/font-awesome.scss";
+@import "froala-plugins";
 
 h1, h2, h3 {
   font-family: $font-lobster;
@@ -129,3 +130,11 @@ a, a.btn {
   margin-top: 15px;
 }
 
+.fr-wrapper.show-placeholder,
+.fr-wrapper {
+  div {
+    a {
+     display: none !important;
+    }
+  }
+}

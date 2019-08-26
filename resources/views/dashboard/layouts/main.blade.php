@@ -55,7 +55,7 @@
         </div>
     </nav>
 
-    <main role="main" class="container main-content">
+    <main role="main" class="container main-content" id="app">
         <div class="underlayer">
             @include('layout._errors')
             @yield('content')

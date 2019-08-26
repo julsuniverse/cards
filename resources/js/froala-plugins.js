@@ -1,0 +1,15 @@
+require('froala-editor/js/plugins/align.min.js');
+require('froala-editor/js/plugins/colors.min.js');
+require('froala-editor/js/third_party/embedly.min.js');
+require('froala-editor/js/plugins/file.min.js');
+require('froala-editor/js/plugins/font_family.min.js');
+require('froala-editor/js/plugins/font_size.min.js');
+require('froala-editor/js/plugins/fullscreen.min.js');
+require('froala-editor/js/plugins/image.min.js');
+require('froala-editor/js/plugins/link.min.js');
+require('froala-editor/js/plugins/lists.min.js');
+require('froala-editor/js/plugins/paragraph_format.min.js');
+require('froala-editor/js/plugins/paragraph_style.min.js');
+require('froala-editor/js/plugins/quick_insert.min.js');
+require('froala-editor/js/plugins/quote.min.js');
+require('froala-editor/js/plugins/table.min.js');
