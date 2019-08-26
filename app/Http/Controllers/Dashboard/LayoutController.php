@@ -60,7 +60,9 @@ class LayoutController extends Controller
     public function update(Request $request, Layout $layout)
     {
         try {
-            $layout->update($request->input());
+            $text_ru = explode('<p data-f-id="pbf"', $layout->text_ru)[0];
+            $text = explode('<p data-f-id="pbf"', $layout->text)[0];
+            $layout->update(array_merge($request->input(), ['text_ru' => $text_ru], ['text' => $text]));
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
         }
