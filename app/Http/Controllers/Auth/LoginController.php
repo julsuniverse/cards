@@ -31,10 +31,11 @@ class LoginController extends Controller
     public function redirectTo()
     {
         if (Auth::user()->role == User::ROLE_ADMIN) {
-            return redirect('/dashboard');
+            $this->redirectTo = '/dashboard';
+            return $this->redirectTo;
         }
 
-        return redirect($this->redirectTo);
+        return $this->redirectTo;
     }
 
     public function redirectPath()
