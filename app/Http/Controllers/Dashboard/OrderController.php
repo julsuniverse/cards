@@ -34,8 +34,9 @@ class OrderController extends Controller
     {
         try {
             $answer = explode('<p data-f-id="pbf"', $order->answer)[0];
+            $oldStatus = $order->status;
             $order->update(array_merge($request->input(), ['answer' => $answer]));
-            if ($order->status == Order::STATUS_READY_FOR_PAYMENT) {
+            if ($order->status == Order::STATUS_READY_FOR_PAYMENT && $oldStatus != Order::STATUS_READY_FOR_PAYMENT) {
                 Mail::to($order->user->email)->send(new OrderIsReadyEmail($order->user->locale ?? 'en'));
             }
         } catch (\DomainException $e) {
