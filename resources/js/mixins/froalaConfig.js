@@ -1,6 +1,8 @@
 var froalaConfig = {
     methods: {
-        getFroalaConfig() {
+        getFroalaConfig(id, folder) {
+            console.log(this.id);
+            console.log(this.folder);
             return {
                 toolbarButtons: {
                     'moreText': {
@@ -10,7 +12,7 @@ var froalaConfig = {
                         'buttons': ['alignLeft', 'alignCenter', 'formatOLSimple', 'alignRight', 'alignJustify', 'formatOL', 'formatUL', 'paragraphFormat', 'paragraphStyle', 'lineHeight', 'outdent', 'indent', 'quote']
                     },
                     'moreRich': {
-                        'buttons': ['insertLink', 'insertImage', 'insertVideo', 'insertTable', 'emoticons', 'fontAwesome', 'specialCharacters', 'embedly', 'insertFile', 'insertHR']
+                        'buttons': ['insertLink', 'insertImage', 'insertVideo', 'insertTable', 'fontAwesome', 'specialCharacters', 'embedly', 'insertFile', 'insertHR']
                     },
                     'moreMisc': {
                         'buttons': ['undo', 'redo', 'fullscreen', 'print', 'getPDF', 'spellChecker', 'selectAll', 'html', 'help']
@@ -18,7 +20,19 @@ var froalaConfig = {
                 },
                 placeholderText: 'Edit Your Content Here!',
                 attribution: false,
-                height: 300
+                height: 250,
+                imageUploadParam: 'image',
+                imageUploadParams: {
+                    id: id,
+                    folder: folder
+                },
+                requestHeaders: {
+                    'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                    'Requested-With': 'XMLHttpRequest'
+                },
+                imageUploadURL: "/dashboard/images/store ",
+                imageAllowedTypes: ['jpeg', 'jpg', 'png'],
+                imageUploadMethod: 'POST',
             }
         },
     },

@@ -42,6 +42,8 @@
 
             <editor inline-template
                 text="{{ old('answer', $order->answer ?? '') }}"
+                entity-id="{{ $order->id }}"
+                entity-name="order"
             >
                 <div class="form-group">
                     <label for="answer">Ответ</label>

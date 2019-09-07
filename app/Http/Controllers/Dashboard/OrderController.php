@@ -33,9 +33,10 @@ class OrderController extends Controller
     public function update(Request $request, Order $order)
     {
         try {
-            $answer = explode('<p data-f-id="pbf"', $order->answer)[0];
+            $answer = explode('<p data-f-id="pbf"', $request->answer)[0];
             $oldStatus = $order->status;
             $order->update(array_merge($request->input(), ['answer' => $answer]));
+
             if ($order->status == Order::STATUS_READY_FOR_PAYMENT && $oldStatus != Order::STATUS_READY_FOR_PAYMENT) {
                 Mail::to($order->user->email)->send(new OrderIsReadyEmail($order->user->locale ?? 'en'));
             }

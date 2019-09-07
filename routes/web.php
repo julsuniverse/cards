@@ -29,6 +29,13 @@ Route::group([
     Route::get('/order/{order}', 'Dashboard\OrderController@show')->name('order.show');
     Route::get('/order/{order}/edit', 'Dashboard\OrderController@edit')->name('order.edit');
     Route::put('/order/{order}/update', 'Dashboard\OrderController@update')->name('order.update');
-});
+
+    Route::group([
+        'prefix' => 'images',
+        'as' => 'images.'
+    ], function () {
+        Route::post('/store', 'Dashboard\ImageController@store')->name('store');
+        Route::delete('/destroy', 'Dashboard\ImageController@destroy')->name('destroy');
+    });});
 
 Auth::routes();

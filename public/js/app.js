@@ -1762,16 +1762,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Editor",
-  props: ['text'],
+  props: ['text', 'entityId', 'entityName'],
   mixins: [_mixins_froalaConfig__WEBPACK_IMPORTED_MODULE_0__["default"]],
   data: function data() {
     return {
       content: this.text,
-      config: null
+      config: null,
+      id: this.entityId,
+      folder: this.entityName
     };
   },
   mounted: function mounted() {
-    this.config = this.getFroalaConfig();
+    this.config = this.getFroalaConfig(this.id, this.folder);
   }
 });
 
@@ -51082,7 +51084,9 @@ __webpack_require__(/*! froala-editor/js/plugins/table.min.js */ "./node_modules
 __webpack_require__.r(__webpack_exports__);
 var froalaConfig = {
   methods: {
-    getFroalaConfig: function getFroalaConfig() {
+    getFroalaConfig: function getFroalaConfig(id, folder) {
+      console.log(this.id);
+      console.log(this.folder);
       return {
         toolbarButtons: {
           'moreText': {
@@ -51092,7 +51096,7 @@ var froalaConfig = {
             'buttons': ['alignLeft', 'alignCenter', 'formatOLSimple', 'alignRight', 'alignJustify', 'formatOL', 'formatUL', 'paragraphFormat', 'paragraphStyle', 'lineHeight', 'outdent', 'indent', 'quote']
           },
           'moreRich': {
-            'buttons': ['insertLink', 'insertImage', 'insertVideo', 'insertTable', 'emoticons', 'fontAwesome', 'specialCharacters', 'embedly', 'insertFile', 'insertHR']
+            'buttons': ['insertLink', 'insertImage', 'insertVideo', 'insertTable', 'fontAwesome', 'specialCharacters', 'embedly', 'insertFile', 'insertHR']
           },
           'moreMisc': {
             'buttons': ['undo', 'redo', 'fullscreen', 'print', 'getPDF', 'spellChecker', 'selectAll', 'html', 'help']
@@ -51100,7 +51104,19 @@ var froalaConfig = {
         },
         placeholderText: 'Edit Your Content Here!',
         attribution: false,
-        height: 300
+        height: 250,
+        imageUploadParam: 'image',
+        imageUploadParams: {
+          id: id,
+          folder: folder
+        },
+        requestHeaders: {
+          'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+          'Requested-With': 'XMLHttpRequest'
+        },
+        imageUploadURL: "/dashboard/images/store ",
+        imageAllowedTypes: ['jpeg', 'jpg', 'png'],
+        imageUploadMethod: 'POST'
       };
     }
   }
