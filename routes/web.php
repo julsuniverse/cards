@@ -1,4 +1,6 @@
 <?php
+Route::get('/locale', 'LocaleController@index')->name('change-locale');
+
 Route::get('/', 'PageController@index')->name('home');
 
 Route::get('/order', 'OrderController@index')->name('order.index');

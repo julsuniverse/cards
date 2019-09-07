@@ -20,6 +20,16 @@
             <ul class="navbar-nav ml-auto text-right">
 
                 <li class="nav-item active">
+                        <a class="nav-link " href="{{ route('change-locale') }}">
+                            @if(App::getLocale() == 'en')
+                                <span class="badge badge-danger mt-1">ru</span>
+                            @elseif(App::getLocale() == 'ru')
+                                <span class="badge badge-danger mt-1">en</span>
+                            @endif
+                        </a>
+                </li>
+
+                <li class="nav-item active">
                     <a class="nav-link" href="{{ route('home') }}">{{ trans('menu.home') }}</a>
                 </li>
                 <li class="nav-item">
