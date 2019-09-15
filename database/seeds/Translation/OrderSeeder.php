@@ -336,5 +336,39 @@ class OrderSeeder extends Seeder
             ],
             'is_html' => true
         ]);
+
+        //Order success
+        LanguageLine::create([
+            'group' => 'order-success',
+            'key' => 'title',
+            'text' => [
+                'en' => 'Thank you for your order!',
+                'ru' => 'Спасибо за Ваш заказ!'
+            ],
+        ]);
+        LanguageLine::create([
+            'group' => 'order-success',
+            'key' => 'info',
+            'text' => [
+                'en' => 'Для вас был создан Ваш персональный аккаунт, данные для входа были отправлены на введенный вами email.',
+                'ru' => 'Для вас был создан Ваш персональный аккаунт, данные для входа были отправлены на введенный вами email.'
+            ],
+        ]);
+        LanguageLine::create([
+            'group' => 'order-success',
+            'key' => 'btn-cabinet',
+            'text' => [
+                'en' => 'Войти в аккаунт',
+                'ru' => 'Войти в аккаунт'
+            ],
+        ]);
+        LanguageLine::create([
+            'group' => 'order-success',
+            'key' => 'btn-home',
+            'text' => [
+                'en' => 'Вернуться на главную',
+                'ru' => 'Вернуться на главную'
+            ],
+        ]);
     }
 }
