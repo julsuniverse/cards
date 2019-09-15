@@ -32,6 +32,11 @@ Route::group([
     Route::get('/order/{order}/edit', 'Dashboard\OrderController@edit')->name('order.edit');
     Route::put('/order/{order}/update', 'Dashboard\OrderController@update')->name('order.update');
 
+    Route::get('/translation', 'Dashboard\TranslationController@index')->name('translation.index');
+    Route::get('/translation/{translation}/edit', 'Dashboard\TranslationController@edit')->name('translation.edit');
+    Route::put('/translation/{translation}/update', 'Dashboard\TranslationController@update')->name('translation.update');
+
+
     Route::group([
         'prefix' => 'images',
         'as' => 'images.'

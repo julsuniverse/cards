@@ -40,6 +40,10 @@
                 </li>
 
                 <li class="nav-item active">
+                    <a class="nav-link" href="{{ route('dashboard.translation.index') }}">Переводы</a>
+                </li>
+
+                <li class="nav-item active">
                     <a class="nav-link" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
