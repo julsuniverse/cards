@@ -29,16 +29,20 @@ class OrderRequest extends FormRequest
 
     public function messages()
     {
-        return [
-            'name.required' => 'Введите имя',
-            'email.required' => 'Введите email',
-            'date.required' => 'Введите дату рождения',
-            'text.required' => 'Опишите свою ситуацию',
-            'name.max' => 'Максимальная длина - 255 символов',
-            'email.max' => 'Максимальная длина - 255 символов',
-            'date.max' => 'Максимальная длина - 255 символов',
-            'email.email' => 'Введите валидный email',
-            'email.unique' => 'Пользователь с таким email уже существует. Введите другой имейл или войдите в свой аккаунт.',
-        ];
+        if(app()->getLocale() == 'ru') {
+            return [
+                'name.required' => 'Введите имя',
+                'email.required' => 'Введите email',
+                'date.required' => 'Введите дату рождения',
+                'text.required' => 'Опишите свою ситуацию',
+                'name.max' => 'Максимальная длина - 255 символов',
+                'email.max' => 'Максимальная длина - 255 символов',
+                'date.max' => 'Максимальная длина - 255 символов',
+                'email.email' => 'Введите валидный email',
+                'email.unique' => 'Пользователь с таким email уже существует. Введите другой имейл или войдите в свой аккаунт.',
+            ];
+        } else {
+            return [];
+        }
     }
 }
