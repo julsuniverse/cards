@@ -9,6 +9,16 @@ class OrderSeeder extends Seeder
     {
         LanguageLine::create([
             'group' => 'order',
+            'key' => 'btn-order',
+            'text' => [
+                'en' => 'Order',
+                'ru' => 'Заказать'
+            ],
+        ]);
+
+        // Order index
+        LanguageLine::create([
+            'group' => 'order',
             'key' => 'title',
             'text' => [
                 'en' => 'Пожалуйста, обратите внимание:',
@@ -192,6 +202,24 @@ class OrderSeeder extends Seeder
                                 </ul>'
             ],
             'is_html' => true
+        ]);
+
+        // Order select
+        LanguageLine::create([
+            'group' => 'order-select',
+            'key' => 'title',
+            'text' => [
+                'en' => 'Заказ консультации',
+                'ru' => 'Заказ консультации'
+            ],
+        ]);
+        LanguageLine::create([
+            'group' => 'order-select',
+            'key' => 'select-theme',
+            'text' => [
+                'en' => 'Выберите тему, которая Вас интересует',
+                'ru' => 'Выберите тему, которая Вас интересует'
+            ],
         ]);
     }
 }

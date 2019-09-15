@@ -3,18 +3,18 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            <h1>Заказ консультации</h1>
-            <p class="font-weight-light text-center">Выберите тему, которая Вас интересует</p>
+            <h1>{{ __('order-select.title') }}</h1>
+            <p class="font-weight-light text-center">{{ __('order-select.select-theme') }}</p>
 
             <div class="mt-4 text-center">
                 <p>
                     <a class="btn btn-danger" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Нажмите, чтобы посмотреть подробную инструкцию
+                        {{ __('order.btn-order-instructions') }}
                     </a>
                 </p>
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body border border-danger">
-
+                        {!! __('order.order-instructions') !!}
                     </div>
                 </div>
             </div>
@@ -51,13 +51,17 @@
                                     @endif
                                 @endif
                             </button>
-                            <a href="{{ route('order.text-order', $layout) }}" class="btn btn-success float-right">Заказать</a>
+                            <a href="{{ route('order.text-order', $layout) }}" class="btn btn-success float-right">{{ __('order.btn-order') }}</a>
                         </p>
                     </div>
 
                     <div id="collapse-{{$layout->id}}" class="collapse" aria-labelledby="heading-{{$layout->id}}" data-parent="#layoutsAccordion">
                         <div class="card-body">
-                            {{ $layout->text_ru }}
+                            @if(app()->getLocale() == 'en')
+                                {!! $layout->text !!}
+                            @else
+                                {!! $layout->text_ru !!}
+                            @endif
                         </div>
                     </div>
                 </div>
