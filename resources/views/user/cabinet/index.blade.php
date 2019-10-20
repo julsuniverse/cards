@@ -1,13 +1,13 @@
 @extends('layout.main')
 
 @section('content')
-    <h3 class="text-left">Добро пожаловать, {{ $user->name }}</h3>
+    <h3 class="text-left">{{ __('cabinet.title') }}, {{ $user->name }}</h3>
     <div class="">
         <nav>
             <div class="nav nav-tabs" id="profile-tab" role="tablist">
-                <a class="nav-item nav-link @if(!session('tab')) active @endif" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Заказы</a>
-                <a class="nav-item nav-link  @if(session('tab') == 'info') active @endif" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Личная ифнормация</a>
-                <a class="nav-item nav-link @if(session('tab') == 'password') active @endif" id="nav-profile-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-profile" aria-selected="false">Смена пароля</a>
+                <a class="nav-item nav-link @if(!session('tab')) active @endif" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">{{ __('cabinet.tab-order-name') }}</a>
+                <a class="nav-item nav-link  @if(session('tab') == 'info') active @endif" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">{{ __('cabinet.tab-info-name') }}</a>
+                <a class="nav-item nav-link @if(session('tab') == 'password') active @endif" id="nav-profile-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-profile" aria-selected="false">{{ __('cabinet.tab-password-name') }}</a>
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
@@ -17,19 +17,18 @@
                         <a href="#" class="list-group-item list-group-item-action">
                             <i class="fa fa-calendar" aria-hidden="true"></i> {{ $order->created_at->format('d-m-Y') }}
                             @if( $order->status == 'new')
-                                <span class="badge badge-primary badge-pill">В обработке</span>
-                                <p class="font-weight-light">Когда заказ будет готов, на ваш email придет уведомление.</p>
+                                <span class="badge badge-primary badge-pill">{{ __('order.order-status-new') }}</span>
                             @endif
 
                             @if($order->layout)
-                                Выбранный расклад:
+                                {{ __('cabinet.order-layout') }}
                                 @if(app()->getLocale() == 'en')
                                     <p>{{$order->layot->name}}</p>
                                 @else
                                     <p>{{$order->layot->name_ru}}</p>
                                 @endif
                             @endif
-                            <p><b>Описание:</b> </p>
+                            <p><b>{{ __('cabinet.order-description') }}</b> </p>
                             <p>{{ $order->description }}</p>
                         </a>
                     @endforeach

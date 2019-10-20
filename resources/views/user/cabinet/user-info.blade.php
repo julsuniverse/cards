@@ -3,10 +3,10 @@
     @method('PUT')
 
     <div class="form-group">
-        <label for="name">Ваше имя</label>
+        <label for="name">{{ __('cabinet.info-name') }}</label>
         <input type="text" class="form-control @if ($errors->has('name')) is-invalid @endif" id="name" name="name"
-               placeholder="Имя" value="{{ old('name', $user->name) }}">
-        <small id="emailHelp" class="form-text text-muted">Ваше имя должно быть настоящим, иначе смысл того что покажут карты не будет соответствовать Вашей личности. </small>
+               placeholder="{{ __('cabinet.info-name-placeholder') }}" value="{{ old('name', $user->name) }}">
+        <small id="emailHelp" class="form-text text-muted">{{ __('cabinet.info-name-help') }}</small>
         @if ($errors->has('name'))
             <div class="invalid-feedback">
                 {{ $errors->first('name') }}
@@ -16,8 +16,8 @@
     <div class="form-group">
         <label for="email">Email</label>
         <input type="email" class="form-control @if ($errors->has('email')) is-invalid @endif" id="email" name="email"
-               aria-describedby="emailHelp" placeholder="Введите email" value="{{ old('email', $user->email) }}">
-        <small id="emailHelp" class="form-text text-muted">Ваш email не будет разглашаться.</small>
+               aria-describedby="emailHelp" placeholder="{{ __('cabinet.info-email-placeholder') }}" value="{{ old('email', $user->email) }}">
+        <small id="emailHelp" class="form-text text-muted">{{ __('cabinet.info-email-help') }}</small>
         @if ($errors->has('email'))
             <div class="invalid-feedback">
                 {{ $errors->first('email') }}
@@ -26,10 +26,10 @@
     </div>
 
     <div class="form-group">
-        <label for="date">Дата рождения</label>
+        <label for="date">{{ __('cabinet.info-date') }}</label>
         <input type="date" class="form-control @if ($errors->has('date')) is-invalid @endif" id="date" name="date"
-               placeholder="Дата рождения" value="{{ old('date', $user->dob) }}">
-        <small id="dateHelp" class="form-text text-muted">Ваша дата рождения должны быть настоящими, иначе смысл того что покажут карты не будет соответствовать Вашей личности. </small>
+               placeholder="{{ __('cabinet.info-date-placeholder') }}" value="{{ old('date', $user->dob) }}">
+        <small id="dateHelp" class="form-text text-muted">{{ __('cabinet.info-date-help') }}</small>
         @if ($errors->has('date'))
             <div class="invalid-feedback">
                 {{ $errors->first('date') }}
@@ -37,5 +37,5 @@
         @endif
     </div>
 
-    <button type="submit" class="btn btn-primary">Сохранить</button>
+    <button type="submit" class="btn btn-primary">{{ __('cabinet.submit') }}</button>
 </form>
