@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Models\LanguageLine;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 class TranslationController
 {
@@ -50,6 +51,9 @@ class TranslationController
             $translation->update([
                 'text' => json_encode($text)
             ]);
+
+            Artisan::call('cache:clear');
+            Artisan::call('view:clear');
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
         }
