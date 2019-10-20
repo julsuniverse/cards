@@ -27,7 +27,7 @@ h4 {
 }
 
 body {
-  padding-top: 50px;
+  //padding-top: 50px;
   font-family: $font-roboto;
  // background-color: #fffbef;
   background-color: #f4ede5;
@@ -54,14 +54,6 @@ footer {
     font-family: $font-lobster;
     font-size: 20px;
   }
-}
-
-.navbar.my-navbar:before {
-  display: block;
-  content: " ";
-  margin-top: -75px;
-  height: 75px;
-  visibility: hidden;
 }
 
 .main-content {

@@ -1,4 +1,5 @@
 @extends('layout.main')
+@section('pre-content')
 <div class="container top-container">
     <div class="row">
         <div class="col-6">
@@ -31,6 +32,7 @@
         </div>
     </div>
 </div>
+    @endsection
 @section('content')
 
     <div class="main-content">

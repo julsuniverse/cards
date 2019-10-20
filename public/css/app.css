@@ -13757,7 +13757,6 @@ h4 {
 }
 
 body {
-  padding-top: 50px;
   font-family: "Roboto", sans-serif;
   background-color: #f4ede5;
 }
@@ -13774,14 +13773,6 @@ body {
 .navbar.my-navbar .navbar-brand {
   font-family: "Lobster", cursive;
   font-size: 20px;
-}
-
-.navbar.my-navbar:before {
-  display: block;
-  content: " ";
-  margin-top: -75px;
-  height: 75px;
-  visibility: hidden;
 }
 
 .main-content {
