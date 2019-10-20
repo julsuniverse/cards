@@ -19,7 +19,7 @@ h1, h2, h3 {
 }
 
 .logo {
-
+margin-bottom: 15px;
 }
 
 h4 {
@@ -46,7 +46,7 @@ footer {
  // width: 100%;
 }
 
-.navbar {
+.navbar.my-navbar {
   a {
     font-size: 16px;
   }
@@ -54,6 +54,14 @@ footer {
     font-family: $font-lobster;
     font-size: 20px;
   }
+}
+
+.navbar.my-navbar:before {
+  display: block;
+  content: " ";
+  margin-top: -75px;
+  height: 75px;
+  visibility: hidden;
 }
 
 .main-content {
@@ -66,6 +74,7 @@ footer {
 
 .lead {
   color: $bordo;
+  margin-bottom: 5px;
 }
 
 hr.divider {

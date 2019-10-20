@@ -10,7 +10,7 @@
             </div>
 
             <div class="row">
-                <div class="col-12 text-center">
+                <div class="col-12 text-center top-block-info">
                     <p class="mb-0 font-weight-bold">
                         {!!  __('main-page.top-block-2') !!}
                     </p>
@@ -46,11 +46,11 @@
 
         <div class="row info-block">
             <div class="col-12">
-                <h2 class="text-justify">{!!  __('main-page.main-block-2-title') !!} </h2>
+                <h2 class="text-center mt-3">{!!  __('main-page.main-block-2-title') !!} </h2>
                 <p>
                     {!!  __('main-page.main-block-2') !!}
                 </p>
-                <div class="mx-auto">
+                <div class="mx-auto text-center mb-4">
                     <a href="{{ route('order.index') }}" class="btn btn-outline-danger">Заказать КОНСУЛЬТАЦИЮ НА КАРТАХ</a>
                 </div>
             </div>
@@ -67,19 +67,15 @@
 
         <div class="row info-block">
             <div class="col-12">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <blockquote class="blockquote mb-0">
-                            <p>{!!  __('main-page.main-block-4') !!}</p>
-                        </blockquote>
-                    </div>
+                <div class="text-center">
+                    <p class="font-italic">{!!  __('main-page.main-block-4') !!}</p>
                 </div>
             </div>
         </div>
 
         <div class="row info-block" id="tarot">
             <div class="col-12">
-                <h2 class="text-center">{!!  __('main-page.main-block-5-title') !!}</h2>
+                <h2 class="text-center mt-3">{!!  __('main-page.main-block-5-title') !!}</h2>
                 {!!  __('main-page.main-block-5') !!}
             </div>
         </div>
@@ -88,7 +84,7 @@
             <div class="col-12">
                 <h2 class="text-center">{!!  __('main-page.main-block-6-title') !!}</h2>
 
-                <p class="text-center font-weight-light">
+                <p class="text-center font-weight-bold">
                     {!!  __('main-page.main-block-6-subtitle') !!}
                 </p>
 

@@ -28,3 +28,12 @@ $('#profile-tab a').on('click', function (e) {
     e.preventDefault()
     $(this).tab('show')
 })
+
+/*$(".my-navbar a").on("click", function(e) {
+    console.log('click')
+    //e.preventDefault();
+    //let top = $(this).attr('href').offset().top;
+    //console.log('top', top)
+
+    $('body,html').animate({scrollBy: (0, -50)}, 1000);
+});*/

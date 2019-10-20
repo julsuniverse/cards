@@ -13748,6 +13748,10 @@ h3 {
   color: #bb1919;
 }
 
+.logo {
+  margin-bottom: 15px;
+}
+
 h4 {
   font-family: "Lobster", cursive;
 }
@@ -13763,13 +13767,21 @@ body {
   background-color: #f8f5f3;
 }
 
-.navbar a {
+.navbar.my-navbar a {
   font-size: 16px;
 }
 
-.navbar .navbar-brand {
+.navbar.my-navbar .navbar-brand {
   font-family: "Lobster", cursive;
   font-size: 20px;
+}
+
+.navbar.my-navbar:before {
+  display: block;
+  content: " ";
+  margin-top: -75px;
+  height: 75px;
+  visibility: hidden;
 }
 
 .main-content {
@@ -13779,6 +13791,7 @@ body {
 
 .lead {
   color: #8d1818;
+  margin-bottom: 5px;
 }
 
 hr.divider {
