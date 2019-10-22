@@ -50923,14 +50923,15 @@ $('#profile-tab a').on('click', function (e) {
   e.preventDefault();
   $(this).tab('show');
 });
-/*$(".my-navbar a").on("click", function(e) {
-    console.log('click')
-    //e.preventDefault();
-    //let top = $(this).attr('href').offset().top;
-    //console.log('top', top)
-
-    $('body,html').animate({scrollBy: (0, -50)}, 1000);
-});*/
+$(".my-navbar a").on("click", function (e) {
+  var str = $(this).attr('href');
+  var position = str.indexOf('#');
+  var anchor = str.substr(position, str.length);
+  var top = $(anchor).offset().top - 56;
+  $('body,html').animate({
+    scrollTop: top
+  }, 1000);
+});
 
 /***/ }),
 

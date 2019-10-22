@@ -29,11 +29,11 @@ $('#profile-tab a').on('click', function (e) {
     $(this).tab('show')
 })
 
-/*$(".my-navbar a").on("click", function(e) {
-    console.log('click')
-    //e.preventDefault();
-    //let top = $(this).attr('href').offset().top;
-    //console.log('top', top)
+$(".my-navbar a").on("click", function(e) {
+    let str = $(this).attr('href');
+    let position = str.indexOf('#');
+    let anchor = str.substr(position, str.length);
+    let top = $(anchor).offset().top - 56;
 
-    $('body,html').animate({scrollBy: (0, -50)}, 1000);
-});*/
+    $('body,html').animate({scrollTop: top}, 1000);
+});
