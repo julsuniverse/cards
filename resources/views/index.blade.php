@@ -46,7 +46,7 @@
         </div>
 
 
-        <div class="row info-block">
+        <div class="row info-block" id="tarot">
             <div class="col-12">
                 <h2 class="text-center mt-3">{!!  __('main-page.main-block-2-title') !!} </h2>
                 <p>
@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <div class="row info-block">
+        <div class="row info-block" id="lenorman">
             <div class="col-12">
                 <h2 class="text-center">{!!  __('main-page.main-block-3-title') !!}</h2>
                 <p class="text-center font-weight-light">
@@ -72,14 +72,14 @@
             </div>
         </div>
 
-        <div class="row info-block" id="tarot">
+        <div class="row info-block" id="future">
             <div class="col-12">
                 <h2 class="text-center mt-3">{!!  __('main-page.main-block-5-title') !!}</h2>
                 {!!  __('main-page.main-block-5') !!}
             </div>
         </div>
 
-        <div class="row info-block" id="lenorman">
+        <div class="row info-block">
             <div class="col-12">
                 <h2 class="text-center">{!!  __('main-page.main-block-6-title') !!}</h2>
 
@@ -97,7 +97,7 @@
             </div>
         </div>
 
-        <div class="row info-block" id="future">
+        <div class="row info-block">
             <div class="col-12">
                 <h2 class="text-center">{!!  __('main-page.main-block-7-title') !!}</h2>
 
