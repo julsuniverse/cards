@@ -15,7 +15,6 @@
                     <p class="mb-0 font-weight-bold">
                         {!!  __('main-page.top-block-2') !!}
                     </p>
-                    <p class="font-weight-bold mt-0">Информация Вашего заказа конфиденциальна</p>
                 </div>
                 <!--<div class="top-block-buttons">-->
                     <div class="col-sm-6  text-center mt-md-5">
