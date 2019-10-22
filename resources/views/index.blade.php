@@ -77,13 +77,13 @@
                 <h2 class="text-center mt-3">{!!  __('main-page.main-block-5-title') !!}</h2>
                 {!!  __('main-page.main-block-5') !!}
 
-                <div class="mx-auto text-center mb-4">
+                <div class="mx-auto text-center mb-4 mt-3">
                     <a href="{{ route('order.index') }}" class="btn btn-outline-danger">{!!  __('order.btn-order-simple') !!}</a>
                 </div>
             </div>
         </div>
 
-        <div class="row info-block" id="future">
+        <div class="row info-block">
             <div class="col-12">
                 <h2 class="text-center">{!!  __('main-page.main-block-6-title') !!}</h2>
 
@@ -97,7 +97,7 @@
             </div>
         </div>
 
-        <div class="row info-block">
+        <div class="row info-block" id="future">
             <div class="col-12">
                 <h2 class="text-center">{!!  __('main-page.main-block-7-title') !!}</h2>
 
