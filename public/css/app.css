@@ -13750,6 +13750,7 @@ h3 {
 
 .logo {
   margin-bottom: 15px;
+  min-height: 135px;
 }
 
 h4 {
@@ -13757,6 +13758,7 @@ h4 {
 }
 
 body {
+  padding-top: 50px;
   font-family: "Roboto", sans-serif;
   background-color: #f4ede5;
 }
@@ -13843,6 +13845,7 @@ a.btn:hover {
 
 .top-container img {
   max-width: 100%;
+  padding-top: 11px;
 }
 
 .top-container .top-block-buttons {

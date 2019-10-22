@@ -20,6 +20,7 @@ h1, h2, h3 {
 
 .logo {
 margin-bottom: 15px;
+  min-height: 135px;
 }
 
 h4 {
@@ -27,7 +28,7 @@ h4 {
 }
 
 body {
-  //padding-top: 50px;
+  padding-top: 50px;
   font-family: $font-roboto;
  // background-color: #fffbef;
   background-color: #f4ede5;
@@ -125,6 +126,7 @@ a, a.btn {
   }
   img {
     max-width: 100%;
+    padding-top: 11px;
   }
   .top-block-buttons {
     padding-top: 40px;

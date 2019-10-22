@@ -17,14 +17,14 @@
                     </p>
                     <p class="font-weight-bold mt-0">Информация Вашего заказа конфиденциальна</p>
                 </div>
-                <div class="top-block-buttons row">
-                    <div class="col-6  text-center">
-                        <a href="{{ route('dashboard.order.index') }}" class="btn btn-outline-danger font-weight-bold">{!!  __('main-page.top-block-btn1') !!}</a>
+                <!--<div class="top-block-buttons">-->
+                    <div class="col-sm-6  text-center mt-md-5">
+                        <a style="width: 200px" href="{{ route('dashboard.order.index') }}" class="btn btn-outline-danger font-weight-bold">{!!  __('main-page.top-block-btn1') !!}</a>
                     </div>
-                    <div class="col-6  text-center">
-                        <a href="{{ route('dashboard.order.index') }}" class="btn btn-outline-danger font-weight-bold">{!!  __('main-page.top-block-btn2') !!}</a>
+                    <div class="col-sm-6  text-center mt-md-5">
+                        <a style="width: 200px" href="{{ route('dashboard.order.index') }}" class="btn btn-outline-danger font-weight-bold">{!!  __('main-page.top-block-btn2') !!}</a>
                     </div>
-                </div>
+                <!--</div>-->
             </div>
         </div>
         <div class="col-6">
@@ -52,9 +52,6 @@
                 <p>
                     {!!  __('main-page.main-block-2') !!}
                 </p>
-                <div class="mx-auto text-center mb-4">
-                    <a href="{{ route('order.index') }}" class="btn btn-outline-danger">Заказать КОНСУЛЬТАЦИЮ НА КАРТАХ</a>
-                </div>
             </div>
         </div>
 
@@ -91,6 +88,10 @@
                 </p>
 
                 {!!  __('main-page.main-block-6') !!}
+
+                <div class="mx-auto text-center mb-4">
+                    <a href="{{ route('order.index') }}" class="btn btn-outline-danger">{!!  __('order.btn-order-simple') !!}</a>
+                </div>
 
                 <hr class="divider"/>
             </div>
