@@ -40,7 +40,7 @@
         <hr class="divider"/>
 
         <div class="row info-block">
-            <div class="col-12 text-justify">
+            <div class="col-12 text-justify mt-2">
                 {!!  __('main-page.main-block-1') !!}
             </div>
         </div>
