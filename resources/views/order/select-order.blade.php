@@ -6,20 +6,6 @@
             <h1>{{ __('order-select.title') }}</h1>
             <p class="font-weight-light text-center">{!! __('order-select.select-theme') !!}  </p>
 
-            <div class="mt-4 text-center">
-                <p>
-                    <a class="btn btn-danger" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        {{ __('order.btn-order-instructions') }}
-                    </a>
-                </p>
-                <div class="collapse" id="collapseExample">
-                    <div class="card card-body border border-danger">
-                        {!! __('order.order-instructions') !!}
-                    </div>
-                </div>
-            </div>
-
-
             <div class="accordion" id="layoutsAccordion">
                 @foreach($layouts as $layoutGroup)
                     <div class="mt-4"><hr class="divider"/></div>
