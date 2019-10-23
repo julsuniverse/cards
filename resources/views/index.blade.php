@@ -31,12 +31,12 @@
         </div>
     </div>
 </div>
+
+<hr class="divider"/>
     @endsection
+
 @section('content')
-
     <div class="main-content">
-
-        <hr class="divider"/>
 
         <div class="row info-block">
             <div class="col-12 text-justify mt-2">

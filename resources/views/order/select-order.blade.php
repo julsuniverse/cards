@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-12">
             <h1>{{ __('order-select.title') }}</h1>
-            <p class="font-weight-light text-center">{{ __('order-select.select-theme') }}</p>
+            <p class="font-weight-light text-center">{!! __('order-select.select-theme') !!}  </p>
 
             <div class="mt-4 text-center">
                 <p>
