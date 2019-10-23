@@ -42,6 +42,9 @@
                     <a class="nav-link" href="{{ route('home') }}#future">{{ trans('menu.future') }}</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('order.select-order') }}">Расклады</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order') }}</a>
                 </li>
 
