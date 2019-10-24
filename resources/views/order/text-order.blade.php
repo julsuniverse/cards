@@ -23,7 +23,7 @@
                 <div class="form-group">
                     <label for="name">{{ __('order-form.name') }}</label>
                     <input type="text" class="form-control @if ($errors->has('name')) is-invalid @endif" id="name" name="name" placeholder="Имя" value="{{ old('name') }}">
-                    <small id="emailHelp" class="form-text text-muted">{{ __('order-form.name-help') }}</small>
+                    <small id="emailHelp" class="form-text text-muted">{!! __('order-form.name-help') !!}</small>
                     @if ($errors->has('name'))
                         <div class="invalid-feedback">
                             {{ $errors->first('name') }}
@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <label for="email">{{ __('order-form.email') }}</label>
                     <input type="email" class="form-control @if ($errors->has('email')) is-invalid @endif" id="email" name="email" aria-describedby="emailHelp" placeholder="Введите email" value="{{ old('email') }}">
-                    <small id="emailHelp" class="form-text text-muted">{{ __('order-form.email-help') }}</small>
+                    <small id="emailHelp" class="form-text text-muted">{!! __('order-form.email-help') !!}</small>
                     @if ($errors->has('email'))
                         <div class="invalid-feedback">
                             {{ $errors->first('email') }}
@@ -44,7 +44,7 @@
                 <div class="form-group">
                     <label for="date">{{ __('order-form.date') }}</label>
                     <input type="date" class="form-control @if ($errors->has('date')) is-invalid @endif" id="date" name="date" placeholder="Дата рождения" value="{{ old('date') }}">
-                    <small id="dateHelp" class="form-text text-muted">{{ __('order-form.date-help') }}</small>
+                    <small id="dateHelp" class="form-text text-muted">{!! __('order-form.date-help') !!}  </small>
                     @if ($errors->has('date'))
                         <div class="invalid-feedback">
                             {{ $errors->first('date') }}
