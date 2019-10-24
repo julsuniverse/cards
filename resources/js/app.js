@@ -37,3 +37,7 @@ $(".my-navbar a").on("click", function(e) {
 
     $('body,html').animate({scrollTop: top}, 1000);
 });
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});

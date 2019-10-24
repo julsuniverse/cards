@@ -50932,6 +50932,9 @@ $(".my-navbar a").on("click", function (e) {
     scrollTop: top
   }, 1000);
 });
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
 
 /***/ }),
 

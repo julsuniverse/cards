@@ -42,7 +42,7 @@
                     <a class="nav-link" href="{{ route('home') }}#future">{{ trans('menu.future') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('order.select-order') }}">Расклады</a>
+                    <a class="nav-link" href="{{ route('order.select-order') }}">Условия консультации</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order') }}</a>
@@ -55,8 +55,10 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
-                           document.getElementById('logout-form').submit();">
-                            {{ trans('menu.logout') }}
+                           document.getElementById('logout-form').submit();"
+                           data-toggle="tooltip" data-placement="bottom" title="{{ trans('menu.logout') }}"
+                        >
+                            <i class="fa fa-sign-out" ></i>
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -66,7 +68,7 @@
 
                     @if(Auth::user()->role == 'admin')
                         <li class="nav-item">
-                            <a class="nav-link font-weight-bold" href="{{ route('dashboard.index') }}">Dashboard</a>
+                            <a class="nav-link font-weight-bold" href="{{ route('dashboard.index') }}"><i class="fa fa-cog"></i></a>
                         </li>
                     @endif
                 @else
