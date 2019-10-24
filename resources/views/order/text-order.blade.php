@@ -52,7 +52,7 @@
                     @endif
                 </div>
                 <div class="form-group">
-                    <label class="form-check-label" for="text">{{ __('order-form.text') }}</label>
+                    <label class="form-check-label" for="text">{!! __('order-form.text') !!}  </label>
                     <textarea class="form-control @if ($errors->has('text')) is-invalid @endif" name="text" id="text" rows="6">{{ old('text') }}</textarea>
                     @if ($errors->has('text'))
                         <div class="invalid-feedback">
