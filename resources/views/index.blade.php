@@ -82,6 +82,8 @@
             </div>
         </div>
 
+        <hr class="divider"/>
+
         <div class="row info-block">
             <div class="col-12">
                 <h2 class="text-center">{!!  __('main-page.main-block-6-title') !!}</h2>
@@ -92,6 +94,42 @@
 
                 {!!  __('main-page.main-block-6') !!}
 
+                <div class="row text-center mt-3">
+                    <div class="col-6">
+                        <h4>{{ __('random-card.taro-title') }}</h4>
+                        <div class="text-small">Интерактивный оракул Таро составлен автором сайта, интерпретация некоторых арканов приводиться по книгам следующих авторов: Хайо Банцхаф «Ключевые понятия»; Скотт Голландер "Искусство понимания и толкования карт Таро" </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p>
+                                    <a href="{{ route('daily-card', ['type' => 'taro-day']) }}" class="btn btn-outline-danger" target="_blank">{{ __('random-card.tarot1') }}</a>
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p>
+                                    <a href="{{ route('daily-card', ['type' => 'taro-advice']) }}" class="btn btn-outline-danger" target="_blank">{{ __('random-card.tarot2') }}</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="mt-3">
+                            <a href="{{ route('daily-card', ['type' => 'taro-love']) }}" class="btn btn-outline-danger" target="_blank">{{ __('random-card.tarot3') }}</a>
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <h4>{{ __('random-card.lenormand-title') }}</h4>
+                        <div class="text-small mb-2">Интерактивный оракул Ленорман составлен автором сайта, интерпретация некоторых карт приводиться по книге Сильви Штайнбэк «Секреты оракула Ленорман»</div>
+                        <p>
+                            Знаменитые карты Марии Ленорман ответят на ваш вопрос
+                        </p>
+                        <p>
+                            Задайте мысленно вопрос и выберите карту:
+                        </p>
+                        <p>
+                            <a href="{{ route('daily-card', ['type' => 'lenormand']) }}" class="btn btn-outline-danger mt-3" target="_blank">{{ __('random-card.lenormand') }}</a>
+                        </p>
+                    </div>
+
+                </div>
                 <hr class="divider"/>
             </div>
         </div>

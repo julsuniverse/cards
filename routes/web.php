@@ -9,6 +9,9 @@ Route::get('/order/select', 'OrderController@selectOrder')->name('order.select-o
 Route::put('/order/store', 'OrderController@store')->name('order.store');
 Route::get('/order/success', 'OrderController@success')->name('order.success');
 
+Route::post('/get-card', 'RandomCard\RandomCard@getCard');
+Route::get('/daily-card/{type}', 'RandomCard\RandomCard@dailyCard')->name('daily-card');
+
 Route::group([
     'middleware' => 'auth',
     'prefix' => 'cabinet'
@@ -36,7 +39,9 @@ Route::group([
     Route::get('/translation/{translation}/edit', 'Dashboard\TranslationController@edit')->name('translation.edit');
     Route::put('/translation/{translation}/update', 'Dashboard\TranslationController@update')->name('translation.update');
 
-
+    Route::resource('/daily-card', 'Dashboard\RandomCardController')->except('index', 'create', 'show', 'delete');
+    Route::get('/daily-card/{type}', 'Dashboard\RandomCardController@index')->name('daily-card.index');
+    Route::get('/daily-card/create/{type}', 'Dashboard\RandomCardController@create')->name('daily-card.create');
     Route::group([
         'prefix' => 'images',
         'as' => 'images.'

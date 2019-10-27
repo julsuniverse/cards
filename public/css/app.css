@@ -13784,7 +13784,7 @@ p {
 
 .main-content {
   border-radius: 10px;
-  padding: 0 50px;
+  padding: 20px 50px;
 }
 
 .lead {
@@ -13860,5 +13860,9 @@ a.btn:hover {
 .fr-wrapper.show-placeholder div a,
 .fr-wrapper div a {
   display: none !important;
+}
+
+.text-small {
+  font-size: 8px;
 }
 

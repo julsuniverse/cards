@@ -80,7 +80,7 @@
         </div>
     </nav>
 
-    <main role="main" class="container main-content">
+    <main role="main" class="container main-content" id="app">
             @yield('pre-content')
         <div class="underlayer">
             @include('layout._errors')

@@ -11,6 +11,7 @@ window.Vue = require('vue');
 
 
 Vue.component('editor', require('./components/Editor').default);
+Vue.component('random-card', require('./components/RandomCard').default);
 
 import VueFroala from 'vue-froala-wysiwyg'
 Vue.use(VueFroala);
