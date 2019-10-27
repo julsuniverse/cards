@@ -30,7 +30,11 @@ class RandomCard
 
     public function dailyCard(string $type)
     {
-        $card = $this->cardsRepository->getRandom($type);
-        return view('random-card.tarot-day')->with(compact('card'));
+        try {
+            $card = $this->cardsRepository->getRandom($type);
+            return view('random-card.tarot-day')->with(compact('card'));
+        } catch (\DomainException $e) {
+            return redirect()->back()->with(['error' => $e]);
+        }
     }
 }

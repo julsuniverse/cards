@@ -101,18 +101,18 @@
                         <div class="row">
                             <div class="col-6">
                                 <p>
-                                    <a href="{{ route('daily-card', ['type' => 'taro-day']) }}" class="btn btn-outline-danger" target="_blank">{{ __('random-card.tarot1') }}</a>
+                                    <a href="{{ route('daily-card', ['type' => 'tarot-day']) }}" class="btn btn-outline-danger" target="_blank">{{ __('random-card.tarot1') }}</a>
                                 </p>
                             </div>
                             <div class="col-6">
                                 <p>
-                                    <a href="{{ route('daily-card', ['type' => 'taro-advice']) }}" class="btn btn-outline-danger" target="_blank">{{ __('random-card.tarot2') }}</a>
+                                    <a href="{{ route('daily-card', ['type' => 'tarot-advice']) }}" class="btn btn-outline-danger" target="_blank">{{ __('random-card.tarot2') }}</a>
                                 </p>
                             </div>
                         </div>
 
                         <p class="mt-3">
-                            <a href="{{ route('daily-card', ['type' => 'taro-love']) }}" class="btn btn-outline-danger" target="_blank">{{ __('random-card.tarot3') }}</a>
+                            <a href="{{ route('daily-card', ['type' => 'tarot-love']) }}" class="btn btn-outline-danger" target="_blank">{{ __('random-card.tarot3') }}</a>
                         </p>
                     </div>
                     <div class="col-6">
