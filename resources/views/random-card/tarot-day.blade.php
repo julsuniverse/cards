@@ -7,7 +7,7 @@
 
         <div class="row text-center">
             <div class="col-6">
-                <img src="{{ asset($card->image) }}">
+                <img class="daily-card-img" src="{{ asset($card->image) }}">
                 <h4>
                     @if(app()->getLocale() == 'ru')
                         {!! $card->name_ru !!}

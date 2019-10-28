@@ -13866,3 +13866,7 @@ a.btn:hover {
   font-size: 8px;
 }
 
+.daily-card-img {
+  max-height: 421px;
+}
+
