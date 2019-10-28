@@ -23,7 +23,7 @@ class RandomCardController extends Controller
     public function index(string $type)
     {
         $types = [];
-        if ($type == Card::TYPE_TAROT || Card::TYPE_TAROT_DAY || Card::TYPE_TAROT_ADVICE || Card::TYPE_TAROT_LOVE) {
+        if ($type == Card::TYPE_TAROT || $type == Card::TYPE_TAROT_DAY || $type == Card::TYPE_TAROT_ADVICE || $type == Card::TYPE_TAROT_LOVE) {
             $types = [Card::TYPE_TAROT_DAY, Card::TYPE_TAROT_ADVICE, Card::TYPE_TAROT_LOVE];
         } elseif ($type == Card::TYPE_LENORMAND) {
             $types = [Card::TYPE_LENORMAND];
@@ -42,7 +42,6 @@ class RandomCardController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request->all());
         try {
             $this->cardsRepository->save($request);
         } catch (\DomainException $e) {

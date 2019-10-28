@@ -45,7 +45,7 @@ class Card extends Model
      */
     public static function getTypesArray(string $type): array
     {
-        if($type == self::TYPE_TAROT || Card::TYPE_TAROT_DAY || Card::TYPE_TAROT_ADVICE || Card::TYPE_TAROT_LOVE) {
+        if($type == self::TYPE_TAROT ||$type == Card::TYPE_TAROT_DAY || $type == Card::TYPE_TAROT_ADVICE || $type == Card::TYPE_TAROT_LOVE) {
             return self::getTypesTarot();
         } elseif ($type == self::TYPE_LENORMAND) {
             return [self::TYPE_LENORMAND  => 'Lenormand'];
