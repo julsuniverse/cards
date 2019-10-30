@@ -5,8 +5,8 @@
         <h1>{{ __('random-card.tarot1') }}</h1>
         <hr class="divider"/>
 
-        <div class="row text-center">
-            <div class="col-6">
+        <div class="row">
+            <div class="col-6 text-center">
                 <img class="daily-card-img" src="{{ asset($card->image) }}">
                 <h4>
                     @if(app()->getLocale() == 'ru')
