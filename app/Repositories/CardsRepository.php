@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Http\Requests\DailyCardRequest;
+use App\Http\Requests\DailyCardUpdateRequest;
 use App\Models\Card;
 use App\Services\ImageService;
 use Illuminate\Http\Request;
@@ -38,13 +39,11 @@ class CardsRepository
     {
         try {
             $image = '';
-            $text_en = explode('<p data-f-id="pbf"', $request->description_en)[0];
-            $text_ru = explode('<p data-f-id="pbf"', $request->description_ru)[0];
             $card = Card::create([
                 'name_ru' => $request->name_ru,
                 'name_en' => $request->name_en,
-                'description_ru' => $text_ru,
-                'description_en' => $text_en,
+                'description_ru' => $request->description_ru,
+                'description_en' => $request->description_en,
                 'image' => $image,
                 'type' => $request->type,
             ]);
@@ -58,25 +57,25 @@ class CardsRepository
         }
     }
 
-    public function update(DailyCardRequest $request, Card $card)
+    public function update(DailyCardUpdateRequest $request, Card $card)
     {
         try {
             $image = '';
-            $text_en = explode('<p data-f-id="pbf"', $request->description_en)[0];
-            $text_ru = explode('<p data-f-id="pbf"', $request->description_ru)[0];
             $card->update([
                 'name_ru' => $request->name_ru,
                 'name_en' => $request->name_en,
-                'description_ru' => $text_ru,
-                'description_en' => $text_en,
-                'image' => $image,
+                'description_ru' => $request->description_ru,
+                'description_en' => $request->description_en,
                 'type' => $request->type,
             ]);
-            $this->imageService->destroyByEntityId('cards', $card->id);
-            $image = $this->imageService->store($card->id, $request->image, 'cards');
-            $card->update([
-                'image' => $image
-            ]);
+
+            if ($request->image) {
+                $this->imageService->destroyByEntityId('cards', $card->id);
+                $image = $this->imageService->store($card->id, $request->image, 'cards');
+                $card->update([
+                    'image' => $image
+                ]);
+            }
         } catch (\Exception $e) {
             throw new \DomainException($e->getMessage());
             throw new \DomainException('Card updating error');

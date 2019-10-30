@@ -16,6 +16,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Карта</th>
+                                <th>Тип</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -26,6 +27,7 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $card->name_ru }}</td>
+                                    <td>{{ $card->type}}</td>
                                     <td class="text-center">
                                         <img src="{{ asset($card->image) }}" style="max-width: 100px; height: 100px" />
                                     </td>

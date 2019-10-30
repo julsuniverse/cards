@@ -1,5 +1,6 @@
 <script>
     import froalaConfig from '../mixins/froalaConfig';
+    //import CKEditor from 'ckeditor'
     export default {
         name: "Editor",
         props: [

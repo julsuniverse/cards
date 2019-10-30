@@ -78,5 +78,7 @@
     </main>
 
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://cdn.ckeditor.com/4.13.0/full/ckeditor.js"></script>
+    <script src="{{ asset('js/editor.js') }}"></script>
 </body>
 </html>

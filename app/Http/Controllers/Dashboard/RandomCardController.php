@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DailyCardRequest;
+use App\Http\Requests\DailyCardUpdateRequest;
 use App\Models\Card;
 use App\Repositories\CardsRepository;
 use Illuminate\Http\Request;
@@ -57,7 +58,7 @@ class RandomCardController extends Controller
         return view('dashboard.random-card.edit')->with(compact('card', 'types'));
     }
 
-    public function update(DailyCardRequest $request, Card $daily_card)
+    public function update(DailyCardUpdateRequest $request, Card $daily_card)
     {
         try {
             $this->cardsRepository->update($request, $daily_card);

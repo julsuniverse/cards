@@ -53,32 +53,38 @@
                 entity-name="card"
             >
                 <div class="form-group">
-                    <label for="name_en" class="col-form-label">Описание на русском</label>
-                    <froala
-                            v-if="config"
-                            :tag="'textarea'"
-                            :config="config"
-                            v-model="content"
-                            id="description_ru" name="description_ru"
-                    ></froala>
+                    <label for="description_ru" class="col-form-label">Описание на русском</label>
+
+                    <textarea
+                            name="description_ru"
+                            id="description_ru"
+                            rows="5"
+                    >
+                        {!! $card->description_ru !!}
+                    </textarea>
+                    @if ($errors->has('description_ru'))
+                        <span class="invalid-feedback"><strong>{{ $errors->first('description_ru') }}</strong></span>
+                    @endif
                 </div>
             </editor>
 
             <editor inline-template
-                text="{{ old('description_ru', $card->description_en ?? '') }}"
+                text="{{ old('description_en', $card->description_en ?? '') }}"
                 entity-id="{{ $card->id ?? null }}"
                 entity-name="card"
             >
                 <div class="form-group">
-                    <label for="name_en" class="col-form-label">Описание на английском</label>
-
-                    <froala
-                            v-if="config"
-                            :tag="'textarea'"
-                            :config="config"
-                            v-model="content"
-                            id="description_en" name="description_en"
-                    ></froala>
+                    <label for="description_en" class="col-form-label">Описание на английском</label>
+                    <textarea
+                            name="description_en"
+                            id="description_en"
+                            rows="5"
+                    >
+                        {!! $card->description_en !!}
+                    </textarea>
+                    @if ($errors->has('description_en'))
+                        <span class="invalid-feedback"><strong>{{ $errors->first('description_en') }}</strong></span>
+                    @endif
                 </div>
             </editor>
         </div>
