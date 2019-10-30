@@ -60,7 +60,7 @@
                             id="description_ru"
                             rows="5"
                     >
-                        {!! $card->description_ru !!}
+                        {!! $card->description_ru ?? '' !!}
                     </textarea>
                     @if ($errors->has('description_ru'))
                         <span class="invalid-feedback"><strong>{{ $errors->first('description_ru') }}</strong></span>
@@ -80,7 +80,7 @@
                             id="description_en"
                             rows="5"
                     >
-                        {!! $card->description_en !!}
+                        {!! $card->description_en ?? ''!!}
                     </textarea>
                     @if ($errors->has('description_en'))
                         <span class="invalid-feedback"><strong>{{ $errors->first('description_en') }}</strong></span>
