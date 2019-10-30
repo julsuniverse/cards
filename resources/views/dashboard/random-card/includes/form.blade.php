@@ -9,7 +9,7 @@
                 <label for="type" class="col-form-label">Тип</label>
                 <select name="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}">
                     @foreach($types as $key => $type)
-                        <option value="{{ $key }}">{{ $type }}</option>
+                        <option @if(isset($card) && $key == $card->type) selected @endif value="{{ $key }}">{{ $type }}</option>
                     @endforeach
                 </select>
                 @if ($errors->has('type'))
