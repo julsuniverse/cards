@@ -41,15 +41,14 @@ class TranslationController
     public function update(Request $request, LanguageLine $translation)
     {
         try {
-            $text_en = explode('<p data-f-id="pbf"', $request->text_en)[0];
-            $text_ru = explode('<p data-f-id="pbf"', $request->text_ru)[0];
             $text = [
-                'en' => $text_en,
-                'ru' => $text_ru,
+                'en' => $request->text_en,
+                'ru' => $request->text_ru,
             ];
 
             $translation->update([
-                'text' => json_encode($text)
+                'text' => json_encode($text),
+                'name' => $request->name
             ]);
 
             Artisan::call('cache:clear');

@@ -2,6 +2,7 @@
 Route::get('/locale', 'LocaleController@index')->name('change-locale');
 
 Route::get('/', 'PageController@index')->name('home');
+Route::get('/terms', 'PageController@terms')->name('terms');
 
 Route::get('/order', 'OrderController@index')->name('order.index');
 Route::get('/order/custom/{layout?}', 'OrderController@textOrder')->name('order.text-order');

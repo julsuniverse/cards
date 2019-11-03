@@ -9,4 +9,9 @@ class PageController extends Controller
     {
         return view('index');
     }
+
+    public function terms()
+    {
+        return view('pages.terms');
+    }
 }

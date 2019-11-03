@@ -3,21 +3,35 @@
     @method('PUT')
     <div class="row">
         <div class="col-12">
+            <div class="form-group">
+                <label for="name" class="col-form-label">Name</label>
+                <input id="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name', $translation->name ?? '') }}">
+                @if ($errors->has('name'))
+                    <span class="invalid-feedback"><strong>{{ $errors->first('name') }}</strong></span>
+                @endif
+            </div>
+
             <editor inline-template
                 text="{{ old('text_en', $translation->text_en ?? '') }}"
                 entity-id="{{ $translation->id }}"
                 entity-name="translation"
             >
                 <div class="form-group">
-                    <label for="text_en">English</label>
                     @if($translation->is_html)
-                        <froala
-                                v-if="config"
-                                :tag="'textarea'"
-                                :config="config"
-                                v-model="content"
-                                id="text_en" name="text_en"
-                        ></froala>
+                        <div class="form-group">
+                            <label for="text_en" class="col-form-label">English</label>
+
+                            <textarea
+                                    name="text_en"
+                                    id="text_en"
+                                    rows="5"
+                            >
+                                {!! $translation->text_en ?? '' !!}
+                            </textarea>
+                            @if ($errors->has('text_en'))
+                                <span class="invalid-feedback"><strong>{{ $errors->first('text_en') }}</strong></span>
+                            @endif
+                        </div>
                     @else
                         <div class="form-group">
                             <textarea
@@ -38,15 +52,21 @@
                 entity-name="translation"
             >
                 <div class="form-group">
-                    <label for="text_ru">Русский</label>
                     @if($translation->is_html)
-                        <froala
-                                v-if="config"
-                                :tag="'textarea'"
-                                :config="config"
-                                v-model="content"
-                                id="text_ru" name="text_ru"
-                        ></froala>
+                        <div class="form-group">
+                            <label for="text_ru" class="col-form-label">Русский</label>
+
+                            <textarea
+                                    name="text_ru"
+                                    id="text_ru"
+                                    rows="5"
+                            >
+                                {!! $translation->text_ru ?? '' !!}
+                            </textarea>
+                            @if ($errors->has('text_ru'))
+                                <span class="invalid-feedback"><strong>{{ $errors->first('text_ru') }}</strong></span>
+                            @endif
+                        </div>
                     @else
                         <div class="form-group">
                                 <textarea

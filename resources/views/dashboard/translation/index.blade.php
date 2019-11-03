@@ -11,6 +11,7 @@
                             <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Name</th>
                                 <th>Group</th>
                                 <th>Key</th>
                                 <th></th>
@@ -21,6 +22,7 @@
                             @foreach ($translations as $translation)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $translation->name }}</td>
                                     <td>{{ $translation->group }}</td>
                                     <td>{{ $translation->key }}</td>
                                     <td>

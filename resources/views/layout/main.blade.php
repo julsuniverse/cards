@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto text-right">
 
-                <li class="nav-item active">
+                <li class="nav-item active nav-item-custom">
                         <a class="nav-link " href="{{ route('change-locale') }}">
                             @if(App::getLocale() == 'en')
                                 <span class="badge badge-danger mt-1">ru</span>
@@ -29,36 +29,36 @@
                         </a>
                 </li>
 
-                <li class="nav-item active">
+                <li class="nav-item active nav-item-custom">
                     <a class="nav-link" href="{{ route('home') }}">{{ trans('menu.home') }}</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-item-custom">
                     <a class="nav-link" href="{{ route('home') }}#tarot">{{ trans('menu.tarot') }}</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-item-custom">
                     <a class="nav-link" href="{{ route('home') }}#lenorman">{{ trans('menu.lenorman') }}</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-item-custom">
                     <a class="nav-link" href="{{ route('home') }}#future">{{ trans('menu.future') }}</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('order.select-order') }}">{{ trans('menu.terms') }}</a>
+                <li class="nav-item nav-item-custom">
+                    <a class="nav-link" href="{{ route('terms') }}">{{ trans('menu.terms') }}</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-item-custom">
                     <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order') }}</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-item-custom">
                     <a class="nav-link" href="{{ route('home') }}#oracle-tarot">{{ trans('menu.oracle-tarot') }}</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-item-custom">
                     <a class="nav-link " href="{{ route('home') }}#oracle-runes">{!! trans('menu.oracle-runes') !!}</a>
                 </li>
 
                 @if(Auth::user())
-                    <li class="nav-item active">
+                    <li class="nav-item active nav-item-custom ">
                         <a class="nav-link" href="{{ route('cabinet') }}"><i class="fa fa-user-circle" aria-hidden="true"></i> {{ trans('menu.profile') }}</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item active nav-item-custom">
                         <a class="nav-link" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();"
@@ -73,12 +73,12 @@
                     </li>
 
                     @if(Auth::user()->role == 'admin')
-                        <li class="nav-item">
+                        <li class="nav-item nav-item-custom">
                             <a class="nav-link font-weight-bold" href="{{ route('dashboard.index') }}"><i class="fa fa-cog"></i></a>
                         </li>
                     @endif
                 @else
-                    <li class="nav-item active">
+                    <li class="nav-item active nav-item-custom">
                         <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user-circle" aria-hidden="true"></i> {{ trans('menu.login') }}</a>
                     </li>
                 @endif

@@ -13769,8 +13769,9 @@ p {
 }
 
 .underlayer {
-  padding: 0 30px 10px;
+  padding: 10px 30px 10px;
   background-color: #f8f5f3;
+  margin-top: 25px;
 }
 
 .navbar.my-navbar a {
@@ -13825,7 +13826,6 @@ a.btn:hover {
 
 .brown-navbar a {
   color: #bb1919 !important;
-  max-width: 120px;
   text-align: center;
 }
 
@@ -13834,10 +13834,11 @@ a.btn:hover {
   transition: 0.5s all;
 }
 
-.brown-navbar li a {
+.brown-navbar li.nav-item-custom a {
   height: 66px;
   display: table-cell;
   vertical-align: middle;
+  max-width: 128px;
 }
 
 .top-container {
