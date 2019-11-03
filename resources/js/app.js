@@ -34,7 +34,7 @@ $(".my-navbar a").on("click", function(e) {
     let str = $(this).attr('href');
     let position = str.indexOf('#');
     let anchor = str.substr(position, str.length);
-    let top = $(anchor).offset().top - 56;
+    let top = $(anchor).offset().top - 90;
 
     $('body,html').animate({scrollTop: top}, 1000);
 });

@@ -94,7 +94,7 @@
 
                 {!!  __('main-page.main-block-6') !!}
 
-                <div class="row text-center mt-3">
+                <div class="row text-center mt-3" id="oracle-tarot">
                     <div class="col-6">
                         <h4>{{ __('random-card.taro-title') }}</h4>
                         <div class="text-small">{{ __('random-card.tarot-small') }} </div>
@@ -144,8 +144,28 @@
                 <hr class="divider"/>
             </div>
         </div>
+
+        <div class="row info-block" id="oracle-runes">
+            <div class="col-12">
+                <h2 class="text-center">{!!  __('main-page.main-block-10-title') !!}</h2>
+                    {!!  __('main-page.main-block-10') !!}
+                <hr class="divider"/>
+            </div>
+        </div>
+
+        <div class="row text-center mt-3">
+            <div class="col-12">
+                <h2>{!! __('main-page.main-block-11-title') !!}</h2>
+                <h4>{!! __('main-page.main-block-11-subtitle')  !!}</h4>
+                <div class="text-small">{!! __('main-page.main-block-11-small') !!}  </div>
+                {!!  __('main-page.main-block-11-text') !!}
+            </div>
+        </div>
+        <div class="mx-auto text-center mb-4 mt-3">
+            <a href="{{ route('daily-card', ['type' => 'runes']) }}" class="btn btn-outline-danger" target="_blank">{{ __('main-page.main-block-11-btn') }}</a>
+        </div>
+
+        <hr class="divider"/>
     </div>
-
-
 @endsection
 

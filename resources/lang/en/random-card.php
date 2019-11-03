@@ -8,6 +8,7 @@ return [
     'tarot3' => 'Love Matters Advice',
     'lenormand' => 'Lenormand',
     'runes' => 'Runes',
+    'runes-btn' => 'Runes',
     'empty-deck' => 'The deck is empty',
     'tarot-small' => 'The cards interpretations for interactive oracles are made by the author of this website',
     'lenormand-small' => 'The cards interpretation for this Interactive Lenormand Oracle are made up by the author of this site',

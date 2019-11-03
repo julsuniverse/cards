@@ -58,5 +58,15 @@ class MenuSeeder extends Seeder
             'key' => 'logout',
             'text' => ['en' => 'Logout', 'ru' => 'Выйти'],
         ]);
+        LanguageLine::create([
+            'group' => 'menu',
+            'key' => 'oracle',
+            'text' => ['en' => 'Interactive ORACLE', 'ru' => 'Интерактивный ОРАКУЛ'],
+        ]);
+        LanguageLine::create([
+            'group' => 'menu',
+            'key' => 'oracle',
+            'text' => ['en' => 'Runes Oracle', 'ru' => 'Руны Оракул'],
+        ]);
     }
 }

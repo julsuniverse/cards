@@ -13825,11 +13825,19 @@ a.btn:hover {
 
 .brown-navbar a {
   color: #bb1919 !important;
+  max-width: 120px;
+  text-align: center;
 }
 
 .brown-navbar a:hover {
   color: #3490dc !important;
   transition: 0.5s all;
+}
+
+.brown-navbar li a {
+  height: 66px;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .top-container {

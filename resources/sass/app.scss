@@ -108,10 +108,17 @@ a, a.btn {
   a {
     //color: #fff !important;
     color: $bbc-red !important;
+    max-width: 120px;
+    text-align: center;
     &:hover {
       color: $blue !important;
       transition: 0.5s all;
     }
+  }
+  li a {
+    height: 66px;
+    display: table-cell;
+    vertical-align: middle;
   }
 }
 

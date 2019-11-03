@@ -42,10 +42,16 @@
                     <a class="nav-link" href="{{ route('home') }}#future">{{ trans('menu.future') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('order.select-order') }}">Условия консультации</a>
+                    <a class="nav-link" href="{{ route('order.select-order') }}">{{ trans('menu.terms') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order') }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('home') }}#oracle-tarot">{{ trans('menu.oracle-tarot') }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ route('home') }}#oracle-runes">{!! trans('menu.oracle-runes') !!}</a>
                 </li>
 
                 @if(Auth::user())
