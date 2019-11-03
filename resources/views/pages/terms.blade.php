@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="main-content">
-        {{ __('terms.text') }}
+        {!! __('terms.text') !!}
     </div>
 @endsection
 
