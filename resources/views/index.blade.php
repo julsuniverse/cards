@@ -97,7 +97,7 @@
                 <div class="row text-center mt-3">
                     <div class="col-6">
                         <h4>{{ __('random-card.taro-title') }}</h4>
-                        <div class="text-small">Интерактивный оракул Таро составлен автором сайта, интерпретация некоторых арканов приводиться по книгам следующих авторов: Хайо Банцхаф «Ключевые понятия»; Скотт Голландер "Искусство понимания и толкования карт Таро" </div>
+                        <div class="text-small">{{ __('random-card.tarot-small') }} </div>
                         <div class="row">
                             <div class="col-6">
                                 <p>
@@ -117,12 +117,9 @@
                     </div>
                     <div class="col-6">
                         <h4>{{ __('random-card.lenormand-title') }}</h4>
-                        <div class="text-small mb-2">Интерактивный оракул Ленорман составлен автором сайта, интерпретация некоторых карт приводиться по книге Сильви Штайнбэк «Секреты оракула Ленорман»</div>
+                        <div class="text-small mb-2">{{ __('random-card.lenormand-small') }}</div>
                         <p>
-                            Знаменитые карты Марии Ленорман ответят на ваш вопрос
-                        </p>
-                        <p>
-                            Задайте мысленно вопрос и выберите карту:
+                            {!! __('random-card.lenormand-intro') !!}
                         </p>
                         <p>
                             <a href="{{ route('daily-card', ['type' => 'lenormand']) }}" class="btn btn-outline-danger mt-3" target="_blank">{{ __('random-card.lenormand') }}</a>

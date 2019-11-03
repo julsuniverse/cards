@@ -26,10 +26,9 @@ class CardsRepository
      */
     public function getRandom(string $type)
     {
-        try {
-            $cards = Card::where('type', $type)->get();
-        } catch (\Exception $e) {
-            throw new \DomainException('Card selecting error');
+        $cards = Card::where('type', $type)->get();
+        if ($cards->isEmpty()) {
+            throw new \DomainException(__('random-card.empty-deck'));
         }
         return $cards->random();
     }
@@ -52,7 +51,6 @@ class CardsRepository
                 'image' => $image
             ]);
         } catch (\Exception $e) {
-            throw new \DomainException($e->getMessage());
             throw new \DomainException('Card creating error');
         }
     }

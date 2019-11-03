@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="main-content">
-        <h1>{{ __('random-card.tarot1') }}</h1>
+        <h1>{{ $title  }}</h1>
         <hr class="divider"/>
 
         <div class="row">

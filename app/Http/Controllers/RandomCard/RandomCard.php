@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\RandomCard;
 
 use App\Http\Requests\CardsRequest;
+use App\Models\Card;
 use App\Repositories\CardsRepository;
 use Illuminate\Http\Response;
 
@@ -32,9 +33,10 @@ class RandomCard
     {
         try {
             $card = $this->cardsRepository->getRandom($type);
-            return view('random-card.tarot-day')->with(compact('card'));
+            $title = Card::getTitle($type);
+            return view('random-card.tarot-day')->with(compact('card', 'title'));
         } catch (\DomainException $e) {
-            return redirect()->back()->with(['error' => $e]);
+            return back()->with('error', $e->getMessage());
         }
     }
 }

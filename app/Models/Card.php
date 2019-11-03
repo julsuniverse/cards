@@ -55,4 +55,24 @@ class Card extends Model
 
         return [];
     }
+
+    public static function getTitle(string $type): string
+    {
+        $title = '';
+        if($type == self::TYPE_TAROT ) {
+            return __('random-card.taro-title');
+        } elseif ($type == self::TYPE_TAROT_LOVE) {
+            return __('random-card.tarot3');
+        } elseif ($type == Card::TYPE_TAROT_DAY) {
+            return __('random-card.tarot1');
+        } elseif ($type == self::TYPE_TAROT_ADVICE) {
+            return __('random-card.tarot2');
+        } elseif ($type == self::TYPE_LENORMAND) {
+            return __('random-card.lenormand-title');
+        } elseif ($type == self::TYPE_RUNES) {
+            return __('random-card.runes');
+        }
+
+        return $title;
+    }
 }
