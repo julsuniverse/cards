@@ -15,7 +15,7 @@ class TranslationController
      */
     public function index()
     {
-        $translations = LanguageLine::orderBy('group')->get();
+        $translations = LanguageLine::orderBy('group')->orderBy('key')->get();
         return view('dashboard.translation.index')->with(compact('translations'));
     }
 

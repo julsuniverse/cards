@@ -84,7 +84,7 @@
 
         <hr class="divider"/>
 
-        <div class="row info-block">
+        <div class="row info-block" id="oracle-tarot">
             <div class="col-12">
                 <h2 class="text-center">{!!  __('main-page.main-block-6-title') !!}</h2>
 
@@ -94,7 +94,7 @@
 
                 {!!  __('main-page.main-block-6') !!}
 
-                <div class="row text-center mt-3" id="oracle-tarot">
+                <div class="row text-center mt-3">
                     <div class="col-6">
                         <h4>{{ __('random-card.taro-title') }}</h4>
                         <div class="text-small">{{ __('random-card.tarot-small') }} </div>
