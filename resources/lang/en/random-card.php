@@ -10,7 +10,7 @@ return [
     'runes' => 'Runes',
     'runes-btn' => 'Runes',
     'empty-deck' => 'The deck is empty',
-    'tarot-small' => 'The cards interpretations for interactive oracles are made by the author of this website',
-    'lenormand-small' => 'The cards interpretation for this Interactive Lenormand Oracle are made up by the author of this site',
+    'tarot-small' => 'The interpretation of the cards for this interactive oracle is made by the author of this website. Some cards in this oracle are described according to “The Tarot Handbook” by Hajo Banzhaf.',
+    'lenormand-small' => 'The interpretation of the cards for this interactive Lenormand oracle is made by the author of this website.',
     'lenormand-intro' => 'Maria Lenormand’s Illustrious Cards unveil your nearest future'
 ];
