@@ -18,10 +18,10 @@
                 </div>
                 <!--<div class="top-block-buttons">-->
                     <div class="col-sm-6  text-center mt-md-5">
-                        <a style="width: 200px" href="{{ route('dashboard.order.index') }}" class="btn btn-outline-danger font-weight-bold">{!!  __('main-page.top-block-btn1') !!}</a>
+                        <a style="width: 200px" href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold">{!!  __('main-page.top-block-btn1') !!}</a>
                     </div>
                     <div class="col-sm-6  text-center mt-md-5">
-                        <a style="width: 200px" href="{{ route('dashboard.order.index') }}" class="btn btn-outline-danger font-weight-bold">{!!  __('main-page.top-block-btn2') !!}</a>
+                        <a style="width: 200px" href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold">{!!  __('main-page.top-block-btn2') !!}</a>
                     </div>
                 <!--</div>-->
             </div>
@@ -162,10 +162,12 @@
             </div>
         </div>
         <div class="mx-auto text-center mb-4 mt-3">
-            <a href="{{ route('daily-card', ['type' => 'runes']) }}" class="btn btn-outline-danger" target="_blank">{{ __('main-page.main-block-11-btn') }}</a>
+            <a href="{{ route('daily-card', ['type' => 'runes']) }}" class="btn btn-outline-danger" target="_blank">{!! __('main-page.main-block-11-btn') !!}  </a>
         </div>
 
         <hr class="divider"/>
     </div>
+
+    <img src="{{ asset('images/cat.jpg') }}" style="max-width: 100%" />
 @endsection
 

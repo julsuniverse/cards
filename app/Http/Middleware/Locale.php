@@ -21,10 +21,16 @@ class Locale
         $url_array = explode('.', parse_url($request->url(), PHP_URL_HOST));
         $subdomain = $url_array[0];
 
-        if ($subdomain == self::LOCALE_RU) {
+        /*if ($subdomain == self::LOCALE_RU) {
             App::setLocale($subdomain);
         } else {
             App::setLocale(self::LOCALE_EN);
+        }*/
+
+        if ($subdomain == self::LOCALE_EN) {
+            App::setLocale($subdomain);
+        } else {
+            App::setLocale(self::LOCALE_RU);
         }
         return $next($request);
     }

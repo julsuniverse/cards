@@ -13,11 +13,11 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade @if(!session('tab') ) show active @endif" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <div class="list-group mt-2">
-                    @foreach($user->orders as $order)
+                    @foreach($orders as $order)
                         <a href="#" class="list-group-item list-group-item-action">
                             <i class="fa fa-calendar" aria-hidden="true"></i> {{ $order->created_at->format('d-m-Y') }}
                             @if( $order->status == 'new')
-                                <span class="badge badge-primary badge-pill">{{ __('order.order-status-new') }}</span>
+                                <span class="badge badge-primary badge-pill">{{ __('order-statuses.status.new') }}</span>
                             @endif
 
                             @if($order->layout)

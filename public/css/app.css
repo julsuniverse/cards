@@ -13835,10 +13835,11 @@ a.btn:hover {
 }
 
 .brown-navbar li.nav-item-custom a {
-  height: 66px;
+  height: 53px;
   display: table-cell;
   vertical-align: middle;
   max-width: 128px;
+  line-height: 19px;
 }
 
 .top-container {
