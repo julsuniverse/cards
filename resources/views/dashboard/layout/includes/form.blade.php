@@ -47,26 +47,6 @@
             </div>
 
             <editor inline-template
-                    text="{{  old('text', $layout->text ?? '') }}"
-            >
-                <div class="form-group">
-                    <label class="form-check-label" for="text">Описание английский</label>
-                    <textarea
-                            name="text"
-                            id="text_en"
-                            rows="5"
-                    >
-                        {!! $layout->text ?? '' !!}
-                    </textarea>
-                    @if ($errors->has('text'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('text') }}
-                        </div>
-                    @endif
-                </div>
-            </editor>
-
-            <editor inline-template
                     text="{{  old('text_ru', $layout->text_ru ?? '') }}"
             >
                 <div class="form-group">
@@ -86,6 +66,25 @@
                 </div>
             </editor>
 
+            <editor inline-template
+                    text="{{  old('text', $layout->text ?? '') }}"
+            >
+                <div class="form-group">
+                    <label class="form-check-label" for="text">Описание английский</label>
+                    <textarea
+                            name="text"
+                            id="text_en"
+                            rows="5"
+                    >
+                        {!! $layout->text ?? '' !!}
+                    </textarea>
+                    @if ($errors->has('text'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('text') }}
+                        </div>
+                    @endif
+                </div>
+            </editor>
 
             <div class="row">
                 <div class="form-group col-md-3">
