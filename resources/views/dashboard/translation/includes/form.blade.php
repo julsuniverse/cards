@@ -34,6 +34,7 @@
                         </div>
                     @else
                         <div class="form-group">
+                            <label for="text_en" class="col-form-label">English</label>
                             <textarea
                                     class="form-control"
                                     rows="3"
@@ -69,7 +70,9 @@
                         </div>
                     @else
                         <div class="form-group">
-                                <textarea
+                            <label for="text_ru" class="col-form-label">Русский</label>
+
+                            <textarea
                                         class="form-control"
                                         rows="3"
                                         id="text_ru"

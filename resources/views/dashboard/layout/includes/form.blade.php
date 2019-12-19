@@ -47,19 +47,37 @@
             </div>
 
             <editor inline-template
+                    text="{{  old('text', $layout->text ?? '') }}"
+            >
+                <div class="form-group">
+                    <label class="form-check-label" for="text">Описание английский</label>
+                    <textarea
+                            name="text"
+                            id="text_en"
+                            rows="5"
+                    >
+                        {!! $layout->text ?? '' !!}
+                    </textarea>
+                    @if ($errors->has('text'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('text') }}
+                        </div>
+                    @endif
+                </div>
+            </editor>
+
+            <editor inline-template
                     text="{{  old('text_ru', $layout->text_ru ?? '') }}"
             >
                 <div class="form-group">
                     <label class="form-check-label" for="text_ru">Описание</label>
-                    <froala
-                            v-if="config"
-                            :tag="'textarea'"
-                            :config="config"
-                            v-model="content"
-                            id="text"
+                    <textarea
                             name="text_ru"
-                            class="@if ($errors->has('text_ru')) is-invalid @endif"
-                    ></froala>
+                            id="text_ru"
+                            rows="5"
+                    >
+                        {!! $layout->text_ru ?? '' !!}
+                    </textarea>
                     @if ($errors->has('text_ru'))
                         <div class="invalid-feedback">
                             {{ $errors->first('text_ru') }}
@@ -68,27 +86,6 @@
                 </div>
             </editor>
 
-            <editor inline-template
-                    text="{{  old('text', $layout->text ?? '') }}"
-            >
-                <div class="form-group">
-                    <label class="form-check-label" for="text_ru">Описание на английском</label>
-                    <froala
-                            v-if="config"
-                            :tag="'textarea'"
-                            :config="config"
-                            v-model="content"
-                            id="text"
-                            name="text"
-                            class="@if ($errors->has('text')) is-invalid @endif"
-                    ></froala>
-                    @if ($errors->has('text'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('text') }}
-                        </div>
-                    @endif
-                </div>
-            </editor>
 
             <div class="row">
                 <div class="form-group col-md-3">
