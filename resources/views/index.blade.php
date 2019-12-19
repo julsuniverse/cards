@@ -92,7 +92,7 @@
                     {!!  __('main-page.main-block-6-subtitle') !!}
                 </p>
 
-                {!!  __('main-page.main-block-6') !!}
+                {{--   {!!  __('main-page.main-block-6') !!} --}}
 
                 <div class="row text-center mt-3">
                     <div class="col-6">
