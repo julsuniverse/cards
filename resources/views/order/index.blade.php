@@ -4,7 +4,19 @@
     <div class="row">
         <div class="col-12">
             <div class="card card-content">
-                <h4 class="card-header">{{ __('order.title') }}</h4>
+                <div class="card-header">
+                    <h4 class="text-center">{{ __('order.title') }}</h4>
+                    <div class="row mt-1 text-center">
+                        <div class="col">
+                            <a href="{{ route('order.text-order') }}" class="btn btn-outline-danger mb-2">{{ __('order.btn-order-simple') }}</a>
+                        </div>
+                        <div class="col">
+                            <a href="{{ route('order.select-order') }}" class="btn btn-outline-danger">{{ __('order.btn-order-select') }}</a>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="card-body">
                     {!! __('order.part1') !!}
 
