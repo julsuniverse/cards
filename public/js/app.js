@@ -51058,7 +51058,9 @@ $(function () {
 });
 $(document).ready(function () {
   var str = window.location.href;
-  var top = $(document).scrollTop() - 90;
+  var top = $(document).scrollTop();
+  console.log('top', top);
+  console.log('top - 90', top - 90);
 
   if (str.indexOf('order/select#layout') !== -1) {
     $('body,html').animate({

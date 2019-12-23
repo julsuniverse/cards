@@ -58,7 +58,9 @@ $(function () {
 
 $( document ).ready(function() {
     let str = window.location.href;
-    let top = $(document).scrollTop() - 90;
+    let top = $(document).scrollTop();
+    console.log('top', top);
+    console.log('top - 90', top - 90);
     if(str.indexOf('order/select#layout') !== -1) {
         $('body,html').animate({scrollTop: top}, 1000);
     }
