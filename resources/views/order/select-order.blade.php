@@ -14,11 +14,10 @@
                         @else
                             <b>{{ $layoutGroup[0]->theme->name_ru }} </b>
                         @endif
-
-                        @if (!$loop->last)
-                            &diams;
-                        @endif
                     </a>
+                    @if (!$loop->last)
+                        &diams;
+                    @endif
                 @endforeach
             </div>
 
