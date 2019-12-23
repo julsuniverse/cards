@@ -51058,11 +51058,14 @@ $(function () {
 });
 $(document).ready(function () {
   var str = window.location.href;
-  var top = $(document).scrollTop();
-  console.log('top', top);
-  console.log('top - 90', top - 90);
 
   if (str.indexOf('order/select#layout') !== -1) {
+    var start = str.indexOf('#');
+    var id = str.substr(start);
+    console.log('id', id);
+    var top = $(id).offset().top;
+    console.log('top', top);
+    console.log('top - 90', top - 90);
     $('body,html').animate({
       scrollTop: top - 90
     }, 1000);
