@@ -8,11 +8,13 @@
 
             <div class="text-center mt-2 layouts-list">
                 @foreach($layouts as $layoutGroup)
-                    @if(app()->getLocale() == 'en')
-                        <b>{{ $layoutGroup[0]->theme->name }}:</b>
-                    @else
-                        <b>{{ $layoutGroup[0]->theme->name_ru }}:</b>
-                    @endif
+                    <a href="#layout-{{ $layoutGroup[0]->theme->id }}" class="text-dark">
+                        @if(app()->getLocale() == 'en')
+                            <b>{{ $layoutGroup[0]->theme->name }}:</b>
+                        @else
+                            <b>{{ $layoutGroup[0]->theme->name_ru }}:</b>
+                        @endif
+                    </a>
 
                     <ul class="list-unstyled">
                         @foreach($layoutGroup as $layout)
@@ -34,7 +36,7 @@
             <div class="accordion" id="layoutsAccordion">
                 @foreach($layouts as $layoutGroup)
                     <div class="mt-4"><hr class="divider"/></div>
-                    <h3 class="text-center">
+                    <h3 class="text-center" id="layout-{{ $layoutGroup[0]->theme->id }}">
                         @if(app()->getLocale() == 'en')
                             {{ $layoutGroup[0]->theme->name }}
                         @else

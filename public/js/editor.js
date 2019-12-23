@@ -4,4 +4,4 @@ setTimeout(function(){
     CKEDITOR.replace('description_en');
     CKEDITOR.replace('text_en');
     CKEDITOR.replace('text_ru');
-},300);
+},400);
