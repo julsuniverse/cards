@@ -58,8 +58,8 @@ $(function () {
 
 $( document ).ready(function() {
     let str = window.location.href;
-    var top = $(document).scrollTop() - 90;
-    if(str.indexOf('#layout') !== -1) {
+    let top = $(document).scrollTop() - 90;
+    if(str.indexOf('order/select#layout') !== -1) {
         $('body,html').animate({scrollTop: top}, 1000);
     }
 });

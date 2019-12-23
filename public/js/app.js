@@ -51060,7 +51060,7 @@ $(document).ready(function () {
   var str = window.location.href;
   var top = $(document).scrollTop() - 90;
 
-  if (str.indexOf('#layout') !== -1) {
+  if (str.indexOf('order/select#layout') !== -1) {
     $('body,html').animate({
       scrollTop: top
     }, 1000);
