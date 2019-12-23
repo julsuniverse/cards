@@ -31,13 +31,26 @@ $('#profile-tab a').on('click', function (e) {
 })
 
 $(".my-navbar a").on("click", function(e) {
-    let str = $(this).attr('href');
+    setScrollMargin($(this));
+    /*let str = $(this).attr('href');
+    let position = str.indexOf('#');
+    let anchor = str.substr(position, str.length);
+    let top = $(anchor).offset().top - 90;
+
+    $('body,html').animate({scrollTop: top}, 1000);*/
+});
+$(".layouts-list a").on("click", function(e) {
+    setScrollMargin($(this));
+});
+
+function setScrollMargin(attribute) {
+    let str = attribute.attr('href');
     let position = str.indexOf('#');
     let anchor = str.substr(position, str.length);
     let top = $(anchor).offset().top - 90;
 
     $('body,html').animate({scrollTop: top}, 1000);
-});
+}
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()

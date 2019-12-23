@@ -6,7 +6,7 @@
             <h1>{{ __('order-select.title') }}</h1>
             <p class="font-weight-light text-center">{!! __('order-select.select-theme') !!}  </p>
 
-            <div class="text-center mt-2">
+            <div class="text-center mt-2 layouts-list">
                 @foreach($layouts as $layoutGroup)
                     @if(app()->getLocale() == 'en')
                         <b>{{ $layoutGroup[0]->theme->name }}:</b>

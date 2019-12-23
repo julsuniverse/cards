@@ -51032,14 +51032,27 @@ $('#profile-tab a').on('click', function (e) {
   $(this).tab('show');
 });
 $(".my-navbar a").on("click", function (e) {
-  var str = $(this).attr('href');
+  setScrollMargin($(this));
+  /*let str = $(this).attr('href');
+  let position = str.indexOf('#');
+  let anchor = str.substr(position, str.length);
+  let top = $(anchor).offset().top - 90;
+   $('body,html').animate({scrollTop: top}, 1000);*/
+});
+$(".layouts-list a").on("click", function (e) {
+  setScrollMargin($(this));
+});
+
+function setScrollMargin(attribute) {
+  var str = attribute.attr('href');
   var position = str.indexOf('#');
   var anchor = str.substr(position, str.length);
   var top = $(anchor).offset().top - 90;
   $('body,html').animate({
     scrollTop: top
   }, 1000);
-});
+}
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
