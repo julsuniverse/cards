@@ -55,3 +55,11 @@ function setScrollMargin(attribute) {
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 });
+
+$( document ).ready(function() {
+    let str = window.location.href;
+    var top = $('html').offset().top - 90;
+    if(str.indexOf('#layout') !== -1) {
+        $('body,html').animate({scrollTop: top}, 1000);
+    }
+});
