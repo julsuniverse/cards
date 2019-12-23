@@ -51064,7 +51064,7 @@ $(document).ready(function () {
 
   if (str.indexOf('order/select#layout') !== -1) {
     $('body,html').animate({
-      scrollTop: top
+      scrollTop: top - 90
     }, 1000);
   }
 });

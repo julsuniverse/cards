@@ -62,6 +62,6 @@ $( document ).ready(function() {
     console.log('top', top);
     console.log('top - 90', top - 90);
     if(str.indexOf('order/select#layout') !== -1) {
-        $('body,html').animate({scrollTop: top}, 1000);
+        $('body,html').animate({scrollTop: top - 90}, 1000);
     }
 });
