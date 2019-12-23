@@ -16,7 +16,7 @@
                         @endif
 
                         @if (!$loop->last)
-                            <i class="fa fa-circle" aria-hidden="true"></i>
+                            &diams;
                         @endif
                     </a>
                 @endforeach
