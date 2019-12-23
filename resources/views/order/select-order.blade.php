@@ -10,9 +10,13 @@
                 @foreach($layouts as $layoutGroup)
                     <a href="#layout-{{ $layoutGroup[0]->theme->id }}" class="text-dark">
                         @if(app()->getLocale() == 'en')
-                            <b>{{ $layoutGroup[0]->theme->name }}:</b>
+                            <b>{{ $layoutGroup[0]->theme->name }}</b>
                         @else
-                            <b>{{ $layoutGroup[0]->theme->name_ru }}:</b>
+                            <b>{{ $layoutGroup[0]->theme->name_ru }} </b>
+                        @endif
+
+                        @if (!$loop->last)
+                            <i class="fa fa-circle" aria-hidden="true"></i>
                         @endif
                     </a>
                 @endforeach
