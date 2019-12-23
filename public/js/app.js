@@ -51060,15 +51060,17 @@ $(document).ready(function () {
   var str = window.location.href;
 
   if (str.indexOf('order/select#layout') !== -1) {
-    var start = str.indexOf('#');
-    var id = str.substr(start);
-    console.log('id', id);
-    var top = $(id).offset().top;
-    console.log('top', top);
-    console.log('top - 90', top - 90);
-    $('body,html').animate({
-      scrollTop: top - 90
-    }, 1000);
+    setTimeout(function () {
+      var start = str.indexOf('#');
+      var id = str.substr(start);
+      console.log('id', id);
+      var top = $(id).offset().top;
+      console.log('top', top);
+      console.log('top - 90', top - 90);
+      $('body,html').animate({
+        scrollTop: top - 90
+      }, 1000);
+    }, 100);
   }
 });
 
