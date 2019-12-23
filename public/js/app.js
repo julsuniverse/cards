@@ -51058,7 +51058,7 @@ $(function () {
 });
 $(document).ready(function () {
   var str = window.location.href;
-  var top = $('html').offset().top - 90;
+  var top = $(document).scrollTop() - 90;
 
   if (str.indexOf('#layout') !== -1) {
     $('body,html').animate({
