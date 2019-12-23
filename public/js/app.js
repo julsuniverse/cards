@@ -51056,23 +51056,23 @@ function setScrollMargin(attribute) {
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
-$(document).ready(function () {
-  var str = window.location.href;
+/*$( document ).ready(function() {
+    let str = window.location.href;
 
-  if (str.indexOf('order/select#layout') !== -1) {
-    setTimeout(function () {
-      var start = str.indexOf('#');
-      var id = str.substr(start);
-      console.log('id', id);
-      var top = $(id).offset().top;
-      console.log('top', top);
-      console.log('top - 90', top - 90);
-      $('body,html').animate({
-        scrollTop: top - 90
-      }, 1000);
-    }, 100);
-  }
+    if(str.indexOf('order/select#layout') !== -1) {
+        setTimeout(function(){
+            let start = str.indexOf('#');
+            let id = str.substr(start);
+            console.log('id', id);
+            let top = $(id).offset().top;
+            console.log('top', top);
+            console.log('top - 90', top - 90);
+            $('body,html').animate({scrollTop: top - 90}, 1000);
+        },100);
+
+    }
 });
+*/
 
 /***/ }),
 

@@ -56,7 +56,7 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 });
 
-$( document ).ready(function() {
+/*$( document ).ready(function() {
     let str = window.location.href;
 
     if(str.indexOf('order/select#layout') !== -1) {
@@ -72,3 +72,4 @@ $( document ).ready(function() {
 
     }
 });
+*/
