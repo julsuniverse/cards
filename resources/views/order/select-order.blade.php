@@ -15,20 +15,6 @@
                             <b>{{ $layoutGroup[0]->theme->name_ru }}:</b>
                         @endif
                     </a>
-
-                    <ul class="list-unstyled">
-                        @foreach($layoutGroup as $layout)
-                            <li>
-                                <a href="#heading-{{ $layout->id }}">
-                                    @if(app()->getLocale() == 'en')
-                                        {{ $layout->name }}
-                                    @else
-                                        {{ $layout->name_ru }}
-                                    @endif
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
                 @endforeach
             </div>
 
