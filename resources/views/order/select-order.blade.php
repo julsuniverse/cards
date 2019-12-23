@@ -17,7 +17,7 @@
                     <ul class="list-unstyled">
                         @foreach($layoutGroup as $layout)
                             <li>
-                                <a href="{{ route('order.select-order') }}#{{ $layout->id }}">
+                                <a href="#heading-{{ $layout->id }}">
                                     @if(app()->getLocale() == 'en')
                                         {{ $layout->name }}
                                     @else
