@@ -79,6 +79,8 @@
                 <div class="mx-auto text-center mb-4 mt-3">
                     <a href="{{ route('order.index') }}" class="btn btn-outline-danger">{!!  __('order.btn-order-simple') !!}</a>
                 </div>
+
+                {!!  __('main-page.main-block-6') !!}
             </div>
         </div>
 
@@ -91,8 +93,6 @@
                 <p class="text-center font-weight-bold">
                     {!!  __('main-page.main-block-6-subtitle') !!}
                 </p>
-
-                {{--   {!!  __('main-page.main-block-6') !!} --}}
 
                 <div class="row text-center mt-3">
                     <div class="col-6">
