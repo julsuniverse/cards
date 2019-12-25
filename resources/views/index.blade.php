@@ -71,7 +71,7 @@
             </div>
         </div>
 
-        <div class="row info-block">
+        <div class="row info-block" id="consultation">
             <div class="col-12">
                 <h2 class="text-center mt-3">{!!  __('main-page.main-block-5-title') !!}</h2>
                 {!!  __('main-page.main-block-5') !!}

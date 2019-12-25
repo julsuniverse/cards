@@ -39,6 +39,9 @@
                     <a class="nav-link" href="{{ route('home') }}#lenorman">{{ trans('menu.lenorman') }}</a>
                 </li>
                 <li class="nav-item nav-item-custom">
+                    <a class="nav-link" href="{{ route('home') }}#consultation">{{ trans('menu.consultation') }}</a>
+                </li>
+                <li class="nav-item nav-item-custom">
                     <a class="nav-link" href="{{ route('home') }}#future">{{ trans('menu.future') }}</a>
                 </li>
                 <li class="nav-item nav-item-custom">
