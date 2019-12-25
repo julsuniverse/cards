@@ -51061,7 +51061,9 @@ function noselect() {
   return false;
 }
 
-if ("false" === true) {
+console.log("1");
+
+if ("1" == 1) {
   document.ondragstart = noselect; // запрет на перетаскивание
 
   document.onselectstart = noselect; // запрет на выделение элементов страницы

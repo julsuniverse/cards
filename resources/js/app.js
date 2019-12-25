@@ -60,7 +60,8 @@ function noselect() {
     return false;
 }
 
-if (process.env.MIX_APP_PROD === true) {
+console.log(process.env.MIX_APP_PROD);
+if (process.env.MIX_APP_PROD == 1) {
     document.ondragstart = noselect;
 // запрет на перетаскивание
     document.onselectstart = noselect;
