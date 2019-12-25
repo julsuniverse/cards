@@ -76,7 +76,7 @@
                 <h2 class="text-center mt-3">{!!  __('main-page.main-block-5-title') !!}</h2>
                 {!!  __('main-page.main-block-5') !!}
 
-                <div class="mx-auto text-center mb-1 mt-3">
+                <div class="mx-auto text-center mb-3 mt-3">
                     <a href="{{ route('order.index') }}" class="btn btn-outline-danger">{!!  __('order.btn-order-simple') !!}</a>
                 </div>
 
