@@ -51002,7 +51002,7 @@ module.exports = function(module) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var vue_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-froala-wysiwyg */ "./node_modules/vue-froala-wysiwyg/es/index.js");
+/* harmony import */ var vue_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-froala-wysiwyg */ "./node_modules/vue-froala-wysiwyg/es/index.js");
 /* harmony import */ var vue_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_0__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Require Froala Editor js file.
 
@@ -51056,6 +51056,36 @@ function setScrollMargin(attribute) {
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+function noselect() {
+  return false;
+}
+
+if ("false" === true) {
+  document.ondragstart = noselect; // запрет на перетаскивание
+
+  document.onselectstart = noselect; // запрет на выделение элементов страницы
+
+  document.oncontextmenu = noselect; // запрет на выведение контекстного меню
+
+  document.onkeydown = function (e) {
+    if (event.keyCode == 123) {
+      return false;
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+      return false;
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+      return false;
+    }
+
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+      return false;
+    }
+  };
+}
 /*$( document ).ready(function() {
     let str = window.location.href;
 
@@ -51073,37 +51103,6 @@ $(function () {
     }
 });
 */
-
-document.ondragstart = noselect; // запрет на перетаскивание
-
-document.onselectstart = noselect; // запрет на выделение элементов страницы
-
-document.oncontextmenu = noselect; // запрет на выведение контекстного меню
-
-function noselect() {
-  return false;
-}
-
-document.onkeydown = function (e) {
-  if (event.keyCode == 123) {
-    return false;
-  }
-
-  if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-    return false;
-  }
-
-  if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-    return false;
-  }
-
-  if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-    return false;
-  }
-};
-
-console.log(process.env.VUE_APP_PROD);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
