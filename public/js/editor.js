@@ -1,7 +1,13 @@
 setTimeout(function(){
-    //$('#content-area').ckeditor();
-    CKEDITOR.replace('description_ru');
-    CKEDITOR.replace('description_en');
-    CKEDITOR.replace('text_en');
-    CKEDITOR.replace('text_ru');
+    replaceEditor('description_ru');
+    replaceEditor('description_en');
+    replaceEditor('text_en');
+    replaceEditor('text_ru');
 },400);
+
+function replaceEditor(id) {
+    var editor = document.getElementById(id);
+    if (editor) {
+        CKEDITOR.replace(editor);
+    }
+}

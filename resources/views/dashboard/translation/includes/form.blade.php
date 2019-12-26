@@ -34,11 +34,11 @@
                         </div>
                     @else
                         <div class="form-group">
-                            <label for="text_en" class="col-form-label">English</label>
+                            <label for="text_en_simple" class="col-form-label">English</label>
                             <textarea
                                     class="form-control"
                                     rows="3"
-                                    id="text_en"
+                                    id="text_en_simple"
                                     name="text_en"
                                     v-model="content"
                             ></textarea>
@@ -70,12 +70,12 @@
                         </div>
                     @else
                         <div class="form-group">
-                            <label for="text_ru" class="col-form-label">Русский</label>
+                            <label for="text_ru_simple" class="col-form-label">Русский</label>
 
                             <textarea
                                         class="form-control"
                                         rows="3"
-                                        id="text_ru"
+                                        id="text_ru_simple"
                                         name="text_ru"
                                         v-model="content"
                                 ></textarea>
