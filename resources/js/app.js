@@ -39,9 +39,9 @@ $(".my-navbar a").on("click", function(e) {
 
     $('body,html').animate({scrollTop: top}, 1000);*/
 });
-$(".layouts-list a").on("click", function(e) {
+/*$(".layouts-list a").on("click", function(e) {
     setScrollMargin($(this));
-});
+});*/
 
 function setScrollMargin(attribute) {
     let str = attribute.attr('href');

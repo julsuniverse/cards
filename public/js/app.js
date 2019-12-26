@@ -51039,9 +51039,9 @@ $(".my-navbar a").on("click", function (e) {
   let top = $(anchor).offset().top - 90;
    $('body,html').animate({scrollTop: top}, 1000);*/
 });
-$(".layouts-list a").on("click", function (e) {
-  setScrollMargin($(this));
-});
+/*$(".layouts-list a").on("click", function(e) {
+    setScrollMargin($(this));
+});*/
 
 function setScrollMargin(attribute) {
   var str = attribute.attr('href');
