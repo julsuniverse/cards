@@ -13898,6 +13898,10 @@ a.btn:hover {
   .navbar-collapse ul li a {
     height: 25px;
   }
+
+  .brown-navbar {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+  }
 }
 
 @media (max-width: 767px) {
