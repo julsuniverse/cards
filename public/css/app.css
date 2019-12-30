@@ -13887,7 +13887,7 @@ a.btn:hover {
 
 @media (max-width: 1200px) {
   .main-content p {
-    text-align: left;
+    text-align: left !important;
   }
 
   .btn-consultation {

@@ -36,7 +36,7 @@
     @endsection
 
 @section('content')
-    <div class="main-content">
+    <div class="main-content main-page-content">
 
         <div class="row info-block">
             <div class="col-12 text-justify mt-2">

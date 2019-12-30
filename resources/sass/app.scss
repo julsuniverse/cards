@@ -170,9 +170,9 @@ a, a.btn {
 }
 
 @media(max-width:1200px) {
-  .main-content {
+  .main-page-content {
     p {
-      text-align: left;
+      text-align: left !important;
     }
   }
 
