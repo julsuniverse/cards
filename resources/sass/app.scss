@@ -170,6 +170,12 @@ a, a.btn {
 }
 
 @media(max-width:1200px) {
+  .main-content {
+    p {
+      text-align: left;
+    }
+  }
+
   .btn-consultation {
     font-size: 12px;
     width: 180px;
