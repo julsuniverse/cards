@@ -163,6 +163,7 @@ a, a.btn {
 
 .daily-card-img {
   max-height: 420px;
+  max-width: 100%;
 }
 
 .btn-consultation {
@@ -173,6 +174,9 @@ a, a.btn {
   .main-page-content {
     p {
       text-align: left !important;
+    }
+    div {
+      line-height: 18px;
     }
   }
 

@@ -13879,6 +13879,7 @@ a.btn:hover {
 
 .daily-card-img {
   max-height: 420px;
+  max-width: 100%;
 }
 
 .btn-consultation {
@@ -13888,6 +13889,10 @@ a.btn:hover {
 @media (max-width: 1200px) {
   .main-page-content p {
     text-align: left !important;
+  }
+
+  .main-page-content div {
+    line-height: 18px;
   }
 
   .btn-consultation {
