@@ -2,7 +2,7 @@
 @section('pre-content')
 <div class="container top-container">
     <div class="row">
-        <div class="col-6">
+        <div class="col-lg-6 col-md-12">
             <div class="top-block">
                 <h1 class="display-3 logo">{{ trans('menu.name') }}</h1>
                 <p class="lead font-weight-bold">
@@ -17,16 +17,16 @@
                     </p>
                 </div>
                 <!--<div class="top-block-buttons">-->
-                    <div class="col-sm-6  text-center mt-md-5">
-                        <a style="width: 200px" href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold">{!!  __('main-page.top-block-btn1') !!}</a>
+                    <div class="col-6 text-center mt-md-5">
+                        <a href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn1') !!}</a>
                     </div>
-                    <div class="col-sm-6  text-center mt-md-5">
-                        <a style="width: 200px" href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold">{!!  __('main-page.top-block-btn2') !!}</a>
+                    <div class="col-6 text-center mt-md-5">
+                        <a href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn2') !!}</a>
                     </div>
                 <!--</div>-->
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6 col-md-12 text-center">
             <img src="{{ asset('images/top-img.gif') }}" />
         </div>
     </div>

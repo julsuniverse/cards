@@ -15,7 +15,7 @@
             @endisset
         </div>
 
-        <div class="col-8">
+        <div class="col-md-8 col-sm-12 order-md-1 order-sm-2">
 
             <form method="POST" action="{{ route('order.store') }}">
                 @csrf
@@ -70,7 +70,7 @@
             </form>
         </div>
 
-        <div class="col-4">
+        <div class="col-md-4 col-sm-12 order-md-2 order-sm-1">
             <div>
                 <hr class="divider" />
                 {!! __('order-form.example') !!}

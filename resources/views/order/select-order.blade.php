@@ -35,7 +35,7 @@
                     @foreach($layoutGroup as $layout)
                         <div class="card">
                             <div class="card-header" id="heading-{{$layout->id}}">
-                                <p class="mb-0">
+                                <div class="mb-0">
                                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-{{$layout->id}}" aria-expanded="true" aria-controls="collapse-{{$layout->id}}">
                                         @if(app()->getLocale() == 'en')
                                             {{ $layout->name }}
@@ -53,8 +53,10 @@
                                             @endif
                                         @endif
                                     </button>
-                                    <a href="{{ route('order.text-order', $layout) }}" class="btn btn-success float-right">{{ __('order.btn-order') }}</a>
-                                </p>
+                                    <div class="text-center float-lg-right">
+                                        <a href="{{ route('order.text-order', $layout) }}" class="btn btn-success">{{ __('order.btn-order') }}</a>
+                                    </div>
+                                </div>
                             </div>
 
                             <div id="collapse-{{$layout->id}}" class="collapse" aria-labelledby="heading-{{$layout->id}}" data-parent="#layoutsAccordion">

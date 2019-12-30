@@ -164,3 +164,54 @@ a, a.btn {
 .daily-card-img {
   max-height: 420px;
 }
+
+.btn-consultation {
+  width: 200px;
+}
+
+@media(max-width:1200px) {
+  .btn-consultation {
+    font-size: 12px;
+    width: 180px;
+  }
+
+  .navbar-collapse {
+    ul li {
+      margin: auto;
+
+      a {
+        height: 25px;
+      }
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .main-content {
+    padding: 0;
+  }
+
+  .btn-consultation {
+    margin-top: 20px;
+    font-size: 11px;
+    width: 155px;
+  }
+}
+
+@media(max-width:575px) {
+  .btn-consultation {
+    font-size: 10px;
+    width: 145px;
+  }
+
+  .logo {
+    font-size: 45px;
+    min-height: 75px;
+  }
+}
+@media(max-width:450px) {
+  .logo {
+    font-size: 35px;
+    min-height: 90px;
+  }
+}

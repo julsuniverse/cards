@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light brown-navbar my-navbar fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-light bg-light brown-navbar my-navbar fixed-top">
         <a class="navbar-brand" href="{{ route('home') }}">{{ trans('menu.name') }}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav ml-auto text-right">
+            <ul class="navbar-nav ml-auto text-center">
 
                 <li class="nav-item active nav-item-custom">
                         <a class="nav-link " href="{{ route('change-locale') }}">
