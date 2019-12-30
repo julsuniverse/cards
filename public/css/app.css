@@ -13942,5 +13942,10 @@ a.btn:hover {
     font-size: 35px;
     min-height: 90px;
   }
+
+  .btn-consultation {
+    width: 120px;
+    padding: 2px;
+  }
 }
 
