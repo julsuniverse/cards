@@ -138,10 +138,10 @@
 
                 {!!  __('main-page.main-block-8') !!}
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 {!!  __('main-page.main-block-9') !!}
             </div>
-            <div class="col-6">
+            <div class="col-4 text-center m-auto">
                 <img src="{{ asset('images/story.jpg') }}" class="daily-card-img" />
             </div>
         </div>
