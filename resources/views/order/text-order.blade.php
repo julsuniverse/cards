@@ -12,6 +12,8 @@
                         {!! $layout->name_ru !!}
                     @endif
                 </p>
+            @else
+                <div class="mb-2">{{ __('order.price') }}</div>
             @endisset
         </div>
 

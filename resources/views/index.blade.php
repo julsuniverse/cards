@@ -134,16 +134,19 @@
         <div class="row info-block" id="future">
             <div class="col-12">
                 <h2 class="text-center">{!!  __('main-page.main-block-7-title') !!}</h2>
-
                 {!!  __('main-page.main-block-7') !!}
 
                 {!!  __('main-page.main-block-8') !!}
-
+            </div>
+            <div class="col-6">
                 {!!  __('main-page.main-block-9') !!}
-
-                <hr class="divider"/>
+            </div>
+            <div class="col-6">
+                <img src="{{ asset('images/story.jpg') }}" class="daily-card-img" />
             </div>
         </div>
+
+        <hr class="divider"/>
 
         <div class="row info-block" id="oracle-runes">
             <div class="col-12">

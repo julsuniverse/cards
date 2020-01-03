@@ -14,6 +14,11 @@
                             <a href="{{ route('order.select-order') }}" class="btn btn-outline-danger">{{ __('order.btn-order-select') }}</a>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            {{ __('order.adult') }}
+                        </div>
+                    </div>
                 </div>
 
 
