@@ -16,7 +16,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12 text-center">
-                            {{ __('order.adult') }}
+                            {!! __('order.adult') !!}
                         </div>
                     </div>
                 </div>

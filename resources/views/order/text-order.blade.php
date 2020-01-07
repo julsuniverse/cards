@@ -13,7 +13,7 @@
                     @endif
                 </p>
             @else
-                <div class="mb-2">{{ __('order.price') }}</div>
+                <div class="mb-2">{!! __('order.price') !!}  </div>
             @endisset
         </div>
 
