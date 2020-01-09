@@ -13786,6 +13786,7 @@ p {
 .main-content {
   border-radius: 10px;
   padding: 0px 50px;
+  min-height: calc(80vh - 58px);
 }
 
 .lead {
@@ -13884,6 +13885,18 @@ a.btn:hover {
 
 .btn-consultation {
   width: 200px;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 25px 0;
+  border-top: 1px solid #e4e4e4;
+  background-color: #ddd5cd;
+}
+
+footer .fondy-logo {
+  max-width: 300px;
+  margin: 10px 0;
 }
 
 @media (max-width: 1200px) {

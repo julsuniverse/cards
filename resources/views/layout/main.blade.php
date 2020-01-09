@@ -56,6 +56,12 @@
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link " href="{{ route('home') }}#oracle-runes">{!! trans('menu.oracle-runes') !!}</a>
                 </li>
+                <li class="nav-item nav-item-custom mr-1">
+                    <a href="mailto:info@light.space" data-toggle="tooltip" data-placement="bottom" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item nav-item-custom">
+                    <a href="tg://resolve?domain=SilverTBot" data-toggle="tooltip" data-placement="bottom" title="Telegram"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                </li>
 
                 @if(Auth::user())
                     <li class="nav-item active nav-item-custom ">
@@ -97,11 +103,24 @@
         </div>
     </main>
 
-    <!--<footer class="footer">
-        <div class="container">
-            <span class="text-muted">Серебрянная нить &copy; {{ date('Y') }}</span>
+    <footer class="footer">
+        <div class="container text-center">
+            <div>
+                <p>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <a href="mailto:info@light.space">info@tarot-light.space</a>
+                </p>
+                <p>
+                    <i class="fa fa-telegram" aria-hidden="true"></i>
+                    <a href="tg://resolve?domain=SilverTBot">Telegram</a>
+                </p>
+            </div>
+            <p><span class="text-muted">{{ __('menu.name') }} &copy; {{ date('Y') }}</span></p>
+
+            <img class="fondy-logo" src="{{ asset('images/master_visa_fondy.png') }}" style="">
+
         </div>
-    </footer>-->
+    </footer>
     <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>
