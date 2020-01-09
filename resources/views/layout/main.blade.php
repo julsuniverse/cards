@@ -113,7 +113,7 @@
                 </p>
                 <p>
                     <i class="fa fa-telegram" aria-hidden="true"></i>
-                    <a href="tg://resolve?domain=SilverTBot">Telegram</a>
+                    <a href="tg://resolve?domain=SilverTBot">@SilverTBot</a>
                 </p>
             </div>
             <p><span class="text-muted">{{ __('menu.name') }} &copy; {{ date('Y') }}</span></p>
