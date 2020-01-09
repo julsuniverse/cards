@@ -50,18 +50,6 @@
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order') }}</a>
                 </li>
-                <li class="nav-item nav-item-custom">
-                    <a class="nav-link" href="{{ route('home') }}#oracle-tarot">{{ trans('menu.oracle-tarot') }}</a>
-                </li>
-                <li class="nav-item nav-item-custom">
-                    <a class="nav-link " href="{{ route('home') }}#oracle-runes">{!! trans('menu.oracle-runes') !!}</a>
-                </li>
-                <li class="nav-item nav-item-custom mr-1">
-                    <a href="mailto:info@light.space" data-toggle="tooltip" data-placement="bottom" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                </li>
-                <li class="nav-item nav-item-custom">
-                    <a href="tg://resolve?domain=SilverTBot" data-toggle="tooltip" data-placement="bottom" title="Telegram"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-                </li>
 
                 @if(Auth::user())
                     <li class="nav-item active nav-item-custom ">
@@ -91,6 +79,13 @@
                         <a class="nav-link" href="{{ route('login') }}"><i class="fa fa-user-circle" aria-hidden="true"></i> {{ trans('menu.login') }}</a>
                     </li>
                 @endif
+
+                <li class="nav-item nav-item-custom">
+                    <a class="nav-link" href="{{ route('home') }}#oracle-tarot">{{ trans('menu.oracle-tarot') }}</a>
+                </li>
+                <li class="nav-item nav-item-custom">
+                    <a class="nav-link " href="{{ route('home') }}#oracle-runes">{!! trans('menu.oracle-runes') !!}</a>
+                </li>
             </ul>
         </div>
     </nav>
