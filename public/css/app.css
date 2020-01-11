@@ -13777,7 +13777,7 @@ p {
 }
 
 .navbar.my-navbar a {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .navbar.my-navbar .navbar-brand {
@@ -13848,7 +13848,7 @@ a.btn:hover {
 
 .top-container {
   background-color: rgba(255, 255, 255, 0.24);
-  margin-top: 20px;
+  margin-top: 18px;
   margin-bottom: 15px;
   padding: 20px 50px 15px;
 }
