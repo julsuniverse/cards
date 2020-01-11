@@ -118,7 +118,7 @@
             </div>
             <p><span class="text-muted">{{ __('menu.name') }} &copy; {{ date('Y') }}</span></p>
 
-            <img class="fondy-logo" src="{{ asset('images/master_visa_fondy.png') }}" style="">
+            <div class="mt-2">{!! __('footer.footer-text') !!}</div>
 
         </div>
     </footer>
