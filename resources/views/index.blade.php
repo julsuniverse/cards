@@ -17,10 +17,10 @@
                     </p>
                 </div>
                 <!--<div class="top-block-buttons">-->
-                    <div class="col-6 text-center mt-md-5">
+                    <div class="col-6 text-center main-top-btn">
                         <a href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn1') !!}</a>
                     </div>
-                    <div class="col-6 text-center mt-md-5">
+                    <div class="col-6 text-center main-top-btn">
                         <a href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn2') !!}</a>
                     </div>
                 <!--</div>-->

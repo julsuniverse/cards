@@ -11,6 +11,7 @@ class FooterSeeder extends Seeder
             'group' => 'footer',
             'key' => 'footer-text',
             'text' => ['en' => '', 'ru' => ''],
+            'is_html' => true,
         ]);
     }
 }

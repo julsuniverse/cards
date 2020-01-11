@@ -13750,7 +13750,9 @@ h3 {
 
 .logo {
   margin-bottom: 15px;
-  min-height: 135px;
+  min-height: 78px;
+  line-height: 65px;
+  font-size: 54px;
 }
 
 h4 {
@@ -13852,7 +13854,7 @@ a.btn:hover {
 }
 
 .top-container .top-block {
-  padding: 20px;
+  padding: 0 20px 20px;
   text-align: center;
 }
 
@@ -13863,6 +13865,10 @@ a.btn:hover {
 
 .top-container .top-block-buttons {
   padding-top: 40px;
+}
+
+.main-top-btn {
+  margin-top: 28px !important;
 }
 
 .card-content {
