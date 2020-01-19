@@ -25,7 +25,8 @@ class OrderService
                 ]);
             } else {
                 $user = User::find($request->user);
-        }
+
+            }
 
             $order = Order::create([
                 'user_id' => $user->id,
@@ -35,13 +36,14 @@ class OrderService
             ]);
 
             if (!$request->user) {
-                \Mail::to($user)->send(new RegistrationEmail($user, $password));
+                \Mail::to($user->email)->send(new RegistrationEmail($user, $password));
             }
 
-            \Mail::to(env('ADMIN_EMAIL_PERSONAL'))->send(new NewOrderAdminEmail($order));
+            $adminEmail = env('ADMIN_EMAIL_PERSONAL');
+            \Mail::to($adminEmail)->send(new NewOrderAdminEmail($order));
 
         } catch (\Exception $e) {
-            \Log::error($e->getMessage(), ['user' => $request->user]);
+            \Log::error($e->getMessage(), ['error' => $e->getTrace(), 'user' => $request->user]);
             throw new \DomainException('Order creating error');
         }
     }

@@ -46,7 +46,7 @@ class OrderController
 
     public function success()
     {
-        $isUserNew = Auth::user()->isNew();
-        return view('order.success', compact('isUserNew'));
+        $isUserOld = Auth::user();
+        return view('order.success', compact('isUserOld'));
     }
 }

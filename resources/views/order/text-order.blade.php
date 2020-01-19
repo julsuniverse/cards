@@ -70,7 +70,7 @@
                     <input type="hidden" name="layout" value="{{ $layout->id }}">
                 @endisset
                 <input type="hidden" name="price" value="@isset($layout->price_uah) {{ $layout->price_uah }} @else 300  @endisset">
-                <input type="hidden" name="user" value="@isset($user) {{ $user->id }} @else null @endisset">
+                <input type="hidden" name="user" value="@isset($user) {{ $user->id }} @else {{ null }} @endisset">
 
                 <button type="submit" class="btn btn-outline-danger">{{ __('order.btn-order') }}</button>
             </form>

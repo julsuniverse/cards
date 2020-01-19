@@ -17,8 +17,6 @@ class OrderIsPayedEmail extends Mailable
      */
     private $order;
 
-    public $from;
-
     /**
      * @param string $locale
      * @param Order $order
@@ -28,7 +26,6 @@ class OrderIsPayedEmail extends Mailable
         $this->locale = $locale;
         $this->appName = config('app.name');
         $this->order = $order;
-        $this->from = env('ADMIN_EMAIL');
     }
 
     /**
@@ -39,12 +36,12 @@ class OrderIsPayedEmail extends Mailable
         if ($this->locale == 'en') {
             return $this
                 ->subject('Your order is ready! -'  . $this->appName)
-                ->markdown('emails.en.order-is-payed')
+                ->view('emails.en.order-is-payed')
                 ->with('order', $this->order);
         } else {
             return $this
                 ->subject('Ваш заказ готов! - ' . $this->appName)
-                ->markdown('emails.ru.order-is-payed')
+                ->view('emails.ru.order-is-payed')
                 ->with('order', $this->order);
         }
     }

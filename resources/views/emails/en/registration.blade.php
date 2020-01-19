@@ -1,22 +1,43 @@
-@component('mail::message')
+@extends('emails.layout')
 
-    <h1>Ваш заказ принят!</h1>
+@section('content')
+    <div class="content">
 
-    <p>Как только гадание будет выполнено, вам придет уведомление на email.</p>
-    <p>После этого будет необходимо оплатить заказ. После оплаты ваше гадание будет доступно в личном кабинете.</p>
+        <h1>Your order have been received!</h1>
 
-    <p>Данные для входа:</p>
-    <ul>
-        <li>
-            <b>Логин:</b> {{ $user->email }}
-        </li>
-        <li>
-            <b>Пароль:</b> {{ $password }}
-        </li>
-    </ul>
+        <p>Dear {{ $user->name }}</p>
+        <p>Thank you for the order</p>
 
-    @component('mail::button', ['url' => route('cabinet')])
-        Войти в кабинет
-    @endcomponent
+        <p>Your cards-reading <b>will be ready</b> within 48 hours, <b>and you will get an Email</b> confirming that your order is ready and can be paid and acquired.</p>
 
-@endcomponent
+        <p>Credentials for your account:</p>
+        <ul>
+            <li>
+                <b>Login:</b> {{ $user->email }}
+            </li>
+            <li>
+                <b>Password:</b> {{ $password }}
+            </li>
+        </ul>
+
+
+        <a href="{{ route('cabinet') }}" class="email-btn">Enter to your account</a>
+
+        <p>The payment can be made by money transfer to my bank account number.</p>
+
+        <p>After the payment, you get an access to your cards-reading, on your personal page of the website.</p>
+
+        <p>The information of your personal page is <b>confidential</b>. It can be accessed only by the person who has the password.</p>
+
+        <p>
+            Kind regards, <br>
+            Svetlana Grabovskaya
+        </p>
+
+        <p>
+            PRIVATE CARDS READING <br>
+            Esoteric services for leisure time
+        </p>
+
+    </div>
+@endsection

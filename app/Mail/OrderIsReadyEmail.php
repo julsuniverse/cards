@@ -13,7 +13,6 @@ class OrderIsReadyEmail extends Mailable
     use Queueable, SerializesModels;
     private $appName;
 
-    public $from;
     /**
      * @param string $locale
      */
@@ -21,7 +20,6 @@ class OrderIsReadyEmail extends Mailable
     {
         $this->locale = $locale;
         $this->appName = config('app.name');
-        $this->from = env('ADMIN_EMAIL');
     }
 
     /**
@@ -32,11 +30,11 @@ class OrderIsReadyEmail extends Mailable
         if ($this->locale == 'en') {
             return $this
                 ->subject('Your order is ready! -'  . $this->appName)
-                ->markdown('emails.en.order-is-ready');
+                ->view('emails.en.order-is-ready');
         } else {
             return $this
                 ->subject('Ваш заказ готов! - ' . $this->appName)
-                ->markdown('emails.ru.order-is-ready');
+                ->view('emails.ru.order-is-ready');
         }
     }
 }

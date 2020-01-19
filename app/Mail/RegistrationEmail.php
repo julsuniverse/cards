@@ -19,8 +19,6 @@ class RegistrationEmail extends Mailable
     /** @var string $password */
     public $password;
 
-    public $from;
-
     /**
      * RegistrationEmail constructor.
      * @param User $user
@@ -30,7 +28,6 @@ class RegistrationEmail extends Mailable
     {
         $this->user = $user;
         $this->password = $password;
-        $this->from = env('ADMIN_EMAIL');
     }
 
     /**
@@ -41,9 +38,9 @@ class RegistrationEmail extends Mailable
     public function build()
     {
         if (App::getLocale() == 'en') {
-            return $this->markdown('emails.en.registration')->with(['user' => $this->user, 'password' => $this->password]);
+            return $this->view('emails.en.registration')->with(['user' => $this->user, 'password' => $this->password]);
         } else {
-            return $this->markdown('emails.ru.registration')->with(['user' => $this->user, 'password' => $this->password]);
+            return $this->view('emails.ru.registration')->with(['user' => $this->user, 'password' => $this->password]);
         }
     }
 }

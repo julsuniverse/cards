@@ -2,14 +2,14 @@
 
 @section('content')
     <div class="row">
-        <div class="col-12 mt-5">
-            <div class="p-5">
+        <div class="col-12">
+            <div class="p-1">
                 <h1 class="text-center">{{ __('order-success.title') }}</h1>
-                @if($isUserNew)
+                @if(!$isUserOld)
                     <p class="font-weight-bold text-center">{{ __('order-success.info') }}</p>
                 @endif
                 <div class="row text-center mt-3">
-                    @if($isUserNew)
+                    @if(!$isUserOld)
                         <div class="col-6">
                             <a href="{{ route('login') }}" class="btn btn-danger">{{ __('order-success.btn-cabinet') }}</a>
                         </div>
@@ -21,5 +21,4 @@
             </div>
         </div>
     </div>
-
 @endsection

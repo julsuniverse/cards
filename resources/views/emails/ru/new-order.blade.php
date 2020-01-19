@@ -1,17 +1,17 @@
-@component('mail::message')
+@extends('emails.layout')
 
-    <h1>Новый заказ!</h1>
+@section('content')
+    <div class="content">
+        <h1>Новый заказ!</h1>
 
-    <p>Дата: {{ $order->created_at->format('d M, Y') }}</p>
-    @if($order->layou)
-    <p>{{ $order->layout->name_ru }}</p>
-    @endif
+        <p>Дата: {{ $order->created_at->format('d M, Y') }}</p>
+        @if($order->layout)
+            <p>{{ $order->layout->name_ru }}</p>
+        @endif
+        <span>Описание:</span>
+        <p>{{ $order->description }}</p>
+        <p>Цена: {{ $order->price }}</p>
 
-    <p>{{ $order->description }}</p>
-    <p>{{ $order->price }}</p>
-
-    @component('mail::button', ['url' => route('dashboard.dashboard.order.index')])
-        Детали заказа
-    @endcomponent
-
-@endcomponent
+        <a href="{{ route('dashboard.order.index') }}" class="email-btn">Детали заказа</a>
+    </div>
+@endsection

@@ -24,7 +24,7 @@ class OrderRequest extends FormRequest
             'email' => 'required_without:user|email|unique:users|max:255',
             'date' => 'required_without:user|string|max:255',
             'text' => 'required',
-            'user' => 'nullable|integer'
+            'user' => 'nullable'
         ];
     }
 
