@@ -19,6 +19,8 @@ class RegistrationEmail extends Mailable
     /** @var string $password */
     public $password;
 
+    public $from;
+
     /**
      * RegistrationEmail constructor.
      * @param User $user
@@ -28,6 +30,7 @@ class RegistrationEmail extends Mailable
     {
         $this->user = $user;
         $this->password = $password;
+        $this->from = env('ADMIN_EMAIL');
     }
 
     /**

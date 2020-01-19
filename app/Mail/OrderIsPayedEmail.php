@@ -8,19 +8,26 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class OrderIsReadyEmail extends Mailable
+class OrderIsPayedEmail extends Mailable
 {
     use Queueable, SerializesModels;
     private $appName;
+    /**
+     * @var Order
+     */
+    private $order;
 
     public $from;
+
     /**
      * @param string $locale
+     * @param Order $order
      */
-    public function __construct(string $locale)
+    public function __construct(string $locale, Order $order)
     {
         $this->locale = $locale;
         $this->appName = config('app.name');
+        $this->order = $order;
         $this->from = env('ADMIN_EMAIL');
     }
 
@@ -32,11 +39,13 @@ class OrderIsReadyEmail extends Mailable
         if ($this->locale == 'en') {
             return $this
                 ->subject('Your order is ready! -'  . $this->appName)
-                ->markdown('emails.en.order-is-ready');
+                ->markdown('emails.en.order-is-payed')
+                ->with('order', $this->order);
         } else {
             return $this
                 ->subject('Ваш заказ готов! - ' . $this->appName)
-                ->markdown('emails.ru.order-is-ready');
+                ->markdown('emails.ru.order-is-payed')
+                ->with('order', $this->order);
         }
     }
 }

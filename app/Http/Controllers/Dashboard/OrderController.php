@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Mail\OrderIsPayedEmail;
 use App\Mail\OrderIsReadyEmail;
 use App\Models\Order;
 use App\Services\ImageService;
@@ -51,6 +52,8 @@ class OrderController extends Controller
 
             if ($order->status == Order::STATUS_READY_FOR_PAYMENT && $oldStatus != Order::STATUS_READY_FOR_PAYMENT) {
                 Mail::to($order->user->email)->send(new OrderIsReadyEmail($order->user->locale ?? 'en'));
+            } elseif ($order->status == Order::STATUS_PAYED && $oldStatus != Order::STATUS_PAYED) {
+                Mail::to($order->user->email)->send(new OrderIsPayedEmail($order->user->locale ?? 'en', $order));
             }
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());

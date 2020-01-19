@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Http\Requests\User\OrderRequest;
+use App\Mail\NewOrderAdminEmail;
 use App\Mail\RegistrationEmail;
 use App\Models\Order;
 use App\Models\User;
@@ -26,20 +27,22 @@ class OrderService
                 $user = User::find($request->user);
         }
 
-            Order::create([
+            $order = Order::create([
                 'user_id' => $user->id,
                 'layout_id' => $request->layout ?? null,
                 'description' =>$request->text,
                 'price' => $request->price
             ]);
+
+            if (!$request->user) {
+                \Mail::to($user)->send(new RegistrationEmail($user, $password));
+            }
+
+            \Mail::to(env('ADMIN_EMAIL_PERSONAL'))->send(new NewOrderAdminEmail($order));
+
         } catch (\Exception $e) {
             \Log::error($e->getMessage(), ['user' => $request->user]);
             throw new \DomainException('Order creating error');
-        }
-
-
-        if (!$request->user) {
-            \Mail::to($user)->send(new RegistrationEmail($user, $password));
         }
     }
 }
