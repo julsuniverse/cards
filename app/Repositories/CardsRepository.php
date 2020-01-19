@@ -75,7 +75,6 @@ class CardsRepository
                 ]);
             }
         } catch (\Exception $e) {
-            throw new \DomainException($e->getMessage());
             throw new \DomainException('Card updating error');
         }
     }

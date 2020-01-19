@@ -36,19 +36,21 @@ class OrderController extends Controller
     {
         try {
             $oldStatus = $order->status;
-            $photo = '';
 
             $order->update([
                 'price' => $request->price,
                 'status' => $request->status,
                 'answer' => $request->answer,
-                'photo' => $photo
             ]);
 
-            $photo = $imageService->store($order->id, $request->photo, 'orders');
-            $order->update([
-                'photo' => $photo
-            ]);
+            if ($request->photo) {
+                $imageService->destroyByEntityId('cards', $order->id);
+                $photo = $imageService->store($order->id, $request->photo, 'orders');
+                $order->update([
+                    'photo' => $photo
+                ]);
+            }
+
 
             if ($order->status == Order::STATUS_READY_FOR_PAYMENT && $oldStatus != Order::STATUS_READY_FOR_PAYMENT) {
                 Mail::to($order->user->email)->send(new OrderIsReadyEmail($order->user->locale ?? 'en'));
