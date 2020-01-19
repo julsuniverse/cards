@@ -25,7 +25,7 @@
                 @if(!$user)
                     <div class="form-group">
                         <label for="name">{{ __('order-form.name') }}</label>
-                        <input type="text" class="form-control @if ($errors->has('name')) is-invalid @endif" id="name" name="name" placeholder="Имя" value="{{ old('name') }}">
+                        <input type="text" class="form-control @if ($errors->has('name')) is-invalid @endif" id="name" name="name" placeholder="{{ __('order.order.name') }}" value="{{ old('name') }}">
                         <small id="emailHelp" class="form-text text-muted">{!! __('order-form.name-help') !!}</small>
                         @if ($errors->has('name'))
                             <div class="invalid-feedback">
@@ -35,7 +35,7 @@
                     </div>
                     <div class="form-group">
                         <label for="email">{{ __('order-form.email') }}</label>
-                        <input type="email" class="form-control @if ($errors->has('email')) is-invalid @endif" id="email" name="email" aria-describedby="emailHelp" placeholder="Введите email" value="{{ old('email') }}">
+                        <input type="email" class="form-control @if ($errors->has('email')) is-invalid @endif" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" value="{{ old('email') }}">
                         <small id="emailHelp" class="form-text text-muted">{!! __('order-form.email-help') !!}</small>
                         @if ($errors->has('email'))
                             <div class="invalid-feedback">
