@@ -180,6 +180,12 @@ footer {
     margin: 10px 0;
   }
 }
+.card {
+  border: none;
+}
+.card-body {
+  background-color: #f8f5f3;
+}
 
 @media(max-width:1200px) {
   .main-page-content {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Mail\OrderIsReadyEmail;
 use App\Models\Order;
+use App\Services\ImageService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -26,16 +27,27 @@ class OrderController extends Controller
 
     public function edit(Order $order)
     {
-        $order = $order->with('user')->with('layout')->first();
+        $order = Order::where('id',$order->id)->with('user')->with('layout')->first();
         return view('dashboard.order.edit')->with(compact('order'));
     }
 
-    public function update(Request $request, Order $order)
+    public function update(Request $request, Order $order, ImageService $imageService)
     {
         try {
-            $answer = explode('<p data-f-id="pbf"', $request->answer)[0];
             $oldStatus = $order->status;
-            $order->update(array_merge($request->input(), ['answer' => $answer]));
+            $photo = '';
+
+            $order->update([
+                'price' => $request->price,
+                'status' => $request->status,
+                'answer' => $request->answer,
+                'photo' => $photo
+            ]);
+
+            $photo = $imageService->store($order->id, $request->photo, 'orders');
+            $order->update([
+                'photo' => $photo
+            ]);
 
             if ($order->status == Order::STATUS_READY_FOR_PAYMENT && $oldStatus != Order::STATUS_READY_FOR_PAYMENT) {
                 Mail::to($order->user->email)->send(new OrderIsReadyEmail($order->user->locale ?? 'en'));

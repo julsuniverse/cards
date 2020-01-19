@@ -21,6 +21,7 @@ Route::group([
     Route::post('/check', 'User\CabinetController@check')->name('check');
     Route::put('/{user}/edit', 'User\CabinetController@edit')->name('cabinet.edit');
     Route::put('/{user}/change-password', 'User\CabinetController@changePassword')->name('cabinet.password');
+    Route::get('/{order}/show-answer', 'User\CabinetController@showAnswer')->name('cabinet.show-answer');
 });
 
 Route::group([

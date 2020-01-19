@@ -44,4 +44,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Order::class);
     }
+
+    public function isNew()
+    {
+        return $this->orders()->count() === 1;
+    }
 }

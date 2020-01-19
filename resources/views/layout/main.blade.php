@@ -90,7 +90,7 @@
                     <a href="mailto:info@light.space" data-toggle="tooltip" data-placement="bottom" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item nav-item-custom">
-                    <a href="tg://resolve?domain=SilverTBot" data-toggle="tooltip" data-placement="bottom" title="Email"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                    <a href="tg://resolve?domain=SilverTBot" data-toggle="tooltip" data-placement="bottom" title="Telegram"><i class="fa fa-telegram" aria-hidden="true"></i></a>
                 </li>
             </ul>
         </div>

@@ -20,10 +20,11 @@ class OrderRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users|max:255',
-            'date' => 'required|string|max:255',
+            'name' => 'required_without:user|string|max:255',
+            'email' => 'required_without:user|email|unique:users|max:255',
+            'date' => 'required_without:user|string|max:255',
             'text' => 'required',
+            'user' => 'nullable|integer'
         ];
     }
 

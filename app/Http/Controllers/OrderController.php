@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\User\OrderRequest;
 use App\Models\Layout;
 use App\Services\OrderService;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController
 {
@@ -23,7 +24,8 @@ class OrderController
 
     public function textOrder(Layout $layout = null)
     {
-        return view('order.text-order')->with(compact('layout'));
+        $user = Auth::user();
+        return view('order.text-order')->with(compact('layout', 'user'));
     }
 
     public function selectOrder()
@@ -34,12 +36,17 @@ class OrderController
 
     public function store(OrderRequest $request)
     {
-        $this->orderService->create($request->all());
+        try {
+            $this->orderService->create($request);
+        } catch (\DomainException $e){
+            return redirect()->back()->with('error', $e->getMessage());
+        }
         return redirect()->route('order.success');
     }
 
     public function success()
     {
-        return view('order.success');
+        $isUserNew = Auth::user()->isNew();
+        return view('order.success', compact('isUserNew'));
     }
 }

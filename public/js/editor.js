@@ -3,6 +3,7 @@ setTimeout(function(){
     replaceEditor('description_en');
     replaceEditor('text_en');
     replaceEditor('text_ru');
+    replaceEditor('answer');
 },400);
 
 function replaceEditor(id) {

@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-    <h3 class="text-left">{{ __('cabinet.title') }}, {{ $user->name }}</h3>
+    <h3 class="text-left">{{ __('cabinet.title') }} {{ $user->name }}</h3>
     <div class="">
         <nav>
             <div class="nav nav-tabs" id="profile-tab" role="tablist">
@@ -14,10 +14,16 @@
             <div class="tab-pane fade @if(!session('tab') ) show active @endif" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <div class="list-group mt-2">
                     @foreach($orders as $order)
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <div class="list-group-item list-group-item-action mb-1">
                             <i class="fa fa-calendar" aria-hidden="true"></i> {{ $order->created_at->format('d-m-Y') }}
                             @if( $order->status == 'new')
                                 <span class="badge badge-primary badge-pill">{{ __('order-statuses.status.new') }}</span>
+                            @elseif($order->status == 'processing')
+                                <span class="badge badge-warning badge-pill">{{ __('order-statuses.status.processing') }}</span>
+                            @elseif($order->status == 'ready')
+                                <span class="badge badge-info badge-pill">{{ __('order-statuses.status.ready') }}</span>
+                            @elseif($order->status == 'payed')
+                                <span class="badge badge-success badge-pill">{{ __('order-statuses.status.payed') }}</span>
                             @endif
 
                             @if($order->layout)
@@ -30,7 +36,13 @@
                             @endif
                             <p><b>{{ __('cabinet.order-description') }}</b> </p>
                             <p>{{ $order->description }}</p>
-                        </a>
+
+                            @if($order->status == 'payed')
+                                <a href="{{ route('cabinet.show-answer', $order->id) }}" class="btn btn-danger mt-3">
+                                    {{ __('order.order.show') }}
+                                </a>
+                            @endif
+                        </div>
                     @endforeach
                 </div>
             </div>
