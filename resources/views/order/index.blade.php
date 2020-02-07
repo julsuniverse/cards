@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            <div class="mt-1 mb-3 text-center">
+            <div class="mt-1 text-center">
                 <p>
                     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                         {{ __('order.btn-order-instructions') }}
@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card card-content">
+            <div class="card card-content mt-1">
                 <div class="card-header">
 
                     <h4 class="text-center">{{ __('order.title') }}</h4>
