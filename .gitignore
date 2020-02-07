@@ -2,6 +2,10 @@
 /public/hot
 /public/storage
 /storage/*.key
+/storage/docker
+/public/build
+/.idea
+/storage/debugbar
 /vendor
 .env
 .phpunit.result.cache
