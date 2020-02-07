@@ -29,9 +29,9 @@
                             @if($order->layout)
                                 {{ __('cabinet.order-layout') }}
                                 @if(app()->getLocale() == 'en')
-                                    <p>{{$order->layot->name}}</p>
+                                    <p>{{$order->layout->name}}</p>
                                 @else
-                                    <p>{{$order->layot->name_ru}}</p>
+                                    <p>{{$order->layout->name_ru}}</p>
                                 @endif
                             @endif
                             <p><b>{{ __('cabinet.order-description') }}</b> </p>
