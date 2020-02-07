@@ -4,21 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>
-        @if(app()->getLocale() == 'ru')
-             Заказать консультацию (гадание) на картах Таро и Ленорман - персональная консультация | Серебрянная нить
-        @else
-             Order a Private card reading | Silver Thread
-        @endif
-    </title>
-
-    @if(app()->getLocale() == 'ru')
-        <meta name="description" content="Большой выбор карточных раскладов на разные темы: «Личная жизнь и любовные отношения», «Работа и карьера», «Поездки и путешествия», а также, «Расклады общего содержания». Прогноз будущего. Конфеденциально. " />
-        <meta name="keywords" content="гадание на картах, гадание онлайн таро, гадание на картах таро онлайн, услуги таролога, консультация таролога" />
-    @else
-        <meta name="description" content=" variety of card lay-outs designed for card-reading in different spheres: Personal Relations & Love Matters, Work and Career, Travelling and Trips, and Miscellaneous life situations. " />
-    @endif
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
