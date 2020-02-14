@@ -1,5 +1,12 @@
 @extends('layout.main')
 
+@push('scripts')
+    <!-- Event snippet for Просмотр страницы: заказать консультацию conversion page -->
+    <script>
+        gtag('event', 'conversion', {'send_to': 'AW-672975950/xoiQCLXDgsQBEM6Y88AC'});
+    </script>
+@endpush
+
 @section('content')
     <div class="row">
         <div class="col-12">

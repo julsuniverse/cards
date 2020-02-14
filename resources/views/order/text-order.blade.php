@@ -1,5 +1,26 @@
 @extends('layout.main')
 
+@push('scripts')
+    <!-- Event snippet for Просмотр страницы: заполнить форму заказа conversion page -->
+    <!-- Event snippet for Заказ conversion page -->
+    <script>
+        gtag('event', 'conversion', {'send_to': 'AW-672975950/KAamCNHHgsQBEM6Y88AC'});
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-672975950/qyG6COWwksQBEM6Y88AC',
+                'transaction_id': '',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+@endpush
+
 @section('content')
     <div class="row">
         <div class="col-12">
@@ -72,7 +93,7 @@
                 <input type="hidden" name="price" value="@isset($layout->price_uah) {{ $layout->price_uah }} @else 300  @endisset">
                 <input type="hidden" name="user" value="@isset($user) {{ $user->id }} @else {{ null }} @endisset">
 
-                <button type="submit" class="btn btn-outline-danger">{{ __('order.btn-order') }}</button>
+                <button type="submit" class="btn btn-outline-danger" onclick="gtag_report_conversion()">{{ __('order.btn-order') }}</button>
             </form>
         </div>
 
