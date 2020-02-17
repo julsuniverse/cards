@@ -5,9 +5,13 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Mail\OrderIsPayedEmail;
 use App\Mail\OrderIsReadyEmail;
+use App\Mail\RegistrationEmail;
 use App\Models\Order;
+use App\Models\User;
 use App\Services\ImageService;
+use App\Services\OrderService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
@@ -23,7 +27,8 @@ class OrderController extends Controller
 
     public function show(Order $order)
     {
-        return view('dashboard.order.show')->with(compact('order'));
+        $user = $order->user;
+        return view('dashboard.order.show')->with(compact('order', 'user'));
     }
 
     public function edit(Order $order)
@@ -61,6 +66,22 @@ class OrderController extends Controller
             return back()->with('error', $e->getMessage());
         }
         return redirect(route('dashboard.order.show', [$order]))->with('success', 'Заказ был обновлен!');
+    }
 
+    public function loginAs(User $user)
+    {
+        Auth::logout();
+        Auth::login($user);
+        return redirect()->route('cabinet');
+    }
+
+    public function acceptOrder(Order $order, OrderService $orderService)
+    {
+        try {
+            $orderService->accept($order);
+        } catch (\DomainException $e) {
+            return back()->with('error', $e->getMessage());
+        }
+        return redirect()->back()->with('success', 'Заказ был принят!');
     }
 }

@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Http\Requests\User\OrderRequest;
 use App\Mail\NewOrderAdminEmail;
+use App\Mail\OrderAcceptedEmail;
 use App\Mail\RegistrationEmail;
 use App\Models\Order;
 use App\Models\User;
@@ -45,6 +46,20 @@ class OrderService
         } catch (\Exception $e) {
             \Log::error($e->getMessage(), ['error' => $e->getTrace(), 'user' => $request->user]);
             throw new \DomainException('Order creating error');
+        }
+    }
+
+    public function accept(Order $order)
+    {
+        try {
+            $order->update([
+                'status' => Order::STATUS_ACCEPTED
+            ]);
+            $user = $order->user;
+            \Mail::to($user->email)->send(new OrderAcceptedEmail($user));
+        } catch (\Exception $e) {
+            \Log::error($e->getMessage());
+            throw new \DomainException('Error while accepting order');
         }
     }
 }

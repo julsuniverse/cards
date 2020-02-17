@@ -30,6 +30,7 @@ Route::group([
     'as' => 'dashboard.'
 ], function () {
     Route::get('/', 'Dashboard\DashboardController@index')->name('index');
+    Route::post('/login-as/{user}', 'Dashboard\OrderController@loginAs')->name('login-as');
     Route::resource('layout', 'Dashboard\LayoutController')->except('show');
     Route::resource('theme', 'Dashboard\ThemeController')->except('show');
     Route::get('/users', 'Dashboard\UserController@index')->name('user.index');
@@ -37,6 +38,7 @@ Route::group([
     Route::get('/order/{order}', 'Dashboard\OrderController@show')->name('order.show');
     Route::get('/order/{order}/edit', 'Dashboard\OrderController@edit')->name('order.edit');
     Route::put('/order/{order}/update', 'Dashboard\OrderController@update')->name('order.update');
+    Route::post('/order/{order}/accept', 'Dashboard\OrderController@acceptOrder')->name('order.accept');
 
     Route::get('/translation', 'Dashboard\TranslationController@index')->name('translation.index');
     Route::get('/translation/{translation}/edit', 'Dashboard\TranslationController@edit')->name('translation.edit');

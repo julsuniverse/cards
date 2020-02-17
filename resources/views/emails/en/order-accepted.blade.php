@@ -10,17 +10,7 @@
 
         <p>Your cards-reading <b>will be ready</b> within 48 hours, <b>and you will get an Email</b> confirming that your order is ready and can be paid and acquired.</p>
 
-        <p>Credentials for your account:</p>
-        <ul>
-            <li>
-                <b>Login:</b> {{ $user->email }}
-            </li>
-            <li>
-                <b>Password:</b> {{ $password }}
-            </li>
-        </ul>
-
-
+        <p>You can track your order status at your personal page:</p>
         <a href="{{ route('cabinet') }}" class="email-btn">Enter to your account</a>
 
         <p>The payment can be made by money transfer to my bank account number.</p>

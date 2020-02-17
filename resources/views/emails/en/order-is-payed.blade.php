@@ -19,10 +19,7 @@
             Kind regards, <br>
             Svetlana Grabovskaya
         </p>
+        <a href="http://tarot-light.space">http://tarot-light.space</a>
 
-        <p>
-            PRIVATE CARDS READING <br>
-            Esoteric services for leisure time
-        </p>
     </div>
 @endsection

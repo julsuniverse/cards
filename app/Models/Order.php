@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     const STATUS_NEW = 'new';
+    const STATUS_ACCEPTED = 'accepted';
     const STATUS_PROCESSING = 'processing';
     const STATUS_READY_FOR_PAYMENT = 'ready';
     const STATUS_PAYED = 'payed';

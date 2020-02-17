@@ -8,8 +8,16 @@
                     <div class="card-header">Заказ</div>
                     <div class="card-body">
                         <div class="d-flex flex-row mb-3">
-                            <a href="{{ route('dashboard.order.index') }}" class="btn btn-secondary mr-1">Назад</a>
-                            <a class="btn btn-outline-success" href="{{route('dashboard.order.edit', $order)}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a href="{{ route('dashboard.order.index') }}" class="btn btn-secondary mr-2">Назад</a>
+                            <a class="btn btn-outline-success mr-2" href="{{route('dashboard.order.edit', $order)}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <form method="POST" action="{{ route('dashboard.order.accept', $order) }}">
+                                @csrf
+                                <button type="submit" class="btn btn-danger mr-2">Принять заказ</button>
+                            </form>
+                            <form method="POST" action="{{ route('dashboard.login-as', $user) }}">
+                                @csrf
+                                <button type="submit" class="btn btn-primary mr-2">Кабинет пользователя</button>
+                            </form>
                         </div>
 
                         <table class="table table-bordered table-striped">
