@@ -34,9 +34,9 @@ class OrderAcceptedEmail extends Mailable
     public function build()
     {
         if (App::getLocale() == 'en') {
-            return $this->view('emails.en.order-accepted')->with(['user' => $this->user]);
+            return $this->subject('You order is accepted!')->view('emails.en.order-accepted')->with(['user' => $this->user]);
         } else {
-            return $this->view('emails.ru.order-accepted')->with(['user' => $this->user]);
+            return $this->subject('Ваш заказ принят')->view('emails.ru.order-accepted')->with(['user' => $this->user]);
         }
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Mail;
 
 use App\Models\Order;
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -14,11 +15,11 @@ class OrderIsReadyEmail extends Mailable
     private $appName;
 
     /**
-     * @param string $locale
+     * @param User $user
      */
-    public function __construct(string $locale)
+    public function __construct(User $user)
     {
-        $this->locale = $locale;
+        $this->locale = $user->locale ?? 'en';
         $this->appName = config('app.name');
     }
 

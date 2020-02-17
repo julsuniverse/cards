@@ -56,11 +56,10 @@ class OrderController extends Controller
                 ]);
             }
 
-
             if ($order->status == Order::STATUS_READY_FOR_PAYMENT && $oldStatus != Order::STATUS_READY_FOR_PAYMENT) {
-                Mail::to($order->user->email)->send(new OrderIsReadyEmail($order->user->locale ?? 'en'));
+                Mail::to($order->user->email)->send(new OrderIsReadyEmail($order->user));
             } elseif ($order->status == Order::STATUS_PAYED && $oldStatus != Order::STATUS_PAYED) {
-                Mail::to($order->user->email)->send(new OrderIsPayedEmail($order->user->locale ?? 'en', $order));
+                Mail::to($order->user->email)->send(new OrderIsPayedEmail($order));
             }
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());

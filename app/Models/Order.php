@@ -23,6 +23,7 @@ class Order extends Model
 
     public $statuses = [
         'new',
+        'accepted',
         'processing',
         'ready',
         'payed',
@@ -31,6 +32,7 @@ class Order extends Model
 
     public $status_class = [
         'new' => 'badge-danger',
+        'accepted' => 'badge-danger',
         'processing' => 'badge-secondary',
         'ready' => 'badge-warning',
         'payed' => 'badge-primary',

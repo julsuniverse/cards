@@ -16,16 +16,18 @@ class OrderIsPayedEmail extends Mailable
      * @var Order
      */
     private $order;
+    private $user;
 
     /**
      * @param string $locale
      * @param Order $order
      */
-    public function __construct(string $locale, Order $order)
+    public function __construct(Order $order)
     {
-        $this->locale = $locale;
-        $this->appName = config('app.name');
         $this->order = $order;
+        $this->user = $order->user;
+        $this->locale =$user->locale ?? 'en';
+        $this->appName = config('app.name');
     }
 
     /**
