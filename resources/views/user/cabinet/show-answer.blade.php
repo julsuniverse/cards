@@ -11,6 +11,10 @@
             </div>
             <hr>
 
+            <div class="mt-3">
+                {!! $order->answer !!}
+            </div>
+
             @if($order->photo)
                 <div class="text-center">
                     <img src="{{ asset($order->photo) }}" style="max-width: 800px" class="m-auto">
@@ -18,9 +22,6 @@
                 </div>
             @endif
 
-            <div class="mt-3">
-                {!! $order->answer !!}
-            </div>
         </div>
     </div>
 
