@@ -18,6 +18,8 @@
                             <i class="fa fa-calendar" aria-hidden="true"></i> {{ $order->created_at->format('d-m-Y') }}
                             @if( $order->status == 'new')
                                 <span class="badge badge-primary badge-pill">{{ __('order-statuses.status.new') }}</span>
+                            @elseif($order->status == 'accepted')
+                                <span class="badge badge-primary badge-pill">{{ __('order-statuses.status.accepted') }}</span>
                             @elseif($order->status == 'processing')
                                 <span class="badge badge-warning badge-pill">{{ __('order-statuses.status.processing') }}</span>
                             @elseif($order->status == 'ready')
