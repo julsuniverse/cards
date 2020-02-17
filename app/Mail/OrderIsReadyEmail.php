@@ -13,6 +13,10 @@ class OrderIsReadyEmail extends Mailable
 {
     use Queueable, SerializesModels;
     private $appName;
+    /**
+     * @var User
+     */
+    private $user;
 
     /**
      * @param User $user
@@ -21,6 +25,7 @@ class OrderIsReadyEmail extends Mailable
     {
         $this->locale = $user->locale ?? 'en';
         $this->appName = config('app.name');
+        $this->user = $user;
     }
 
     /**
@@ -31,11 +36,13 @@ class OrderIsReadyEmail extends Mailable
         if ($this->locale == 'en') {
             return $this
                 ->subject('Your order is ready! -'  . $this->appName)
-                ->view('emails.en.order-is-ready');
+                ->view('emails.en.order-is-ready')
+                ->with('user', $this->user);
         } else {
             return $this
                 ->subject('Ваш заказ готов! - ' . $this->appName)
-                ->view('emails.ru.order-is-ready');
+                ->view('emails.ru.order-is-ready')
+                ->with('user', $this->user);
         }
     }
 }
