@@ -1,7 +1,7 @@
 @extends('dashboard.layouts.main')
 
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
@@ -19,6 +19,7 @@
                                 <th>Дата заказа</th>
                                 <th>Статус</th>
                                 <th>Цена</th>
+                                <th>Карты</th>
                                 <th>Описание</th>
                                 <th></th>
                             </tr>
@@ -39,6 +40,7 @@
                                         <span class="badge {{ $order->status_class[$order->status] }}">{{ $order->status }}</span>
                                     </td>
                                     <td>{{ $order->price }}</td>
+                                    <td>{{ $order->cards }}</td>
                                     <td>
                                         {{ substr($order->description, 0, 100) }}
                                     </td>

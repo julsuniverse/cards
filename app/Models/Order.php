@@ -18,6 +18,9 @@ class Order extends Model
     const STATUS_PAYED = 'payed';
     const STATUS_VIEWED = 'viewed';
 
+    const CARDS_TAROT = 'tarot';
+    const CARDS_LENORMAND = 'lenormand';
+
     /** @inheritdoc */
     protected $guarded = [];
 

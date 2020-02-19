@@ -59,6 +59,11 @@
                             </tr>
 
                             <tr>
+                                <th>Карты</th>
+                                <td>{{ $order->cards }}</td>
+                            </tr>
+
+                            <tr>
                                 <th>Описание</th>
                                 <td>{{ $order->description }}</td>
                             </tr>

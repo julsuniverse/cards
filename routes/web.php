@@ -3,6 +3,7 @@ Route::get('/locale', 'LocaleController@index')->name('change-locale');
 
 Route::get('/', 'PageController@index')->name('home');
 Route::get('/terms', 'PageController@terms')->name('terms');
+Route::post('/set-cards', 'HomeController@setCards')->name('set-cards');
 
 Route::get('/order', 'OrderController@index')->name('order.index');
 Route::get('/order/custom/{layout?}', 'OrderController@textOrder')->name('order.text-order');

@@ -33,7 +33,8 @@ class OrderService
                 'user_id' => $user->id,
                 'layout_id' => $request->layout ?? null,
                 'description' =>$request->text,
-                'price' => $request->price
+                'price' => $request->price,
+                'cards' => $request->cards
             ]);
 
             if (!$request->user) {

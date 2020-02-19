@@ -25,7 +25,8 @@ class OrderController
     public function textOrder(Layout $layout = null)
     {
         $user = Auth::user();
-        return view('order.text-order')->with(compact('layout', 'user'));
+        $cards =  session('cards', 'tarot');
+        return view('order.text-order')->with(compact('layout', 'user', 'cards'));
     }
 
     public function selectOrder()

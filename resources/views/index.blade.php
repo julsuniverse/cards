@@ -18,10 +18,19 @@
                 </div>
                 <!--<div class="top-block-buttons">-->
                     <div class="col-6 text-center main-top-btn">
-                        <a href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn1') !!}</a>
+                        <form method="post" action="{{ route('set-cards') }}">
+                            @csrf
+                            <input type="hidden" value="tarot" name="cards">
+                            <button type="submit" class="btn btn-outline-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn1') !!}</button>
+                        </form>
+
                     </div>
                     <div class="col-6 text-center main-top-btn">
-                        <a href="{{ route('order.index') }}" class="btn btn-outline-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn2') !!}</a>
+                        <form method="post" action="{{ route('set-cards') }}">
+                            @csrf
+                            <input type="hidden" value="lenormand" name="cards">
+                            <button type="submit" class="btn btn-outline-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn2') !!}</button>
+                        </form>
                     </div>
                 <!--</div>-->
             </div>
