@@ -75,21 +75,21 @@
                             </div>
                         @endif
                     </div>
-
-                    <div class="form-group">
-                        <label for="cards">{{ __('order-form.choose-cards') }}</label>
-                        <select class="form-control" id="cards" name="cards">
-                            <option value="tarot" @if(old('cards', $cards) == 'tarot') selected @endif>{{ __('order-form.tarot') }}</option>
-                            <option value="lenormand" @if(old('cards', $cards) == 'lenormand') selected @endif>{{ __('order-form.lenormand') }}</option>
-                        </select>
-                        @if ($errors->has('cards'))
-                            <div class="invalid-feedback">
-                                {{ $errors->first('cards') }}
-                            </div>
-                        @endif
-                    </div>
-
                 @endif
+
+                <div class="form-group">
+                    <label for="cards">{{ __('order-form.choose-cards') }}</label>
+                    <select class="form-control" id="cards" name="cards">
+                        <option value="tarot" @if(old('cards', $cards) == 'tarot') selected @endif>{{ __('order-form.tarot') }}</option>
+                        <option value="lenormand" @if(old('cards', $cards) == 'lenormand') selected @endif>{{ __('order-form.lenormand') }}</option>
+                    </select>
+                    @if ($errors->has('cards'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('cards') }}
+                        </div>
+                    @endif
+                </div>
+
                 <div class="form-group">
                     <label class="form-check-label" for="text">{!! __('order-form.text') !!}  </label>
                     <textarea class="form-control @if ($errors->has('text')) is-invalid @endif" name="text" id="text" rows="6">{{ old('text') }}</textarea>
