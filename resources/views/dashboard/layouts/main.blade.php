@@ -65,12 +65,12 @@
                         @csrf
                     </form>
                 </li>
-                
+
             </ul>
         </div>
     </nav>
 
-    <main role="main" class="container main-content" id="app">
+    <main role="main" class="container-fluid main-content" id="app">
         <div class="underlayer">
             @include('layout._errors')
             @yield('content')
