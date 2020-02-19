@@ -15,6 +15,16 @@
     @endif
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Ads: 672975950 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-672975950"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-672975950');
+    </script>
+
+    @stack('ads')
 </head>
 
 <body>
