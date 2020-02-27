@@ -1,23 +1,9 @@
 @extends('layout.main')
 
 @push('scripts')
-    <!-- Event snippet for Просмотр страницы: заполнить форму заказа conversion page -->
-    <!-- Event snippet for Заказ conversion page -->
+
     <script>
-        gtag('event', 'conversion', {'send_to': 'AW-672975950/KAamCNHHgsQBEM6Y88AC'});
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof(url) != 'undefined') {
-                    window.location = url;
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-672975950/qyG6COWwksQBEM6Y88AC',
-                'transaction_id': '',
-                'event_callback': callback
-            });
-            return false;
-        }
+        function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-672975950/z-OnCLn48McBEM6Y88AC', 'transaction_id': '', 'event_callback': callback }); return false; }
     </script>
 @endpush
 
