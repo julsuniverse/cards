@@ -7,7 +7,7 @@ return [
     'tarot2' => 'TAROT Advice for Today',
     'tarot3' => 'Love Matters Advice',
     'lenormand' => 'Lenormand',
-    'runes' => 'Runes',
+    'runes' => 'Interactive Runes Oracle',
     'runes-btn' => 'Runes',
     'empty-deck' => 'The deck is empty',
     'tarot-small' => 'The interpretation of the cards for this interactive oracle is made by the author of this website. Some cards in this oracle are described according to “The Tarot Handbook” by Hajo Banzhaf.',
