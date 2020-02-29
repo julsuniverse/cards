@@ -83,4 +83,9 @@ class OrderController extends Controller
         }
         return redirect()->back()->with('success', 'Заказ был принят!');
     }
+
+    public function preview(Order $order)
+    {
+        return view('dashboard.order.preview')->with(compact('order'));
+    }
 }

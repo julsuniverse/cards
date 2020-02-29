@@ -70,7 +70,7 @@
 
                             <tr>
                                 <th>Ответ</th>
-                                <td>{{ $order->answer ?? 'Ответ еще не был дан' }}</td>
+                                <td><a href="{{ route('dashboard.order.preview', $order) }}" class="btn btn-primary">Посмотреть ответ</a> </td>
                             </tr>
                             </tbody>
                         </table>
