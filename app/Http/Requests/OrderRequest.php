@@ -25,23 +25,28 @@ class OrderRequest extends FormRequest
             'date' => 'required_without:user|string|max:255',
             'text' => 'required',
             'user' => 'nullable',
-            'cards' => 'string'
+            'cards' => 'string',
+            //'agree' => 'required|boolean'
+            'agree' => 'accepted'
         ];
     }
 
     public function messages()
     {
         if(app()->getLocale() == 'ru') {
+            //dd(app()->getLocale());
+
             return [
-                'name.required' => 'Введите имя',
-                'email.required' => 'Введите email',
-                'date.required' => 'Введите дату рождения',
+                'name.required_without' => 'Введите имя',
+                'email.required_without' => 'Введите email',
+                'date.required_without' => 'Введите дату рождения',
                 'text.required' => 'Опишите свою ситуацию',
                 'name.max' => 'Максимальная длина - 255 символов',
                 'email.max' => 'Максимальная длина - 255 символов',
                 'date.max' => 'Максимальная длина - 255 символов',
                 'email.email' => 'Введите валидный email',
                 'email.unique' => 'Пользователь с таким email уже существует. Введите другой имейл или войдите в свой аккаунт.',
+                'agree.accepted' => 'Подтвердите, пожалуйста, согласие с ценой заказа.'
             ];
         } else {
             return [];

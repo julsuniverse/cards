@@ -18,6 +18,10 @@ h1, h2, h3 {
   color: $bbc-red;
 }
 
+.invalid-feedback {
+    display: block;
+}
+
 .logo {
   margin-bottom: 15px;
   min-height: 78px;

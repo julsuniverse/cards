@@ -86,6 +86,17 @@
                     @endif
                 </div>
 
+                <div class="custom-control custom-checkbox mb-2">
+                    <input type="hidden" name="agree" value="0">
+                    <input type="checkbox" class="custom-control-input" id="agree" name="agree" value="1">
+                    <label class="custom-control-label" for="agree">{{ __('order.order.agree', ['price' => isset($layout->price_uah) ? $layout->price_uah . ' грн.': 600 . ' грн.']) }}</label>
+                    @if ($errors->has('agree'))
+                        <div class="invalid-feedback font-weight-bold">
+                            {{ $errors->first('agree') }}
+                        </div>
+                    @endif
+                </div>
+
                 @isset($layout)
                     <input type="hidden" name="layout" value="{{ $layout->id }}">
                 @endisset

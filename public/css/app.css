@@ -13748,6 +13748,10 @@ h3 {
   color: #bb1919;
 }
 
+.invalid-feedback {
+  display: block;
+}
+
 .logo {
   margin-bottom: 15px;
   min-height: 78px;
