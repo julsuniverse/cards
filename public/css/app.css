@@ -13753,7 +13753,7 @@ h3 {
 }
 
 .logo {
-  margin-bottom: 15px;
+  margin-bottom: 11px;
   min-height: 78px;
   line-height: 65px;
   font-size: 54px;
@@ -13775,9 +13775,9 @@ p {
 }
 
 .underlayer {
-  padding: 10px 30px 10px;
+  padding: 8px 30px 10px;
   background-color: #f8f5f3;
-  margin-top: 25px;
+  margin-top: 18px;
 }
 
 .navbar.my-navbar a {
@@ -13858,13 +13858,13 @@ a.btn:hover {
 }
 
 .top-container .top-block {
-  padding: 0 20px 20px;
+  padding: 0 20px 13px;
   text-align: center;
 }
 
 .top-container img {
   max-width: 100%;
-  padding-top: 11px;
+  padding-top: 17px;
 }
 
 .top-container .top-block-buttons {
@@ -13872,11 +13872,15 @@ a.btn:hover {
 }
 
 .main-top-btn {
-  margin-top: 28px !important;
+  margin-top: 19px !important;
 }
 
 .card-content {
   margin-top: 15px;
+}
+
+.my-btn-link {
+  text-decoration: underline;
 }
 
 .fr-wrapper.show-placeholder div a,

@@ -39,27 +39,27 @@
                             {{ $layoutGroup[0]->theme->name_ru }}
                         @endif
                     </h3>
+                <div class="text-center">{!! __('order-select.click-btn') !!}</div>
                     @foreach($layoutGroup as $layout)
                         <div class="card">
                             <div class="card-header" id="heading-{{$layout->id}}">
                                 <div class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-{{$layout->id}}" aria-expanded="true" aria-controls="collapse-{{$layout->id}}">
+                                    <button class="btn btn-link my-btn-link" type="button" data-toggle="collapse" data-target="#collapse-{{$layout->id}}" aria-expanded="true" aria-controls="collapse-{{$layout->id}}">
                                         @if(app()->getLocale() == 'en')
                                             {{ $layout->name }}
                                         @else
                                             {{ $layout->name_ru }}
                                         @endif
-
-                                        @if(app()->getLocale() == 'en')
-                                            @if($layout->price_usd)
-                                                <span class="badge badge-primary badge-pill">{{ $layout->price_usd }} $</span>
-                                            @endif
-                                        @else
-                                            @if($layout->price_uah)
-                                                <span class="badge badge-primary badge-pill">{{ $layout->price_uah }} грн</span>
-                                            @endif
-                                        @endif
                                     </button>
+                                    @if(app()->getLocale() == 'en')
+                                        @if($layout->price_usd)
+                                            <span class="badge badge-primary badge-pill">{{ $layout->price_usd }} $</span>
+                                        @endif
+                                    @else
+                                        @if($layout->price_uah)
+                                            <span class="badge badge-primary badge-pill">{{ $layout->price_uah }} грн</span>
+                                        @endif
+                                    @endif
                                     <div class="text-center float-lg-right">
                                         <a href="{{ route('order.text-order', $layout) }}" class="btn btn-success">{{ __('order.btn-order') }}</a>
                                     </div>

@@ -48,7 +48,7 @@
     <div class="main-content main-page-content">
 
         <div class="row info-block">
-            <div class="col-12 text-justify mt-2">
+            <div class="col-12 text-justify mt-1">
                 {!!  __('main-page.main-block-1') !!}
             </div>
         </div>
