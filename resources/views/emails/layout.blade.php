@@ -5,8 +5,11 @@
             font-family: "Hind", sans-serif;
             font-weight: 100;
         }
+        ul {
+            padding: 0;
+        }
         p, span, li {
-            color: #4c4c4c;
+            color: #000;
         }
         p, span, li, a {
             font-size: 16px;
@@ -54,11 +57,11 @@
         .email-btn {
             background-color: #bb1919;
             border: 1px solid #9a1717;
-            color: #fff;
+            color: #fff !important;
             padding: 10px;
             border-radius: 7px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
             text-decoration: none;
         }
         .email-btn:hover {
