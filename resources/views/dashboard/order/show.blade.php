@@ -50,7 +50,9 @@
 
                             <tr>
                                 <th>Статус</th>
-                                <td>{{ $order->status }}</td>
+                                <td>
+                                    <span class="badge {{ $order->status_class[$order->status] }}">{{ __('order-statuses.status.' . $order->status) }}</span>
+                                </td>
                             </tr>
 
                             <tr>

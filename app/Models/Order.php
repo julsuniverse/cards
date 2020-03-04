@@ -16,7 +16,6 @@ class Order extends Model
     const STATUS_PROCESSING = 'processing';
     const STATUS_READY_FOR_PAYMENT = 'ready';
     const STATUS_PAYED = 'payed';
-    const STATUS_VIEWED = 'viewed';
 
     const CARDS_TAROT = 'tarot';
     const CARDS_LENORMAND = 'lenormand';
@@ -30,16 +29,14 @@ class Order extends Model
         'processing',
         'ready',
         'payed',
-        'viewed',
     ];
 
     public $status_class = [
         'new' => 'badge-danger',
-        'accepted' => 'badge-danger',
-        'processing' => 'badge-secondary',
-        'ready' => 'badge-warning',
+        'accepted' => 'badge-warning',
+        'processing' => 'badge-info',
+        'ready' => 'badge-success',
         'payed' => 'badge-primary',
-        'viewed' => 'badge-success',
     ];
 
     public function user()

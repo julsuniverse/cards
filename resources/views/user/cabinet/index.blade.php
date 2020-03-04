@@ -28,14 +28,17 @@
                                 <span class="badge badge-success badge-pill">{{ __('order-statuses.status.payed') }}</span>
                             @endif
 
-                            @if($order->layout)
-                                {{ __('cabinet.order-layout') }}
-                                @if(app()->getLocale() == 'en')
-                                    <p>{{$order->layout->name}}</p>
-                                @else
-                                    <p>{{$order->layout->name_ru}}</p>
+                            <div>
+                                @if($order->layout)
+                                    {{ __('cabinet.order-layout') }}
+                                    @if(app()->getLocale() == 'en')
+                                        <p>{{$order->layout->name}}</p>
+                                    @else
+                                        <p>{{$order->layout->name_ru}}</p>
+                                    @endif
                                 @endif
-                            @endif
+                            </div>
+
                             <p><b>{{ __('cabinet.order-description') }}</b> </p>
                             <p>{{ $order->description }}</p>
 

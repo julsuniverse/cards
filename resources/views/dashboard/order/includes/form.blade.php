@@ -35,7 +35,7 @@
                 <select class="form-control" id="status" name="status">
                     @foreach($order->statuses as $status)
                         <option @if($order->status === $status) selected @endif
-                                value="{{ $status }}">{{ $status }}</option>
+                                value="{{ $status }}">{{ __('order-statuses.status.' . $status) }}</option>
                     @endforeach
                 </select>
                 @if ($errors->has('status'))
