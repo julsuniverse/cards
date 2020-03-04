@@ -5,6 +5,9 @@
             font-family: "Hind", sans-serif;
             font-weight: 100;
         }
+        h1 {
+            margin: 16px 0;
+        }
         ul {
             padding: 0;
         }
@@ -21,7 +24,6 @@
             text-decoration: none;
         }
         .content {
-            padding: 20px;
             background-color: #fff;
             border-radius: 10px;
             display: block;
