@@ -18,11 +18,11 @@
             text-decoration: none;
         }
         .content {
-            padding: 30px;
+            padding: 20px;
             background-color: #fff;
             border-radius: 10px;
             display: block;
-            width: 60%;
+            width: 100%;
             max-width: 90%;
             margin: auto;
             box-sizing: border-box;

@@ -20,7 +20,8 @@
 
         <p>
             <em>С уважением, <br>
-                Светлана Грабовская
+                Светлана Грабовская <br>
+                Таролог
             </em>
         </p>
         <a href="http://tarot-light.space">http://tarot-light.space</a>
