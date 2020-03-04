@@ -16,17 +16,7 @@
                     @foreach($orders as $order)
                         <div class="list-group-item list-group-item-action mb-1">
                             <i class="fa fa-calendar" aria-hidden="true"></i> {{ $order->created_at->format('d-m-Y') }}
-                            @if( $order->status == 'new')
-                                <span class="badge badge-primary badge-pill">{{ __('order-statuses.status.new') }}</span>
-                            @elseif($order->status == 'accepted')
-                                <span class="badge badge-primary badge-pill">{{ __('order-statuses.status.accepted') }}</span>
-                            @elseif($order->status == 'processing')
-                                <span class="badge badge-warning badge-pill">{{ __('order-statuses.status.processing') }}</span>
-                            @elseif($order->status == 'ready')
-                                <span class="badge badge-info badge-pill">{{ __('order-statuses.status.ready') }}</span>
-                            @elseif($order->status == 'payed')
-                                <span class="badge badge-success badge-pill">{{ __('order-statuses.status.payed') }}</span>
-                            @endif
+                            <span class="badge {{ $order->status_class[$order->status] }} badge-status">{{ __('order-statuses.status.' . $order->status) }}</span>
 
                             <div>
                                 @if($order->layout)

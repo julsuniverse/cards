@@ -34,9 +34,9 @@ class Order extends Model
     public $status_class = [
         'new' => 'badge-danger',
         'accepted' => 'badge-warning',
-        'processing' => 'badge-info',
-        'ready' => 'badge-success',
-        'payed' => 'badge-primary',
+        'processing' => 'badge-secondary',
+        'ready' => 'badge-primary',
+        'payed' => 'badge-success',
     ];
 
     public function user()

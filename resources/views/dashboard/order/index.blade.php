@@ -37,7 +37,7 @@
                                     <td>{{ $order->layout->name_ru ?? '-' }}</td>
                                     <td>{{ $order->created_at->format('d.m.Y H:m') }}</td>
                                     <td class="text-center">
-                                        <span class="badge {{ $order->status_class[$order->status] }}">{{ __('order-statuses.status.' . $order->status) }}</span>
+                                        <span class="badge {{ $order->status_class[$order->status] }} badge-status">{{ __('order-statuses.status.' . $order->status) }}</span>
                                     </td>
                                     <td>{{ $order->price }}</td>
                                     <td>{{ $order->cards }}</td>
