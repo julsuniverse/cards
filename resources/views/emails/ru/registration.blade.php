@@ -22,11 +22,6 @@
 
         <p>Информация Вашего личного кабинета на сайте доступна только для Вас.</p>
 
-        <p>
-            С уважением, <br>
-            Светлана Грабовская <br>
-            Таролог
-        </p>
-        <a href="http://tarot-light.space">http://tarot-light.space</a>
+        @include('emails.ru._footer')
     </div>
 @endsection
