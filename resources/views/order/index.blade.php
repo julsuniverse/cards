@@ -13,12 +13,12 @@
             <div class="mt-1 text-center">
                 <p>
                     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        {{ __('order.btn-order-instructions') }}
+                        <b>{{ __('order.btn-order-instructions') }}</b>
                     </a>
                 </p>
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body border border-danger">
-                        {!! __('order.order-instructions') !!}
+                        <b>{!! __('order.order-instructions') !!}</b>
                     </div>
                 </div>
             </div>
@@ -28,10 +28,10 @@
                     <h4 class="text-center">{{ __('order.title') }}</h4>
                     <div class="row mt-1 text-center">
                         <div class="col">
-                            <a href="{{ route('order.text-order') }}" class="btn btn-outline-danger mb-2">{{ __('order.btn-order-simple') }}</a>
+                            <a href="{{ route('order.text-order') }}" class="btn btn-outline-danger mb-2"><b>{{ __('order.btn-order-simple') }}</b></a>
                         </div>
                         <div class="col">
-                            <a href="{{ route('order.select-order') }}" class="btn btn-outline-danger">{{ __('order.btn-order-select') }}</a>
+                            <a href="{{ route('order.select-order') }}" class="btn btn-outline-danger"><b>{{ __('order.btn-order-select') }}</b></a>
                         </div>
                     </div>
                     <div class="row">
@@ -43,23 +43,27 @@
 
 
                 <div class="card-body">
-                    {!! __('order.part1') !!}
+                    <div>
+                        {!! __('order.part1') !!}
+                    </div>
 
-                    <a href="{{ route('order.text-order') }}" class="btn btn-outline-danger mb-2">{{ __('order.btn-order-simple') }}</a>
+                    <a href="{{ route('order.text-order') }}" class="btn btn-outline-danger mb-2"><b>{{ __('order.btn-order-simple') }}</b></a>
 
-                    {!! __('order.part2') !!}
+                    <div>
+                        {!! __('order.part2') !!}
+                    </div>
 
-                    <a href="{{ route('order.select-order') }}" class="btn btn-outline-danger">{{ __('order.btn-order-select') }}</a>
+                    <a href="{{ route('order.select-order') }}" class="btn btn-outline-danger"><b>{{ __('order.btn-order-select') }}</b></a>
 
                     <div class="mt-2 text-center">
                         <p>
                             <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                {{ __('order.btn-order-instructions') }}
+                                <b>{{ __('order.btn-order-instructions') }}</b>
                             </a>
                         </p>
                         <div class="collapse" id="collapseExample">
                             <div class="card card-body border border-danger">
-                                {!! __('order.order-instructions') !!}
+                                <b>{!! __('order.order-instructions') !!}</b>
                             </div>
                         </div>
                     </div>

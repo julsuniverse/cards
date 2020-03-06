@@ -3,7 +3,7 @@
 @section('content')
     <div class="content">
 
-        <h1>Ваш заказ принят!</h1>
+        <p><b>Ваш заказ принят!</b></p>
 
         <p>Здравствуйте, {{ $user->name }}</p>
 

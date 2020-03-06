@@ -113,7 +113,7 @@
                     </li>
                 @endif
 
-                <li class="nav-item nav-item-custom mr-1">
+                <li class="nav-item nav-item-custom menu-email-icon">
                     <a href="mailto:info@light.space" data-toggle="tooltip" data-placement="bottom" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item nav-item-custom">

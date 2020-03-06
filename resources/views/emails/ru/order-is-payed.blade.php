@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="content">
-        <h1>Ваша оплата принята!</h1>
+        <p><b>Ваша оплата принята!</b></p>
 
         <p>Здравствуйте, {{ $user->name }}! </p>
 

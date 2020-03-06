@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="content">
-        <h1>Новый заказ!</h1>
+        <p><b>Новый заказ!</b></p>
 
         <p>Дата: {{ $order->created_at->format('d M, Y') }}</p>
         @if($order->layout)
