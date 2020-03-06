@@ -10,7 +10,7 @@
                         <div class="d-flex flex-row mb-3">
                             <a href="{{ route('dashboard.order.index') }}" class="btn btn-secondary mr-2">Назад</a>
                             <a class="btn btn-outline-success mr-2" href="{{route('dashboard.order.edit', $order)}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                            @if($order->status != \App\Models\Order::STATUS_ACCEPTED)
+                            @if($order->status == \App\Models\Order::STATUS_NEW)
                             <form method="POST" action="{{ route('dashboard.order.accept', $order) }}">
                                 @csrf
                                 <button type="submit" class="btn btn-danger mr-2">Принять заказ</button>
