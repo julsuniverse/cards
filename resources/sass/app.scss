@@ -243,8 +243,8 @@ footer {
     }
 
     .logo {
-        min-height: 55px;
-        line-height: 42px;
+        min-height: 49px;
+        line-height: 39px;
     }
 }
 
@@ -278,14 +278,12 @@ footer {
 @media(max-width:575px) {
   .logo {
     font-size: 45px;
-    min-height: 75px;
   }
 }
 
 @media(max-width:450px) {
   .logo {
     font-size: 35px;
-    min-height: 90px;
   }
   .btn-consultation {
     padding: 2px;
