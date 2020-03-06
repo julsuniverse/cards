@@ -13966,6 +13966,11 @@ footer .fondy-logo {
   .menu-email-icon {
     margin-right: 0;
   }
+
+  .logo {
+    min-height: 55px;
+    line-height: 42px;
+  }
 }
 
 @media (max-width: 767px) {
