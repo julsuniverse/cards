@@ -13968,8 +13968,8 @@ footer .fondy-logo {
   }
 
   .logo {
-    min-height: 49px;
-    line-height: 39px;
+    min-height: 55px;
+    line-height: 37px;
   }
 }
 
@@ -14000,11 +14000,18 @@ footer .fondy-logo {
   .btn {
     font-size: 16px !important;
   }
+
+  .logo {
+    min-height: 55px;
+    line-height: 37px;
+  }
 }
 
 @media (max-width: 575px) {
   .logo {
     font-size: 45px;
+    min-height: 49px;
+    line-height: 39px;
   }
 }
 
