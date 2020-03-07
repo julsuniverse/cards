@@ -81,7 +81,7 @@
                     <a class="nav-link" href="{{ route('home') }}#oracle-tarot">{{ trans('menu.oracle-tarot') }}</a>
                 </li>
                 <li class="nav-item nav-item-custom">
-                    <a class="nav-link " href="{{ route('home') }}#oracle-runes" style="max-width: 105px;">{!! trans('menu.oracle-runes') !!}</a>
+                    <a class="nav-link " href="{{ route('home') }}#oracle-runes menu-runes">{!! trans('menu.oracle-runes') !!}</a>
                 </li>
 
                 @if(Auth::user())

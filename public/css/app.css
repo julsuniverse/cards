@@ -13929,6 +13929,10 @@ footer .fondy-logo {
   margin-right: 10px;
 }
 
+.menu-runes {
+  max-width: 105px;
+}
+
 @media (max-width: 1200px) {
   .main-page-content p {
     text-align: left !important;
@@ -13970,6 +13974,10 @@ footer .fondy-logo {
   .logo {
     min-height: 59px;
     line-height: 37px;
+  }
+
+  .menu-runes {
+    max-width: 100%;
   }
 }
 
