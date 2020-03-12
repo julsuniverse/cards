@@ -31,7 +31,7 @@
                 @method('PUT')
                 @if(!$user)
                     <div class="form-group">
-                        <label for="name">{{ __('order-form.name') }}</label>
+                        <label for="name">{!! __('order-form.name')  !!} </label>
                         <input type="text" class="form-control @if ($errors->has('name')) is-invalid @endif" id="name" name="name" placeholder="{{ __('order.order.name') }}" value="{{ old('name') }}">
                         <small id="emailHelp" class="form-text text-muted">{!! __('order-form.name-help') !!}</small>
                         @if ($errors->has('name'))
@@ -41,7 +41,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <label for="email">{{ __('order-form.email') }}</label>
+                        <label for="email">{!! __('order-form.email')  !!}</label>
                         <input type="email" class="form-control @if ($errors->has('email')) is-invalid @endif" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" value="{{ old('email') }}">
                         <small id="emailHelp" class="form-text text-muted">{!! __('order-form.email-help') !!}</small>
                         @if ($errors->has('email'))
@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="date">{{ __('order-form.date') }}</label>
+                        <label for="date">{!! __('order-form.date') !!}</label>
                         <input type="date" class="form-control @if ($errors->has('date')) is-invalid @endif" id="date" name="date" placeholder="Дата рождения" value="{{ old('date') }}">
                         <small id="dateHelp" class="form-text text-muted">{!! __('order-form.date-help') !!}  </small>
                         @if ($errors->has('date'))
@@ -64,7 +64,7 @@
                 @endif
 
                 <div class="form-group">
-                    <label for="cards">{{ __('order-form.choose-cards') }}</label>
+                    <label for="cards">{!! __('order-form.choose-cards') !!}</label>
                     <select class="form-control" id="cards" name="cards">
                         <option value="tarot" @if(old('cards', $cards) == 'tarot') selected @endif>{{ __('order-form.tarot') }}</option>
                         <option value="lenormand" @if(old('cards', $cards) == 'lenormand') selected @endif>{{ __('order-form.lenormand') }}</option>
@@ -89,11 +89,7 @@
                 <div class="custom-control custom-checkbox mb-2">
                     <input type="hidden" name="agree" value="0">
                     <input type="checkbox" class="custom-control-input" id="agree" name="agree" value="1">
-                    @if(app()->getLocale() == 'en')
-                        <label class="custom-control-label" for="agree">{{ __('order.order.agree', ['price' => isset($layout->price_uah) ? '$' . $layout->price_uah : '$' . __('price.value')]) }}</label>
-                    @else
-                        <label class="custom-control-label" for="agree">{{ __('order.order.agree', ['price' => isset($layout->price_uah) ? $layout->price_uah . ' грн.': __('price.value') . ' грн.']) }}</label>
-                    @endif
+                    <label class="custom-control-label" for="agree">{!! __('order.agree') !!}</label>
                     @if ($errors->has('agree'))
                         <div class="invalid-feedback font-weight-bold">
                             {{ $errors->first('agree') }}
