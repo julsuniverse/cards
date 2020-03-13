@@ -63,7 +63,7 @@
                         </p>
                         <div class="collapse" id="collapseExample">
                             <div class="card card-body border border-danger">
-                                <b>{!! __('order.order-instructions') !!}</b>
+                                {!! __('order.order-instructions') !!}
                             </div>
                         </div>
                     </div>
