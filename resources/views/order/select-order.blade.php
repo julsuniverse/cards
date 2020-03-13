@@ -46,9 +46,9 @@
                                 <div class="mb-0">
                                     <button class="btn btn-link my-btn-link" type="button" data-toggle="collapse" data-target="#collapse-{{$layout->id}}" aria-expanded="true" aria-controls="collapse-{{$layout->id}}">
                                         @if(app()->getLocale() == 'en')
-                                            {{ $layout->name }}
+                                            <b>{{ $layout->name }}</b>
                                         @else
-                                            {{ $layout->name_ru }}
+                                            <b>{{ $layout->name_ru }}</b>
                                         @endif
                                     </button>
                                     @if(app()->getLocale() == 'en')
