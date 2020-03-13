@@ -180,7 +180,7 @@
             </div>
         </div>
 
-        <div class="row text-center mt-3">
+        <div class="row text-center">
             <div class="col-12">
                 <h2>{!! __('main-page.main-block-11-title') !!}</h2>
                 <h4>{!! __('main-page.main-block-11-subtitle')  !!}</h4>
