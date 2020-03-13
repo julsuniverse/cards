@@ -13822,6 +13822,10 @@ hr.divider:after {
   background: transparent;
 }
 
+a {
+  color: #003366;
+}
+
 a:hover,
 a.btn:hover {
   transition: 1s all;
@@ -13838,7 +13842,7 @@ a.btn:hover {
 }
 
 .brown-navbar a:hover {
-  color: #3490dc !important;
+  color: #003366 !important;
   transition: 0.5s all;
 }
 

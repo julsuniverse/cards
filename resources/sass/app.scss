@@ -97,6 +97,10 @@ hr.divider {
   }
 }
 
+a {
+    color: $dark-blue;
+}
+
 a, a.btn {
   &:hover {
     transition: 1s all;
@@ -112,7 +116,7 @@ a, a.btn {
     color: $bbc-red !important;
     text-align: center;
     &:hover {
-      color: $blue !important;
+      color: $dark-blue !important;
       transition: 0.5s all;
     }
   }

@@ -6,7 +6,7 @@ return [
     'tarot1' => 'TAROT Card for Today',
     'tarot2' => 'TAROT Advice for Today',
     'tarot3' => 'Love Matters Advice',
-    'lenormand' => 'Lenormand',
+    'lenormand' => 'Lenormand Oracle',
     'runes' => 'Interactive Runes Oracle',
     'runes-btn' => 'Runes',
     'empty-deck' => 'The deck is empty',
