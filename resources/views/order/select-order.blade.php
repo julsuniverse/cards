@@ -15,7 +15,7 @@
 
             <div class="text-center mt-2 layouts-list">
                 @foreach($layouts as $layoutGroup)
-                    <a href="#layout{{ $layoutGroup[0]->theme->id }}" class="text-primary link">
+                    <a href="#layout{{ $layoutGroup[0]->theme->id }}" class="link">
                         @if(app()->getLocale() == 'en')
                             <b>{{ $layoutGroup[0]->theme->name }}</b>
                         @else
