@@ -12,7 +12,7 @@
         <div class="col-12">
             <h1>{{ __('order-form.title') }}</h1>
             @isset($layout)
-                <p class="text-center sub-title mb-2">
+                <p class="text-center sub-title mb-3">
                     @if(app()->getLocale() == 'en')
                         {!! $layout->name !!}
                     @else
