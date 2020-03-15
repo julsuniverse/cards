@@ -18,6 +18,12 @@ h1, h2, h3 {
   color: $bbc-red;
 }
 
+.sub-title {
+    font-family: $font-lobster;
+    color: $dark-blue;
+    font-size: 28px;
+}
+
 .invalid-feedback {
     display: block;
 }

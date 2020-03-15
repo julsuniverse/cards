@@ -54,20 +54,6 @@
                     </div>
 
                     <a href="{{ route('order.select-order') }}" class="btn btn-outline-danger"><b>{{ __('order.btn-order-select') }}</b></a>
-
-                    <div class="mt-2 text-center">
-                        <p>
-                            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                <b>{{ __('order.btn-order-instructions') }}</b>
-                            </a>
-                        </p>
-                        <div class="collapse" id="collapseExample">
-                            <div class="card card-body border border-danger">
-                                {!! __('order.order-instructions') !!}
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@
         <div class="col-12">
             <h1>{{ __('order-form.title') }}</h1>
             @isset($layout)
-                <p class="text-center font-weight-light">
+                <p class="text-center sub-title">
                     @if(app()->getLocale() == 'en')
                         {!! $layout->name !!}
                     @else
@@ -29,39 +29,16 @@
             <form method="POST" action="{{ route('order.store') }}">
                 @csrf
                 @method('PUT')
-                @if(!$user)
-                    <div class="form-group">
-                        <label for="name">{!! __('order-form.name')  !!} </label>
-                        <input type="text" class="form-control @if ($errors->has('name')) is-invalid @endif" id="name" name="name" placeholder="{{ __('order.order.name') }}" value="{{ old('name') }}">
-                        <small id="emailHelp" class="form-text text-muted">{!! __('order-form.name-help') !!}</small>
-                        @if ($errors->has('name'))
-                            <div class="invalid-feedback">
-                                {{ $errors->first('name') }}
-                            </div>
-                        @endif
-                    </div>
-                    <div class="form-group">
-                        <label for="email">{!! __('order-form.email')  !!}</label>
-                        <input type="email" class="form-control @if ($errors->has('email')) is-invalid @endif" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" value="{{ old('email') }}">
-                        <small id="emailHelp" class="form-text text-muted">{!! __('order-form.email-help') !!}</small>
-                        @if ($errors->has('email'))
-                            <div class="invalid-feedback">
-                                {{ $errors->first('email') }}
-                            </div>
-                        @endif
-                    </div>
 
-                    <div class="form-group">
-                        <label for="date">{!! __('order-form.date') !!}</label>
-                        <input type="date" class="form-control @if ($errors->has('date')) is-invalid @endif" id="date" name="date" placeholder="Дата рождения" value="{{ old('date') }}">
-                        <small id="dateHelp" class="form-text text-muted">{!! __('order-form.date-help') !!}  </small>
-                        @if ($errors->has('date'))
-                            <div class="invalid-feedback">
-                                {{ $errors->first('date') }}
-                            </div>
-                        @endif
-                    </div>
-                @endif
+                <div class="form-group">
+                    <label class="form-check-label" for="text">{!! __('order-form.text') !!}  </label>
+                    <textarea class="form-control @if ($errors->has('text')) is-invalid @endif" name="text" id="text" rows="6">{{ old('text') }}</textarea>
+                    @if ($errors->has('text'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('text') }}
+                        </div>
+                    @endif
+                </div>
 
                 <div class="form-group">
                     <label for="cards">{!! __('order-form.choose-cards') !!}</label>
@@ -76,15 +53,40 @@
                     @endif
                 </div>
 
-                <div class="form-group">
-                    <label class="form-check-label" for="text">{!! __('order-form.text') !!}  </label>
-                    <textarea class="form-control @if ($errors->has('text')) is-invalid @endif" name="text" id="text" rows="6">{{ old('text') }}</textarea>
-                    @if ($errors->has('text'))
-                        <div class="invalid-feedback">
-                            {{ $errors->first('text') }}
-                        </div>
-                    @endif
-                </div>
+                @if(!$user)
+                    <div class="form-group">
+                        <label for="name">{!! __('order-form.name')  !!} </label>
+                        <input type="text" class="form-control @if ($errors->has('name')) is-invalid @endif" id="name" name="name" placeholder="{{ __('order.order.name') }}" value="{{ old('name') }}">
+                        <small id="emailHelp" class="form-text text-muted">{!! __('order-form.name-help') !!}</small>
+                        @if ($errors->has('name'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('name') }}
+                            </div>
+                        @endif
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">{!! __('order-form.date') !!}</label>
+                        <input type="date" class="form-control @if ($errors->has('date')) is-invalid @endif" id="date" name="date" placeholder="Дата рождения" value="{{ old('date') }}">
+                        <small id="dateHelp" class="form-text text-muted">{!! __('order-form.date-help') !!}  </small>
+                        @if ($errors->has('date'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('date') }}
+                            </div>
+                        @endif
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">{!! __('order-form.email')  !!}</label>
+                        <input type="email" class="form-control @if ($errors->has('email')) is-invalid @endif" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" value="{{ old('email') }}">
+                        <small id="emailHelp" class="form-text text-muted">{!! __('order-form.email-help') !!}</small>
+                        @if ($errors->has('email'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('email') }}
+                            </div>
+                        @endif
+                    </div>
+                @endif
 
                 <div class="custom-control custom-checkbox mb-2">
                     <input type="hidden" name="agree" value="0">
