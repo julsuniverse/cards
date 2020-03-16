@@ -55,7 +55,7 @@
 
                     <a href="{{ route('order.select-order') }}" class="btn btn-outline-danger"><b>{{ __('order.btn-order-select') }}</b></a>
 
-                    <img src="{{ asset('images/cards-3.jpg') }}" style="max-width: 100%; margin-top: 20px;"/>
+                    <img src="{{ asset('images/cards-4.jpg') }}" style="max-width: 100%; margin-top: 20px;"/>
                 </div>
             </div>
         </div>
