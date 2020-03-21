@@ -17,7 +17,7 @@
 
             @if($order->photo)
                 <div class="text-center">
-                    <img src="{{ asset($order->photo) }}" style="max-width: 800px" class="m-auto">
+                    <img src="{{ asset($order->photo) }}" style="max-width: 100%" class="m-auto">
                     <hr>
                 </div>
             @endif
