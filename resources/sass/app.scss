@@ -225,7 +225,9 @@ footer {
 
 @media(max-width:1200px) {
   .main-page-content {
-    .text-justify-mobile {
+    .text-justify-mobile,
+    .text-justify-mobile p,
+    .text-justify-mobile.p {
       text-align: justify !important;
     }
     p {
