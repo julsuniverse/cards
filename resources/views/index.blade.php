@@ -48,7 +48,7 @@
     <div class="main-content main-page-content">
 
         <div class="row info-block">
-            <div class="col-12 text-justify mt-1">
+            <div class="col-12 text-justify text-justify-mobile mt-1">
                 {!!  __('main-page.main-block-1') !!}
             </div>
         </div>
@@ -57,7 +57,7 @@
         <div class="row info-block" id="tarot">
             <div class="col-12">
                 <h2 class="text-center mt-3">{!!  __('main-page.main-block-2-title') !!} </h2>
-                <p>
+                <p class="text-justify-mobile">
                     {!!  __('main-page.main-block-2') !!}
                 </p>
             </div>

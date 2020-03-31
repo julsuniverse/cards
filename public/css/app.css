@@ -13950,6 +13950,10 @@ footer .fondy-logo {
 }
 
 @media (max-width: 1200px) {
+  .main-page-content .text-justify-mobile {
+    text-align: justify !important;
+  }
+
   .main-page-content p {
     text-align: left !important;
   }
