@@ -16,6 +16,7 @@ class Order extends Model
     const STATUS_PAYED = 'payed';
     const STATUS_PROCESSING = 'processing';
     const STATUS_READY = 'ready';
+    const STATUS_NOT_PAYED = 'not payed';
 
     const CARDS_TAROT = 'tarot';
     const CARDS_LENORMAND = 'lenormand';
@@ -29,6 +30,7 @@ class Order extends Model
         'payed',
         'processing',
         'ready',
+        'not payed'
     ];
 
     public $status_class = [
@@ -37,6 +39,7 @@ class Order extends Model
         'processing' => 'badge-secondary',
         'ready' => 'badge-success',
         'payed' => 'badge-primary',
+        'not payed' => 'badge-dark'
     ];
 
     public function user()

@@ -8,6 +8,7 @@ return [
         'processing' => 'Выполняется',
         'ready' => 'Готов',
         'payed' => 'Оплачен',
+        'not payed' => 'Не оплачен'
     ]
 
 ];
