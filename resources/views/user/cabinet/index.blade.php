@@ -32,7 +32,7 @@
                             <p><b>{{ __('cabinet.order-description') }}</b> </p>
                             <p>{{ $order->description }}</p>
 
-                            @if($order->status == 'payed')
+                            @if($order->status == \App\Models\Order::STATUS_READY)
                                 <a href="{{ route('cabinet.show-answer', $order->id) }}" class="btn btn-danger mt-3">
                                     {{ __('order.order.show') }}
                                 </a>

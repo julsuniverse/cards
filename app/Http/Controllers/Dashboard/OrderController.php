@@ -56,7 +56,7 @@ class OrderController extends Controller
                 ]);
             }
 
-            if ($order->status == Order::STATUS_READY_FOR_PAYMENT && $oldStatus != Order::STATUS_READY_FOR_PAYMENT) {
+            if ($order->status == Order::STATUS_READY && $oldStatus != Order::STATUS_READY) {
                 Mail::to($order->user->email)->send(new OrderIsReadyEmail($order->user));
             } elseif ($order->status == Order::STATUS_PAYED && $oldStatus != Order::STATUS_PAYED) {
                 Mail::to($order->user->email)->send(new OrderIsPayedEmail($order));

@@ -29,6 +29,10 @@ class CabinetController extends Controller
             abort(403);
         }
 
+        if ($order->status != Order::STATUS_READY) {
+            abort(403);
+        }
+
         return view('user.cabinet.show-answer')->with(compact('user', 'order'));
     }
 
