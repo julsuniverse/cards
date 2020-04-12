@@ -36,12 +36,12 @@ class OrderService
                 'price' => $request->price,
                 'cards' => $request->cards
             ]);
+            $adminEmail = env('ADMIN_EMAIL_PERSONAL');
 
             if (!$request->user) {
-                \Mail::to($user->email)->send(new RegistrationEmail($user, $password));
+                \Mail::to($user->email)->cc($adminEmail)->send(new RegistrationEmail($user, $password));
             }
 
-            $adminEmail = env('ADMIN_EMAIL_PERSONAL');
             \Mail::to($adminEmail)->send(new NewOrderAdminEmail($order));
 
         } catch (\Exception $e) {
