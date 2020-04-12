@@ -67,7 +67,7 @@
 
                     <div class="form-group">
                         <label for="date">{!! __('order-form.date') !!}</label>
-                        <input type="date" class="form-control @if ($errors->has('date')) is-invalid @endif" id="date" name="date" placeholder="Дата рождения" value="{{ old('date') }}">
+                        <input class="form-control @if ($errors->has('date')) is-invalid @endif" id="date" name="date" placeholder="Дата рождения" value="{{ old('date') }}">
                         <small id="dateHelp" class="form-text text-muted">{!! __('order-form.date-help') !!}  </small>
                         @if ($errors->has('date'))
                             <div class="invalid-feedback">
