@@ -57,7 +57,8 @@ class OrderService
                 'status' => Order::STATUS_ACCEPTED
             ]);
             $user = $order->user;
-            \Mail::to($user->email)->send(new OrderAcceptedEmail($user, $order));
+            $adminEmail = env('ADMIN_EMAIL_PERSONAL');
+            \Mail::to($user->email)->cc($adminEmail)->send(new OrderAcceptedEmail($user, $order));
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
             throw new \DomainException('Error while accepting order');

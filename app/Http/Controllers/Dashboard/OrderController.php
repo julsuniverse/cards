@@ -55,11 +55,11 @@ class OrderController extends Controller
                     'photo' => $photo
                 ]);
             }
-
+            $adminEmail = env('ADMIN_EMAIL_PERSONAL');
             if ($order->status == Order::STATUS_READY && $oldStatus != Order::STATUS_READY) {
-                Mail::to($order->user->email)->send(new OrderIsReadyEmail($order->user));
+                Mail::to($order->user->email)->cc($adminEmail)->send(new OrderIsReadyEmail($order->user));
             } elseif ($order->status == Order::STATUS_PAYED && $oldStatus != Order::STATUS_PAYED) {
-                Mail::to($order->user->email)->send(new OrderIsPayedEmail($order));
+                Mail::to($order->user->email)->cc($adminEmail)->send(new OrderIsPayedEmail($order));
             }
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
