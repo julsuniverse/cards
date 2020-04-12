@@ -266,6 +266,11 @@ footer {
         font-size: 23px;
     }
 
+    .navbar-nav {
+        overflow-y: scroll;
+        max-height: -webkit-fill-available;
+    }
+
     .menu-email-icon {
         margin-right: 0;
     }
