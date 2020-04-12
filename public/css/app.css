@@ -13875,6 +13875,9 @@ a.btn:hover {
 .top-container img {
   max-width: 100%;
   padding-top: 17px;
+  position: absolute;
+  bottom: 0;
+  left: 15px;
 }
 
 .top-container .top-block-buttons {
@@ -14000,6 +14003,10 @@ footer .fondy-logo {
 
   .menu-runes {
     max-width: 100% !important;
+  }
+
+  .top-container img {
+    position: inherit;
   }
 }
 

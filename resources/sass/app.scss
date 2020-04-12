@@ -146,8 +146,11 @@ a, a.btn {
     text-align: center;
   }
   img {
-    max-width: 100%;
-    padding-top: 17px;
+      max-width: 100%;
+      padding-top: 17px;
+      position: absolute;
+      bottom: 0;
+      left: 15px;
   }
   .top-block-buttons {
     padding-top: 40px;
@@ -274,6 +277,9 @@ footer {
 
     .menu-runes {
         max-width: 100% !important;
+    }
+    .top-container img {
+        position: inherit;
     }
 
 }

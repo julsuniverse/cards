@@ -2,7 +2,7 @@
 @section('pre-content')
 <div class="container top-container">
     <div class="row">
-        <div class="col-lg-6 col-md-12">
+        <div class="col-xl-6 col-lg-12 col-md-12">
             <div class="top-block">
                 <h1 class="display-3 logo">{{ trans('menu.name') }}</h1>
                 <p class="lead font-weight-bold">
@@ -35,7 +35,7 @@
                 <!--</div>-->
             </div>
         </div>
-        <div class="col-lg-6 col-md-12 text-center">
+        <div class="col-xl-6 col-lg-12 col-md-12 text-center position-relative">
             <img src="{{ asset('images/top-img.gif') }}" />
         </div>
     </div>
