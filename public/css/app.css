@@ -14007,6 +14007,7 @@ footer .fondy-logo {
 
   .top-container img {
     position: inherit;
+    left: 0;
   }
 }
 
