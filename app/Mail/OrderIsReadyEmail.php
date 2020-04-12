@@ -40,7 +40,7 @@ class OrderIsReadyEmail extends Mailable
                 ->with('user', $this->user);
         } else {
             return $this
-                ->subject('Ваш заказ готов! - ' . $this->appName)
+                ->subject('Ваш заказ готов - ' . $this->appName)
                 ->view('emails.ru.order-is-ready')
                 ->with('user', $this->user);
         }

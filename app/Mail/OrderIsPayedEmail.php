@@ -42,7 +42,7 @@ class OrderIsPayedEmail extends Mailable
                 ->with(['order' => $this->order, 'user' => $this->user]);
         } else {
             return $this
-                ->subject('Ваша оплата принята! - ' . $this->appName)
+                ->subject('Спасибо, Ваша оплата получена - ' . $this->appName)
                 ->view('emails.ru.order-is-payed')
                 ->with(['order' => $this->order, 'user' => $this->user]);
         }
