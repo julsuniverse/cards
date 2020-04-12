@@ -12,7 +12,7 @@
             padding: 0;
         }
         p, span, li {
-            color: #000;
+            color: #000 !important;
         }
         p, span, li, a {
             font-size: 16px;
