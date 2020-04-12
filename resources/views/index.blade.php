@@ -17,7 +17,7 @@
                     </p>
                 </div>
                 <!--<div class="top-block-buttons">-->
-                    <div class="col-sm-12 col-md-6 text-center main-top-btn">
+                    <div class="col-sm-12 col-md-6 text-xl-center text-lg-right text-md-right text-sm-center text-center main-top-btn">
                         <form method="post" action="{{ route('set-cards') }}">
                             @csrf
                             <input type="hidden" value="tarot" name="cards">
@@ -25,7 +25,7 @@
                         </form>
 
                     </div>
-                    <div class="col-sm-12 col-md-6 text-center main-top-btn">
+                    <div class="col-sm-12 col-md-6 text-xl-center text-lg-left text-md-left text-sm-center text-center main-top-btn">
                         <form method="post" action="{{ route('set-cards') }}">
                             @csrf
                             <input type="hidden" value="lenormand" name="cards">
