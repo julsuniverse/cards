@@ -3,7 +3,6 @@
     <style>
         h1, h2, h3, h4, h5, p, span, a, li {
             font-family: "Arial", sans-serif;
-            font-weight: 100;
         }
         h1 {
             margin: 16px 0;
