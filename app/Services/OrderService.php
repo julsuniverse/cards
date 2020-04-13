@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Http\Requests\User\OrderRequest;
 use App\Mail\NewOrderAdminEmail;
 use App\Mail\OrderAcceptedEmail;
+use App\Mail\OrderReceivedForRegisteredUser;
 use App\Mail\RegistrationEmail;
 use App\Models\Order;
 use App\Models\User;
@@ -40,6 +41,8 @@ class OrderService
 
             if (!$request->user) {
                 \Mail::to($user->email)->bcc($adminEmail)->send(new RegistrationEmail($user, $password));
+            } else {
+                \Mail::to($user->email)->bcc($adminEmail)->send(new OrderReceivedForRegisteredUser($user));
             }
 
             \Mail::to($adminEmail)->send(new NewOrderAdminEmail($order));
