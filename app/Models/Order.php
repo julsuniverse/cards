@@ -14,7 +14,6 @@ class Order extends Model
     const STATUS_NEW = 'new';
     const STATUS_ACCEPTED = 'accepted';
     const STATUS_PAYED = 'payed';
-    const STATUS_PROCESSING = 'processing';
     const STATUS_READY = 'ready';
     const STATUS_NOT_PAYED = 'not payed';
 
@@ -28,17 +27,15 @@ class Order extends Model
         'new',
         'accepted',
         'payed',
-        'processing',
         'ready',
         'not payed'
     ];
 
     public $status_class = [
-        'new' => 'badge-danger',
-        'accepted' => 'badge-warning',
-        'processing' => 'badge-secondary',
+        'new' => 'badge-info',
+        'accepted' => 'badge-primary',
         'ready' => 'badge-success',
-        'payed' => 'badge-primary',
+        'payed' => 'badge-danger',
         'not payed' => 'badge-dark'
     ];
 

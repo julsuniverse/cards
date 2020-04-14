@@ -13960,7 +13960,7 @@ footer .fondy-logo {
   }
 
   .main-page-content p {
-    text-align: left !important;
+    text-align: left;
   }
 
   .main-page-content div {

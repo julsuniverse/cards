@@ -137,7 +137,7 @@
                     </div>
                     <div class="col-6">
                         <h4>{{ __('random-card.lenormand-title') }}</h4>
-                        <div class="text-small mb-2">{{ __('random-card.lenormand-small') }}</div>
+                        <div class="text-small text-left mb-2">{{ __('random-card.lenormand-small') }}</div>
                         <p>
                             {!! __('random-card.lenormand-intro') !!}
                         </p>

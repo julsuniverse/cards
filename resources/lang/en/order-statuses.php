@@ -3,12 +3,11 @@
 return [
 
     'status' =>[
-        'new' => 'new',
-        'accepted' => 'accepted',
-        'processing' => 'processing',
-        'ready' => 'ready',
-        'payed' => 'payed',
-        'viewed' => 'viewed',
+        'new' => 'NEW',
+        'accepted' => 'ACCEPTED AND AWAITS PAYMENT',
+        'ready' => 'READY',
+        'payed' => 'PAYED AND PROCESSING',
+        'not payed' => 'NOT PAYED'
     ]
 
 ];

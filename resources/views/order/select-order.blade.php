@@ -50,16 +50,19 @@
                                         @else
                                             <b>{{ $layout->name_ru }}</b>
                                         @endif
+
+                                        <div class="pl-2 d-inline">
+                                            @if(app()->getLocale() == 'en')
+                                                @if($layout->price_usd)
+                                                    <span class="badge badge-primary badge-pill">$ {{ $layout->price_usd }} </span>
+                                                @endif
+                                            @else
+                                                @if($layout->price_uah)
+                                                    <span class="badge badge-primary badge-pill">{{ $layout->price_uah }} грн</span>
+                                                @endif
+                                            @endif
+                                        </div>
                                     </button>
-                                    @if(app()->getLocale() == 'en')
-                                        @if($layout->price_usd)
-                                            <span class="badge badge-primary badge-pill">$ {{ $layout->price_usd }} </span>
-                                        @endif
-                                    @else
-                                        @if($layout->price_uah)
-                                            <span class="badge badge-primary badge-pill">{{ $layout->price_uah }} грн</span>
-                                        @endif
-                                    @endif
                                     <div class="text-center float-lg-right">
                                         <a href="{{ route('order.text-order', $layout) }}" class="btn btn-success">{{ __('order.btn-order') }}</a>
                                     </div>
