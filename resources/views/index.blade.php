@@ -141,7 +141,7 @@
                         <p>
                             {!! __('random-card.lenormand-intro') !!}
                         </p>
-                        <p>
+                        <p class="text-center">
                             <a href="{{ route('daily-card', ['type' => 'lenormand']) }}" class="btn btn-outline-danger mt-3" target="_blank">
                                 <b>
                                     {{ __('random-card.lenormand') }}
