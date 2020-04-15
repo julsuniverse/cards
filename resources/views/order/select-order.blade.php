@@ -44,7 +44,7 @@
                         <div class="card">
                             <div class="card-header" id="heading-{{$layout->id}}">
                                 <div class="mb-0">
-                                    <button class="btn btn-link my-btn-link" type="button" data-toggle="collapse" data-target="#collapse-{{$layout->id}}" aria-expanded="true" aria-controls="collapse-{{$layout->id}}">
+                                    <button class="btn btn-link my-btn-link text-left" type="button" data-toggle="collapse" data-target="#collapse-{{$layout->id}}" aria-expanded="true" aria-controls="collapse-{{$layout->id}}">
                                         @if(app()->getLocale() == 'en')
                                             <b>{{ $layout->name }}</b>
                                         @else

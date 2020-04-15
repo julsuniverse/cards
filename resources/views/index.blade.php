@@ -106,7 +106,7 @@
                 <div class="row text-center mt-3">
                     <div class="col-6">
                         <h4>{{ __('random-card.taro-title') }}</h4>
-                        <div class="text-small">{{ __('random-card.tarot-small') }} </div>
+                        <div class="text-small text-left">{{ __('random-card.tarot-small') }} </div>
                         <div class="row mt-md-2">
                             <div class="col-sm-12 col-md-6">
                                 <span class="text-center">
@@ -162,10 +162,10 @@
 
                 {!!  __('main-page.main-block-8') !!}
             </div>
-            <div class="col-md-8 col-sm-12 order-md-1 order-sm-2 order-2">
+            <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 order-xl-1 order-lg-2 order-md-2 order-sm-2 order-2">
                 {!!  __('main-page.main-block-9') !!}
             </div>
-            <div class="col-md-4 col-sm-12 order-md-2 order-sm-1 order-1 text-center mb-3 m-md-auto ">
+            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 order-xl-2 order-lg-1 order-md-1 order-sm-1 order-1 text-center mb-3 m-md-auto ">
                 <img src="{{ asset('images/story.jpg') }}" class="daily-card-img" />
             </div>
         </div>
