@@ -162,7 +162,7 @@
 
                 {!!  __('main-page.main-block-8') !!}
             </div>
-            <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 order-xl-1 order-lg-2 order-md-2 order-sm-2 order-2">
+            <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 order-xl-1 order-lg-2 order-md-2 order-sm-2 order-2 mt-lg-2">
                 {!!  __('main-page.main-block-9') !!}
             </div>
             <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 order-xl-2 order-lg-1 order-md-1 order-sm-1 order-1 text-center mb-3 m-md-auto ">
