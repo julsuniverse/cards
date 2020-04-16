@@ -10,10 +10,10 @@
                 @endif
                 <div class="row text-center mt-3">
                     <div class="col-6">
-                        <a href="{{ route('login') }}" class="btn btn-danger">{{ __('order-success.btn-cabinet') }}</a>
+                        <a href="{{ route('login') }}" class="btn btn-danger"><b>{{ __('order-success.btn-cabinet') }}</b></a>
                     </div>
                     <div class="col">
-                        <a href="{{ route('home') }}" class="btn btn-outline-danger">{{ __('order-success.btn-home') }}</a>
+                        <a href="{{ route('home') }}" class="btn btn-outline-danger"><b>{{ __('order-success.btn-home') }}</b></a>
                     </div>
                 </div>
             </div>
