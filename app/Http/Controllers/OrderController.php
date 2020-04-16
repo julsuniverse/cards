@@ -38,7 +38,8 @@ class OrderController
     public function store(OrderRequest $request)
     {
         try {
-            $this->orderService->create($request);
+            $user = $this->orderService->create($request);
+            Auth::login($user);
         } catch (\DomainException $e){
             return redirect()->back()->with('error', $e->getMessage());
         }

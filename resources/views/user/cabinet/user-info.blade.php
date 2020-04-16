@@ -39,3 +39,7 @@
 
     <button type="submit" class="btn btn-primary">{{ __('cabinet.submit') }}</button>
 </form>
+
+@push('scripts')
+    <script src="{{ asset('js/allowCopy.js') }}"></script>
+@endpush

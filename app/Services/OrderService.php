@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 
 class OrderService
 {
-    public function create(OrderRequest $request)
+    public function create(OrderRequest $request): User
     {
         try {
             $password = str_random(8);
@@ -51,6 +51,8 @@ class OrderService
             \Log::error($e->getMessage(), ['error' => $e->getTrace(), 'user' => $request->user]);
             throw new \DomainException('Order creating error');
         }
+
+        return $user;
     }
 
     public function accept(Order $order)

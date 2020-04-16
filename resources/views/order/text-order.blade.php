@@ -25,6 +25,15 @@
         </div>
 
         <div class="col-md-8 col-sm-12 order-md-1 order-sm-2">
+            @if($errors->any())
+                <div class="alert alert-danger alert-dismissible">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    {!! implode('', $errors->all('<div>:message</div>')) !!}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
 
             <form method="POST" action="{{ route('order.store') }}">
                 @csrf
