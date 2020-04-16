@@ -37,12 +37,12 @@ class OrderIsPayedEmail extends Mailable
     {
         if ($this->locale == 'en') {
             return $this
-                ->subject('Your order is ready! -'  . $this->appName)
+                ->subject('Your order is ready!')
                 ->view('emails.en.order-is-payed')
                 ->with(['order' => $this->order, 'user' => $this->user]);
         } else {
             return $this
-                ->subject('Спасибо, Ваша оплата получена - ' . $this->appName)
+                ->subject('Спасибо, Ваша оплата получена')
                 ->view('emails.ru.order-is-payed')
                 ->with(['order' => $this->order, 'user' => $this->user]);
         }

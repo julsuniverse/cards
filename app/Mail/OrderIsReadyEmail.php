@@ -35,12 +35,12 @@ class OrderIsReadyEmail extends Mailable
     {
         if ($this->locale == 'en') {
             return $this
-                ->subject('Your order is ready! -'  . $this->appName)
+                ->subject('Your order is ready!')
                 ->view('emails.en.order-is-ready')
                 ->with('user', $this->user);
         } else {
             return $this
-                ->subject('Ваш заказ готов - ' . $this->appName)
+                ->subject('Ваш заказ готов')
                 ->view('emails.ru.order-is-ready')
                 ->with('user', $this->user);
         }

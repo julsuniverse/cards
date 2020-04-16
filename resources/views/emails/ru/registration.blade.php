@@ -18,7 +18,7 @@
             </li>
         </ul>
 
-        <a href="https://tarot-light.space/cabinet" class="email-btn">Войти в Ваш личный кабинет</a>
+        <a href="https://tarot-light.space/cabinet" class="email-btn">Войти в личный кабинет</a>
 
         <p>Информация Вашего личного кабинета на сайте доступна только для Вас.</p>
 
