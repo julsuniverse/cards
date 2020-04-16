@@ -40,9 +40,9 @@ class OrderService
             $adminEmail = env('ADMIN_EMAIL_PERSONAL');
 
             if (!$request->user) {
-                \Mail::to($user->email)->bcc($adminEmail)->send(new RegistrationEmail($user, $password));
+                \Mail::to($user->email)->send(new RegistrationEmail($user, $password));
             } else {
-                \Mail::to($user->email)->bcc($adminEmail)->send(new OrderReceivedForRegisteredUser($user));
+                \Mail::to($user->email)->send(new OrderReceivedForRegisteredUser($user));
             }
 
             \Mail::to($adminEmail)->send(new NewOrderAdminEmail($order));
@@ -62,8 +62,7 @@ class OrderService
                 'status' => Order::STATUS_ACCEPTED
             ]);
             $user = $order->user;
-            $adminEmail = env('ADMIN_EMAIL_PERSONAL');
-            \Mail::to($user->email)->bcc($adminEmail)->send(new OrderAcceptedEmail($user, $order));
+            \Mail::to($user->email)->send(new OrderAcceptedEmail($user, $order));
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
             throw new \DomainException('Error while accepting order');

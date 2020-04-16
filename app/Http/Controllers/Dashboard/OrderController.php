@@ -57,12 +57,12 @@ class OrderController extends Controller
             }
             $adminEmail = env('ADMIN_EMAIL_PERSONAL');
             if ($order->status == Order::STATUS_READY && $oldStatus != Order::STATUS_READY) {
-                Mail::to($order->user->email)->bcc($adminEmail)->send(new OrderIsReadyEmail($order->user));
+                Mail::to($order->user->email)->send(new OrderIsReadyEmail($order->user));
             } elseif ($order->status == Order::STATUS_PAYED && $oldStatus != Order::STATUS_PAYED) {
-                Mail::to($order->user->email)->bcc($adminEmail)->send(new OrderIsPayedEmail($order));
+                Mail::to($order->user->email)->send(new OrderIsPayedEmail($order));
             } elseif ($request->status == Order::STATUS_ACCEPTED && $oldStatus != Order::STATUS_ACCEPTED) {
                 $orderService = new OrderService();
-                $orderService->accept();
+                $orderService->accept($order);
             }
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
