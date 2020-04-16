@@ -60,6 +60,9 @@ class OrderController extends Controller
                 Mail::to($order->user->email)->bcc($adminEmail)->send(new OrderIsReadyEmail($order->user));
             } elseif ($order->status == Order::STATUS_PAYED && $oldStatus != Order::STATUS_PAYED) {
                 Mail::to($order->user->email)->bcc($adminEmail)->send(new OrderIsPayedEmail($order));
+            } elseif ($request->status == Order::STATUS_ACCEPTED && $oldStatus != Order::STATUS_ACCEPTED) {
+                $orderService = new OrderService();
+                $orderService->accept();
             }
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
