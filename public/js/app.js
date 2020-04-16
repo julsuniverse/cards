@@ -51004,8 +51004,10 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-froala-wysiwyg */ "./node_modules/vue-froala-wysiwyg/es/index.js");
 /* harmony import */ var vue_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_0__);
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Require Froala Editor js file.
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+window.allowCopy = false;
+console.log('in app.js', window.allowCopy); // Require Froala Editor js file.
 
 __webpack_require__(/*! froala-editor/js/froala_editor.pkgd.min.js */ "./node_modules/froala-editor/js/froala_editor.pkgd.min.js");
 
@@ -51056,38 +51058,6 @@ function setScrollMargin(attribute) {
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
-
-function noselect() {
-  return false;
-}
-
-console.log("1");
-
-if ("1" == 1) {
-  document.ondragstart = noselect; // запрет на перетаскивание
-
-  document.onselectstart = noselect; // запрет на выделение элементов страницы
-
-  document.oncontextmenu = noselect; // запрет на выведение контекстного меню
-
-  document.onkeydown = function (e) {
-    if (event.keyCode == 123) {
-      return false;
-    }
-
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-      return false;
-    }
-
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-      return false;
-    }
-
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-      return false;
-    }
-  };
-}
 /*$( document ).ready(function() {
     let str = window.location.href;
 

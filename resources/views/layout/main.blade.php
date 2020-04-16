@@ -149,6 +149,8 @@
 
         </div>
     </footer>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    @stack('scripts')
+    <script src="{{ asset('js/disableCopy.js') }}"></script>
 </body>
 </html>

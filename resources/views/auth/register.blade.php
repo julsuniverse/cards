@@ -75,3 +75,6 @@
     </div>
 </div>
 @endsection
+@push('scripts')
+    <script src="{{ asset('js/allowCopy.js') }}"></script>
+@endpush
