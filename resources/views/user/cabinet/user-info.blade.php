@@ -27,7 +27,7 @@
 
     <div class="form-group">
         <label for="date">{{ __('cabinet.info-date') }}</label>
-        <input type="date" class="form-control @if ($errors->has('date')) is-invalid @endif" id="date" name="date"
+        <input class="form-control @if ($errors->has('date')) is-invalid @endif" id="date" name="date"
                placeholder="{{ __('cabinet.info-date-placeholder') }}" value="{{ old('date', $user->dob) }}">
         <small id="dateHelp" class="form-text text-muted">{{ __('cabinet.info-date-help') }}</small>
         @if ($errors->has('date'))
