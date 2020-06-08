@@ -67,7 +67,7 @@ class OrderController extends Controller
         } catch (\DomainException $e) {
             return back()->with('error', $e->getMessage());
         }
-        return redirect(route('dashboard.order.show', [$order]))->with('success', 'Заказ был обновлен!');
+        return redirect(route('dashboard.order.show', [$order]))->with('success', 'Order was updated!');
     }
 
     public function loginAs(User $user)

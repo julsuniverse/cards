@@ -21,7 +21,7 @@
                         <form method="post" action="{{ route('set-cards') }}">
                             @csrf
                             <input type="hidden" value="tarot" name="cards">
-                            <button type="submit" class="btn btn-outline-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn1') !!}</button>
+                            <button type="submit" class="btn btn-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn1') !!}</button>
                         </form>
 
                     </div>
@@ -29,7 +29,7 @@
                         <form method="post" action="{{ route('set-cards') }}">
                             @csrf
                             <input type="hidden" value="lenormand" name="cards">
-                            <button type="submit" class="btn btn-outline-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn2') !!}</button>
+                            <button type="submit" class="btn btn-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn2') !!}</button>
                         </form>
                     </div>
                 <!--</div>-->
@@ -86,7 +86,7 @@
                 {!!  __('main-page.main-block-5') !!}
 
                 <div class="mx-auto text-center mb-3 mt-3">
-                    <a href="{{ route('order.index') }}" class="btn btn-outline-danger"><b>{!!  __('order.btn-order-simple') !!}</b></a>
+                    <a href="{{ route('order.index') }}" class="btn btn-danger"><b>{!!  __('order.btn-order-simple') !!}</b></a>
                 </div>
 
                 {!!  __('main-page.main-block-6') !!}
@@ -110,14 +110,14 @@
                         <div class="row mt-md-2">
                             <div class="col-sm-12 col-md-6">
                                 <span class="text-center">
-                                    <a href="{{ route('daily-card', ['type' => 'tarot-day']) }}" class="btn btn-outline-danger random-card-btn" target="_blank">
+                                    <a href="{{ route('daily-card', ['type' => 'tarot-day']) }}" class="btn btn-danger random-card-btn" target="_blank">
                                         <b>{{ __('random-card.tarot1') }}</b>
                                     </a>
                                 </span>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <span class="text-center">
-                                    <a href="{{ route('daily-card', ['type' => 'tarot-advice']) }}" class="btn btn-outline-danger random-card-btn" target="_blank">
+                                    <a href="{{ route('daily-card', ['type' => 'tarot-advice']) }}" class="btn btn-danger random-card-btn" target="_blank">
                                         <b>
                                             {{ __('random-card.tarot2') }}
                                         </b>
@@ -126,7 +126,7 @@
                             </div>
                             <div class="col-sm-12 mt-md-2">
                                 <span class="text-center">
-                                    <a href="{{ route('daily-card', ['type' => 'tarot-love']) }}" class="btn btn-outline-danger random-card-btn" target="_blank">
+                                    <a href="{{ route('daily-card', ['type' => 'tarot-love']) }}" class="btn btn-danger random-card-btn" target="_blank">
                                         <b>
                                             {{ __('random-card.tarot3') }}
                                         </b>
@@ -142,7 +142,7 @@
                             {!! __('random-card.lenormand-intro') !!}
                         </p>
                         <p class="text-center">
-                            <a href="{{ route('daily-card', ['type' => 'lenormand']) }}" class="btn btn-outline-danger mt-3" target="_blank">
+                            <a href="{{ route('daily-card', ['type' => 'lenormand']) }}" class="btn btn-danger mt-3" target="_blank">
                                 <b>
                                     {{ __('random-card.lenormand') }}
                                 </b>
@@ -189,7 +189,7 @@
             </div>
         </div>
         <div class="mx-auto text-center mb-4 mt-3">
-            <a href="{{ route('daily-card', ['type' => 'runes']) }}" class="btn btn-outline-danger" target="_blank"><b>{!! __('main-page.main-block-11-btn') !!}</b>  </a>
+            <a href="{{ route('daily-card', ['type' => 'runes']) }}" class="btn btn-danger" target="_blank"><b>{!! __('main-page.main-block-11-btn') !!}</b>  </a>
         </div>
 
         <hr class="divider"/>
