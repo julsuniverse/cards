@@ -88,7 +88,7 @@
     @yield('content')
 
     <footer>
-        <p>&copy; {{ date('Y') }} Silver Thread. All rights reserved. </p>
+        <p>&copy; {{ date('Y') }} Light of TAROT. All rights reserved. </p>
     </footer>
 </div>
 </body>

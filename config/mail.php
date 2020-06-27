@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => env('ADMIN_EMAIL'),
-        'name' => env('MAIL_FROM_NAME', 'Silver Thread'),
+        'name' => env('MAIL_FROM_NAME', 'Light of TAROT'),
     ],
 
     /*

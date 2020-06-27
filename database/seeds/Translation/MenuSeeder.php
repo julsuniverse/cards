@@ -36,7 +36,7 @@ class MenuSeeder extends Seeder
         LanguageLine::create([
             'group' => 'menu',
             'key' => 'name',
-            'text' => ['en' => 'Silver Thread', 'ru' => 'Серебрянная нить'],
+            'text' => ['en' => 'Light of TAROT', 'ru' => 'Серебрянная нить'],
         ]);
         LanguageLine::create([
             'group' => 'menu',
