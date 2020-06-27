@@ -51,7 +51,7 @@
             <div class="col-12 text-justify mt-1">
                 <div id="youtube" class="text-center">
                     <a href="https://www.youtube.com/channel/UC_DHLqSbI0pJah8HUiEfx5g" target="_blank">
-                        <img src="{{ asset('images/youtube.png') }}" alt="youtube" style="width: 160px;"/>
+                        <img src="{{ asset('images/youtube.png') }}" alt="youtube" style="width: 150px;"/>
                     </a>
                 </div>
                 {!!  __('main-page.main-block-1') !!}
