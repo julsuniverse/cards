@@ -10,9 +10,6 @@
                 </p>
             </div>
         </div>
-{{--        <div class="col-xl-6 col-lg-12 col-md-12 text-center position-relative">
-            <img id="header-img" src="{{ asset('images/00.jpg') }}" />
-        </div>--}}
     </div>
 
     <div class="row">
@@ -75,6 +72,12 @@
                 <div class="text-center">
                     <p>{!!  __('main-page.main-block-12') !!}</p>
                 </div>
+            </div>
+        </div>
+
+        <div class="row info-block">
+            <div class="col-xl-12 col-lg-12 col-md-12 text-center position-relative">
+                <img id="header-img" src="{{ asset('images/top-img.gif') }}" />
             </div>
         </div>
 
