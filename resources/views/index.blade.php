@@ -79,13 +79,13 @@
 
         <div class="row info-block">
             <div class="col-xl-12 col-lg-12 col-md-12 text-center position-relative">
-                <img id="header-img" src="{{ asset('images/top-img.gif') }}" />
+                <img id="header-img" src="{{ asset('images/top-img.gif') }}" style="max-width: 100%" />
             </div>
         </div>
 
         <div class="row info-block" id="tarot">
             <div class="col-12">
-                <h2 class="text-center mt-1">{!!  __('main-page.main-block-2-title') !!} </h2>
+                <h2 class="text-center mt-3">{!!  __('main-page.main-block-2-title') !!} </h2>
                 <div class="">
                     {!!  __('main-page.main-block-2') !!}
                 </div>
