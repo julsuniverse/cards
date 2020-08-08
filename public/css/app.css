@@ -13868,7 +13868,7 @@ a.btn:hover {
 }
 
 .top-container .top-block {
-  padding: 75px 20px 13px;
+  padding: 0px 20px 13px;
   text-align: center;
 }
 
@@ -13959,10 +13959,6 @@ footer .fondy-logo {
 }
 
 @media (max-width: 1200px) {
-  .top-container .top-block {
-    padding: 0 20px 13px;
-  }
-
   .main-page-content .text-justify-mobile,
   .main-page-content .text-justify-mobile p,
   .main-page-content .text-justify-mobile.p {
