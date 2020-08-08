@@ -70,6 +70,14 @@
             </div>
         </div>
 
+        <div class="row info-block">
+            <div class="col-12">
+                <div class="text-center">
+                    <p>{!!  __('main-page.main-block-12') !!}</p>
+                </div>
+            </div>
+        </div>
+
         <div class="row info-block" id="tarot">
             <div class="col-12">
                 <h2 class="text-center mt-3">{!!  __('main-page.main-block-2-title') !!} </h2>
