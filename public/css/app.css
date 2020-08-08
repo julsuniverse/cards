@@ -13954,6 +13954,10 @@ footer .fondy-logo {
   max-width: 105px !important;
 }
 
+#youtube {
+  margin-bottom: 8px;
+}
+
 @media (max-width: 1200px) {
   .top-container .top-block {
     padding: 0 20px 13px;
