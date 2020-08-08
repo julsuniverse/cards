@@ -75,12 +75,15 @@
                     <a class="nav-link" href="{{ route('terms') }}">{{ trans('menu.terms') }}</a>
                 </li>--}}
                 <li class="nav-item nav-item-custom">
-                    <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order') }}</a>
-                </li>
-                <li class="nav-item nav-item-custom">
                     <a class="nav-link font-weight-bold" href="https://www.youtube.com/channel/UC_DHLqSbI0pJah8HUiEfx5g" target="_blank">
                         {{ trans('menu.youtube') }}
                     </a>
+                </li>
+                <li class="nav-item nav-item-custom">
+                    <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order') }}</a>
+                </li>
+                <li class="nav-item nav-item-custom">
+                    <a class="nav-link" href="{{ route('terms') }}">{{ trans('menu.terms') }}</a>
                 </li>
                 {{--<li class="nav-item nav-item-custom">
                     <a class="nav-link" href="{{ route('home') }}#oracle-tarot">{{ trans('menu.oracle-tarot') }}</a>
