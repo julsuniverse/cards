@@ -115,7 +115,7 @@ a, a.btn {
 
 .brown-navbar {
   //background-color: $bbc-red !important;
-  background-color: rgba(255, 255, 255, 0.6196078431372549) !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
   padding: 4px 16px;
   a {
     //color: #fff !important;
@@ -265,8 +265,9 @@ footer {
   .brown-navbar {
       li.nav-item-custom a {
           max-width: none;
+          line-height: 25px;
       }
-      background-color: rgba(255, 255, 255, 0.9) !important;
+      background-color: rgba(255, 255, 255, 0.95) !important;
   }
     .navbar.my-navbar a {
         font-size: 23px;

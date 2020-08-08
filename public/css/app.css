@@ -13838,7 +13838,7 @@ a.btn:hover {
 }
 
 .brown-navbar {
-  background-color: rgba(255, 255, 255, 0.6196078431) !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
   padding: 4px 16px;
 }
 
@@ -13987,11 +13987,12 @@ footer .fondy-logo {
   }
 
   .brown-navbar {
-    background-color: rgba(255, 255, 255, 0.9) !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
   }
 
   .brown-navbar li.nav-item-custom a {
     max-width: none;
+    line-height: 25px;
   }
 
   .navbar.my-navbar a {
