@@ -9,48 +9,48 @@
                     {!!  __('main-page.top-block-1') !!}
                 </p>
             </div>
-
-            <div class="row">
-                <div class="col-12 text-center top-block-info">
-                    <p class="mb-0 font-weight-bold">
-                        {!!  __('main-page.top-block-2') !!}
-                    </p>
-                </div>
-                <div class="col-12 text-center top-block-info">
-                    <div id="youtube" class="text-center mt-2">
-                        <a href="https://www.youtube.com/channel/UC_DHLqSbI0pJah8HUiEfx5g" target="_blank">
-                            <img src="{{ asset('images/youtube.png') }}" alt="youtube" style="width: 180px;"/>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-12 text-center top-block-info">
-                    <p class="mb-0 font-weight-bold">
-                        {!!  __('main-page.top-block-3') !!}
-                    </p>
-                </div>
-                <!--<div class="top-block-buttons">-->
-                    {{--<div class="col-sm-12 col-md-6 text-xl-center text-lg-right text-md-right text-sm-center text-center main-top-btn">
-                        <form method="post" action="{{ route('set-cards') }}">
-                            @csrf
-                            <input type="hidden" value="tarot" name="cards">
-                            <button type="submit" class="btn btn-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn1') !!}</button>
-                        </form>
-
-                    </div>
-                    <div class="col-sm-12 col-md-6 text-xl-center text-lg-left text-md-left text-sm-center text-center main-top-btn">
-                        <form method="post" action="{{ route('set-cards') }}">
-                            @csrf
-                            <input type="hidden" value="lenormand" name="cards">
-                            <button type="submit" class="btn btn-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn2') !!}</button>
-                        </form>
-                    </div>--}}
-                <!--</div>-->
-            </div>
         </div>
         <div class="col-xl-6 col-lg-12 col-md-12 text-center position-relative">
             <img id="header-img" src="{{ asset('images/00.jpg') }}" />
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center top-block-info mt-2">
+            <p class="mb-0 font-weight-bold">
+                {!!  __('main-page.top-block-2') !!}
+            </p>
+        </div>
+        <div class="col-12 text-center top-block-info">
+            <div id="youtube" class="text-center mt-2">
+                <a href="https://www.youtube.com/channel/UC_DHLqSbI0pJah8HUiEfx5g" target="_blank">
+                    <img src="{{ asset('images/youtube.png') }}" alt="youtube" style="width: 180px;"/>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-12 text-center top-block-info">
+            <p class="mb-0 font-weight-bold">
+                {!!  __('main-page.top-block-3') !!}
+            </p>
+        </div>
+        <!--<div class="top-block-buttons">-->
+    {{--<div class="col-sm-12 col-md-6 text-xl-center text-lg-right text-md-right text-sm-center text-center main-top-btn">
+        <form method="post" action="{{ route('set-cards') }}">
+            @csrf
+            <input type="hidden" value="tarot" name="cards">
+            <button type="submit" class="btn btn-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn1') !!}</button>
+        </form>
+
+    </div>
+    <div class="col-sm-12 col-md-6 text-xl-center text-lg-left text-md-left text-sm-center text-center main-top-btn">
+        <form method="post" action="{{ route('set-cards') }}">
+            @csrf
+            <input type="hidden" value="lenormand" name="cards">
+            <button type="submit" class="btn btn-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn2') !!}</button>
+        </form>
+    </div>--}}
+    <!--</div>-->
     </div>
 </div>
 
