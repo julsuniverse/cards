@@ -16,8 +16,16 @@
                         {!!  __('main-page.top-block-2') !!}
                     </p>
                 </div>
+                <div class="col-12 text-center top-block-info">
+                    <div id="youtube" class="text-center mt-2">
+                        <a href="https://www.youtube.com/channel/UC_DHLqSbI0pJah8HUiEfx5g" target="_blank">
+                            <img src="{{ asset('images/youtube.png') }}" alt="youtube" style="width: 180px;"/>
+                        </a>
+                    </div>
+                </div>
+
                 <!--<div class="top-block-buttons">-->
-                    <div class="col-sm-12 col-md-6 text-xl-center text-lg-right text-md-right text-sm-center text-center main-top-btn">
+                    {{--<div class="col-sm-12 col-md-6 text-xl-center text-lg-right text-md-right text-sm-center text-center main-top-btn">
                         <form method="post" action="{{ route('set-cards') }}">
                             @csrf
                             <input type="hidden" value="tarot" name="cards">
@@ -31,12 +39,12 @@
                             <input type="hidden" value="lenormand" name="cards">
                             <button type="submit" class="btn btn-danger font-weight-bold btn-consultation">{!!  __('main-page.top-block-btn2') !!}</button>
                         </form>
-                    </div>
+                    </div>--}}
                 <!--</div>-->
             </div>
         </div>
         <div class="col-xl-6 col-lg-12 col-md-12 text-center position-relative">
-            <img src="{{ asset('images/top-img.gif') }}" />
+            <img id="header-img" src="{{ asset('images/top-img.gif') }}" />
         </div>
     </div>
 </div>
@@ -46,22 +54,6 @@
 
 @section('content')
     <div class="main-content main-page-content">
-
-        <div class="row info-block">
-            <div class="col-12 text-justify mt-1">
-                @if(app()->getLocale() == 'ru')
-                    <div id="youtube" class="text-center">
-                        <a href="https://www.youtube.com/channel/UC_DHLqSbI0pJah8HUiEfx5g" target="_blank">
-                            <img src="{{ asset('images/youtube.png') }}" alt="youtube" style="width: 130px;"/>
-                        </a>
-                    </div>
-                @else
-                    {!!  __('main-page.main-block-1') !!}
-                @endif
-            </div>
-        </div>
-
-
         <div class="row info-block" id="tarot">
             <div class="col-12">
                 <h2 class="text-center mt-3">{!!  __('main-page.main-block-2-title') !!} </h2>

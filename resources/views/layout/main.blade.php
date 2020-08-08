@@ -59,7 +59,7 @@
                 <li class="nav-item active nav-item-custom">
                     <a class="nav-link" href="{{ route('home') }}">{{ trans('menu.home') }}</a>
                 </li>
-                <li class="nav-item nav-item-custom">
+                {{--<li class="nav-item nav-item-custom">
                     <a class="nav-link" href="{{ route('home') }}#tarot">{{ trans('menu.tarot') }}</a>
                 </li>
                 <li class="nav-item nav-item-custom">
@@ -73,16 +73,19 @@
                 </li>
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link" href="{{ route('terms') }}">{{ trans('menu.terms') }}</a>
-                </li>
+                </li>--}}
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order') }}</a>
                 </li>
                 <li class="nav-item nav-item-custom">
+                    <a class="nav-link font-weight-bold" href="https://www.youtube.com/channel/UC_DHLqSbI0pJah8HUiEfx5g" target="_blank">{{ trans('menu.youtube') }}</a>
+                </li>
+                {{--<li class="nav-item nav-item-custom">
                     <a class="nav-link" href="{{ route('home') }}#oracle-tarot">{{ trans('menu.oracle-tarot') }}</a>
                 </li>
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link menu-runes" href="{{ route('home') }}#oracle-runes">{!! trans('menu.oracle-runes') !!}</a>
-                </li>
+                </li>--}}
 
                 @if(Auth::user())
                     <li class="nav-item active nav-item-custom ">

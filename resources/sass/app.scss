@@ -145,7 +145,7 @@ a, a.btn {
     padding: 0 20px 13px;
     text-align: center;
   }
-  img {
+  #header-img {
       max-width: 100%;
       padding-top: 17px;
       position: absolute;
@@ -283,7 +283,7 @@ footer {
     .menu-runes {
         max-width: 100% !important;
     }
-    .top-container img {
+    .top-container #header-img {
         position: inherit;
         left: 0;
     }

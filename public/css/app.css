@@ -13872,7 +13872,7 @@ a.btn:hover {
   text-align: center;
 }
 
-.top-container img {
+.top-container #header-img {
   max-width: 100%;
   padding-top: 17px;
   position: absolute;
@@ -14010,7 +14010,7 @@ footer .fondy-logo {
     max-width: 100% !important;
   }
 
-  .top-container img {
+  .top-container #header-img {
     position: inherit;
     left: 0;
   }
