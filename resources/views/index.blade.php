@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="col-xl-6 col-lg-12 col-md-12 text-center position-relative">
-            <img id="header-img" src="{{ asset('images/catface.jpg') }}" />
+            <img id="header-img" src="{{ asset('images/00.jpg') }}" />
         </div>
     </div>
 </div>

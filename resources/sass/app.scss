@@ -142,7 +142,7 @@ a, a.btn {
   margin-bottom: 15px;
   padding: 20px 50px 15px;
   .top-block {
-    padding:75px 20px 13px;
+    padding:0px 20px 13px;
     text-align: center;
   }
   #header-img {
@@ -233,11 +233,6 @@ footer {
 }
 
 @media(max-width:1200px) {
-    .top-container {
-        .top-block {
-            padding: 0 20px 13px;
-        }
-    }
   .main-page-content {
     .text-justify-mobile,
     .text-justify-mobile p,
