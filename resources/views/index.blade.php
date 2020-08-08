@@ -59,6 +59,17 @@
 
 @section('content')
     <div class="main-content main-page-content">
+        <div class="row info-block">
+            <div class="col-12">
+                <div class="text-center">
+                    <p class="font-italic">{!!  __('main-page.main-block-4') !!}</p>
+                    <div class="mx-auto text-center mb-3 mt-3">
+                        <a href="{{ route('order.index') }}" class="btn btn-danger"><b>{!!  __('order.btn-order-simple') !!}</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row info-block" id="tarot">
             <div class="col-12">
                 <h2 class="text-center mt-3">{!!  __('main-page.main-block-2-title') !!} </h2>
@@ -76,14 +87,6 @@
                 </p>
             </div>
         </div>
-
-        <!--<div class="row info-block">
-            <div class="col-12">
-                <div class="text-center">
-                    <p class="font-italic">{!!  __('main-page.main-block-4') !!}</p>
-                </div>
-            </div>
-        </div>-->
 
         <div class="row info-block" id="consultation">
             <div class="col-12">
