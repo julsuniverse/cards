@@ -62,7 +62,7 @@
         <div class="row info-block">
             <div class="col-12">
                 <div class="text-center">
-                    <p class="font-italic">{!!  __('main-page.main-block-4') !!}</p>
+                    <p>{!!  __('main-page.main-block-4') !!}</p>
                     <div class="mx-auto text-center mb-3 mt-3">
                         <a href="{{ route('order.index') }}" class="btn btn-danger"><b>{!!  __('order.btn-order-simple') !!}</b></a>
                     </div>
