@@ -26,6 +26,11 @@
                 <div class="card-header">
 
                     <h4 class="text-center">{{ __('order.title') }}</h4>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            {!! __('order.text-before-btns') !!}
+                        </div>
+                    </div>
                     <div class="row mt-1 text-center">
                         <div class="col-xl-6 col-lg-6 col-md-12">
                             <a href="{{ route('order.text-order') }}" class="btn btn-outline-danger mb-2"><b>{{ __('order.btn-order-simple') }}</b></a>
