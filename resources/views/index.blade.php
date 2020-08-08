@@ -12,6 +12,8 @@
         </div>
     </div>
 
+    <hr class="divider"/>
+
     <div class="row">
         <div class="col-12 text-center top-block-info mt-2">
             <p class="mb-0 font-weight-bold">
