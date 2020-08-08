@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Spatie\TranslationLoader\LanguageLine;
 
 class NewPageBlockSeeder extends \Illuminate\Database\Seeder
 {
