@@ -24,6 +24,11 @@
                     </div>
                 </div>
 
+                <div class="col-12 text-center top-block-info">
+                    <p class="mb-0 font-weight-bold">
+                        {!!  __('main-page.top-block-3') !!}
+                    </p>
+                </div>
                 <!--<div class="top-block-buttons">-->
                     {{--<div class="col-sm-12 col-md-6 text-xl-center text-lg-right text-md-right text-sm-center text-center main-top-btn">
                         <form method="post" action="{{ route('set-cards') }}">
