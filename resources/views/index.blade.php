@@ -221,7 +221,6 @@
             <div class="col-12">
                 <h2 class="text-center">{!!  __('main-page.main-block-10-title') !!}</h2>
                     {!!  __('main-page.main-block-10') !!}
-                <hr class="divider"/>
             </div>
         </div>
 
