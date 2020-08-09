@@ -149,7 +149,7 @@
         </div>
         <hr class="divider"/>
 
-        <div class="row text-center" id="oracle-runes>
+        <div class="row text-center" id="oracle-runes">
             <div class="col-12">
                 <h2>{!! __('main-page.main-block-11-title') !!}</h2>
                 <h4>{!! __('main-page.main-block-11-subtitle')  !!}</h4>
