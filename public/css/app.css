@@ -13762,7 +13762,7 @@ h3 {
   min-height: 60px;
   line-height: 63px;
   font-size: 50px;
-  margin-bottom: 0;
+  margin-bottom: 7px;
 }
 
 h4 {
@@ -13867,7 +13867,7 @@ a.btn:hover {
 }
 
 .top-container .top-block {
-  padding: 0px 20px 13px;
+  padding: 0px 20px 0px;
   text-align: center;
 }
 
