@@ -3,8 +3,8 @@
 return [
     'taro-title' => 'Interactive Tarot Oracle',
     'lenormand-title' => 'Interactive Lenormand Oracle',
-    'tarot1' => 'TAROT CARD FOR TODAY',
-    'tarot2' => 'TAROT ADVICE FOR TODAY',
+    'tarot1' => 'TAROT CARD for TODAY',
+    'tarot2' => 'TAROT ADVICE for TODAY',
     'tarot3' => 'LOVE MATTERS ADVICE',
     'lenormand' => 'LENORMAND ORACLE',
     'runes' => 'Interactive Runes Oracle',

@@ -88,16 +88,16 @@
         <div class="row text-center mt-3">
             <div class="col-12">
                 <h4>{{ __('random-card.taro-title') }}</h4>
-                <div class="text-small text-left">{{ __('random-card.tarot-small') }} </div>
+                <div class="text-small text-center">{{ __('random-card.tarot-small') }} </div>
                 <div class="row mt-md-2">
-                    <div class="col-sm-12 col-md-12">
+                    <div class="col-sm-12 col-md-4">
                         <span class="text-center">
                             <a href="{{ route('daily-card', ['type' => 'tarot-day']) }}" class="btn btn-danger random-card-btn" target="_blank">
                                 <b>{{ __('random-card.tarot1') }}</b>
                             </a>
                         </span>
                     </div>
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-sm-12 col-md-4">
                         <span class="text-center">
                             <a href="{{ route('daily-card', ['type' => 'tarot-advice']) }}" class="btn btn-danger random-card-btn" target="_blank">
                                 <b>
@@ -106,7 +106,7 @@
                             </a>
                         </span>
                     </div>
-                    <div class="col-sm-12 col-md-6 mt-md-2">
+                    <div class="col-sm-12 col-md-4">
                         <span class="text-center">
                             <a href="{{ route('daily-card', ['type' => 'tarot-love']) }}" class="btn btn-danger random-card-btn" target="_blank">
                                 <b>
@@ -124,7 +124,7 @@
         <div class="row text-center mt-3">
             <div class="col-12">
                 <h4>{{ __('random-card.lenormand-title') }}</h4>
-                <div class="text-small text-left mb-2">{{ __('random-card.lenormand-small') }}</div>
+                <div class="text-small text-center mb-2">{{ __('random-card.lenormand-small') }}</div>
                 <p>
                     {!! __('random-card.lenormand-intro') !!}
                 </p>
