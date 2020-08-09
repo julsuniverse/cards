@@ -85,10 +85,10 @@
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link font-weight-bold" href="{{ route('terms') }}">{{ trans('menu.terms') }}</a>
                 </li>
-                {{--<li class="nav-item nav-item-custom">
+                <li class="nav-item nav-item-custom">
                     <a class="nav-link" href="{{ route('home') }}#oracle-tarot">{{ trans('menu.oracle-tarot') }}</a>
                 </li>
-                <li class="nav-item nav-item-custom">
+                {{--<li class="nav-item nav-item-custom">
                     <a class="nav-link menu-runes" href="{{ route('home') }}#oracle-runes">{!! trans('menu.oracle-runes') !!}</a>
                 </li>--}}
 

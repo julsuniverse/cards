@@ -83,6 +83,79 @@
             </div>
         </div>
 
+        <!-- ORACLE -->
+        <hr class="divider"/>
+        <div class="row text-center mt-3">
+            <div class="col-12">
+                <h4>{{ __('random-card.taro-title') }}</h4>
+                <div class="text-small text-left">{{ __('random-card.tarot-small') }} </div>
+                <div class="row mt-md-2">
+                    <div class="col-sm-12 col-md-12">
+                        <span class="text-center">
+                            <a href="{{ route('daily-card', ['type' => 'tarot-day']) }}" class="btn btn-danger random-card-btn" target="_blank">
+                                <b>{{ __('random-card.tarot1') }}</b>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <span class="text-center">
+                            <a href="{{ route('daily-card', ['type' => 'tarot-advice']) }}" class="btn btn-danger random-card-btn" target="_blank">
+                                <b>
+                                    {{ __('random-card.tarot2') }}
+                                </b>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="col-sm-12 col-md-6 mt-md-2">
+                        <span class="text-center">
+                            <a href="{{ route('daily-card', ['type' => 'tarot-love']) }}" class="btn btn-danger random-card-btn" target="_blank">
+                                <b>
+                                    {{ __('random-card.tarot3') }}
+                                </b>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider"/>
+
+        <div class="row text-center mt-3">
+            <div class="col-12">
+                <h4>{{ __('random-card.lenormand-title') }}</h4>
+                <div class="text-small text-left mb-2">{{ __('random-card.lenormand-small') }}</div>
+                <p>
+                    {!! __('random-card.lenormand-intro') !!}
+                </p>
+                <p class="text-center">
+                    <a href="{{ route('daily-card', ['type' => 'lenormand']) }}" class="btn btn-danger mt-3" target="_blank">
+                        <b>
+                            {{ __('random-card.lenormand') }}
+                        </b>
+                    </a>
+                </p>
+            </div>
+
+        </div>
+        <hr class="divider"/>
+
+        <div class="row text-center">
+            <div class="col-12">
+                <h2>{!! __('main-page.main-block-11-title') !!}</h2>
+                <h4>{!! __('main-page.main-block-11-subtitle')  !!}</h4>
+                <div class="text-small">{!! __('main-page.main-block-11-small') !!}  </div>
+                {!!  __('main-page.main-block-11-text') !!}
+            </div>
+        </div>
+        <div class="mx-auto text-center mb-4 mt-3">
+            <a href="{{ route('daily-card', ['type' => 'runes']) }}" class="btn btn-danger" target="_blank"><b>{!! __('main-page.main-block-11-btn') !!}</b>  </a>
+        </div>
+
+        <hr class="divider"/>
+
+        <!-- END ORACLE -->
+
         <div class="row info-block" id="tarot">
             <div class="col-12">
                 <h2 class="text-center mt-3">{!!  __('main-page.main-block-2-title') !!} </h2>
@@ -123,56 +196,6 @@
                 <p class="text-center font-weight-bold">
                     {!!  __('main-page.main-block-6-subtitle') !!}
                 </p>
-
-                <div class="row text-center mt-3">
-                    <div class="col-6">
-                        <h4>{{ __('random-card.taro-title') }}</h4>
-                        <div class="text-small text-left">{{ __('random-card.tarot-small') }} </div>
-                        <div class="row mt-md-2">
-                            <div class="col-sm-12 col-md-6">
-                                <span class="text-center">
-                                    <a href="{{ route('daily-card', ['type' => 'tarot-day']) }}" class="btn btn-danger random-card-btn" target="_blank">
-                                        <b>{{ __('random-card.tarot1') }}</b>
-                                    </a>
-                                </span>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <span class="text-center">
-                                    <a href="{{ route('daily-card', ['type' => 'tarot-advice']) }}" class="btn btn-danger random-card-btn" target="_blank">
-                                        <b>
-                                            {{ __('random-card.tarot2') }}
-                                        </b>
-                                    </a>
-                                </span>
-                            </div>
-                            <div class="col-sm-12 mt-md-2">
-                                <span class="text-center">
-                                    <a href="{{ route('daily-card', ['type' => 'tarot-love']) }}" class="btn btn-danger random-card-btn" target="_blank">
-                                        <b>
-                                            {{ __('random-card.tarot3') }}
-                                        </b>
-                                    </a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <h4>{{ __('random-card.lenormand-title') }}</h4>
-                        <div class="text-small text-left mb-2">{{ __('random-card.lenormand-small') }}</div>
-                        <p>
-                            {!! __('random-card.lenormand-intro') !!}
-                        </p>
-                        <p class="text-center">
-                            <a href="{{ route('daily-card', ['type' => 'lenormand']) }}" class="btn btn-danger mt-3" target="_blank">
-                                <b>
-                                    {{ __('random-card.lenormand') }}
-                                </b>
-                            </a>
-                        </p>
-                    </div>
-
-                </div>
-                <hr class="divider"/>
             </div>
         </div>
 
@@ -199,18 +222,6 @@
                     {!!  __('main-page.main-block-10') !!}
                 <hr class="divider"/>
             </div>
-        </div>
-
-        <div class="row text-center">
-            <div class="col-12">
-                <h2>{!! __('main-page.main-block-11-title') !!}</h2>
-                <h4>{!! __('main-page.main-block-11-subtitle')  !!}</h4>
-                <div class="text-small">{!! __('main-page.main-block-11-small') !!}  </div>
-                {!!  __('main-page.main-block-11-text') !!}
-            </div>
-        </div>
-        <div class="mx-auto text-center mb-4 mt-3">
-            <a href="{{ route('daily-card', ['type' => 'runes']) }}" class="btn btn-danger" target="_blank"><b>{!! __('main-page.main-block-11-btn') !!}</b>  </a>
         </div>
 
         <hr class="divider"/>
