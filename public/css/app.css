@@ -13760,7 +13760,7 @@ h3 {
 
 .logo {
   min-height: 60px;
-  line-height: 65px;
+  line-height: 63px;
   font-size: 50px;
   margin-bottom: 0;
 }
@@ -13804,7 +13804,7 @@ p {
 .sub-logo {
   font-size: 37px;
   margin-bottom: 5px;
-  font-family: "Lobster", cursive;
+  font-family: "Roboto", sans-serif;
 }
 
 hr.divider {
@@ -14069,8 +14069,8 @@ footer .fondy-logo {
 @media (max-width: 575px) {
   .logo {
     font-size: 45px;
-    min-height: 59px;
-    line-height: 39px;
+    min-height: 40px;
+    line-height: 38px;
   }
 }
 
