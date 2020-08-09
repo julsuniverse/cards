@@ -13801,7 +13801,7 @@ p {
   min-height: calc(80vh - 58px);
 }
 
-.sub-logo {
+.sub-logo h2 {
   font-family: "Roboto", sans-serif;
 }
 
