@@ -85,7 +85,7 @@
 
         <!-- ORACLE -->
         <hr class="divider"/>
-        <div class="row info-block">
+        <div class="row info-block" id="oracle-tarot">
             <div class="col-12">
                 <h2 class="text-center blue-title">{{ __('main-page.main-block-6-title') }}</h2>
 
