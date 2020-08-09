@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12">
             <div class="top-block">
-                <h1 class="display-3 logo">{{ trans('menu.name') }}</h1>
-                <h2 class="sub-logo">
+                <h2 class="display-3 logo">{{ trans('menu.name') }}</h2>
+                <h1 class="sub-logo">
                     {{  __('main-page.top-block-1') }}
-                </h2>
+                </h1>
             </div>
         </div>
     </div>
