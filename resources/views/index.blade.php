@@ -165,6 +165,8 @@
 
         <!-- END ORACLE -->
 
+        <img src="{{ asset('images/after-oracle.jpg') }}" style="max-width: 100%">
+
         <div class="row info-block" id="tarot">
             <div class="col-12">
                 <h2 class="text-center mt-3">{!!  __('main-page.main-block-2-title') !!} </h2>
