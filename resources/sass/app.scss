@@ -78,8 +78,6 @@ p {
 }
 
 .sub-logo {
-  font-size: 37px;
-  margin-bottom: 5px;
   font-family: $font-roboto;
 }
 
@@ -340,8 +338,8 @@ footer {
 @media(max-width:575px) {
   .logo {
     font-size: 45px;
-      min-height: 40px;
-      line-height: 38px;
+      min-height: 55px;
+      line-height: 45px;
   }
 }
 

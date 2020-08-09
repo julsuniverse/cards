@@ -13807,6 +13807,10 @@ p {
   font-family: "Roboto", sans-serif;
 }
 
+.sub-logo p {
+  line-height: 32px;
+}
+
 hr.divider {
   border: 0;
   height: 1px;
@@ -14069,8 +14073,8 @@ footer .fondy-logo {
 @media (max-width: 575px) {
   .logo {
     font-size: 45px;
-    min-height: 40px;
-    line-height: 38px;
+    min-height: 55px;
+    line-height: 45px;
   }
 }
 
