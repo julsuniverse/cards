@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12">
             <div class="top-block">
-                <h2 class="display-3 logo">{{ trans('menu.name') }}</h2>
-                <h1 class="sub-logo">
-                    {{  __('main-page.top-block-1') }}
-                </h1>
+                <h1 class="display-3 logo">{{ trans('menu.name') }}</h1>
+                <h2 class="sub-logo">
+                    {!! __('main-page.top-block-1') !!}
+                </h2>
             </div>
         </div>
     </div>
@@ -96,7 +96,7 @@
         </div>
         <div class="row text-center mt-3">
             <div class="col-12">
-                <h2 class="oracle-title">{{ __('random-card.taro-title') }}</h2>
+                <h2>{{ __('random-card.taro-title') }}</h2>
                 <div class="text-small text-center font-weight-bold">{{ __('random-card.tarot-small') }} </div>
                 <div class="row mt-md-2">
                     <div class="col-sm-12 col-md-4">
@@ -132,7 +132,7 @@
 
         <div class="row text-center mt-3">
             <div class="col-12">
-                <h2 class="oracle-title">{{ __('random-card.lenormand-title') }}</h2>
+                <h2>{{ __('random-card.lenormand-title') }}</h2>
                 <div class="text-small text-center font-weight-bold mb-2">{{ __('random-card.lenormand-small') }}</div>
                 <p>
                     {!! __('random-card.lenormand-intro') !!}
@@ -151,7 +151,7 @@
 
         <div class="row text-center">
             <div class="col-12">
-                <h2 class="oracle-title">{!! __('main-page.main-block-11-title') !!}</h2>
+                <h2>{!! __('main-page.main-block-11-title') !!}</h2>
                 <h4>{!! __('main-page.main-block-11-subtitle')  !!}</h4>
                 <div class="text-small font-weight-bold">{!! __('main-page.main-block-11-small') !!}  </div>
                 {!!  __('main-page.main-block-11-text') !!}

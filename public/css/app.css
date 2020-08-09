@@ -13761,7 +13761,7 @@ h3 {
 .logo {
   min-height: 60px;
   line-height: 65px;
-  font-size: 45px;
+  font-size: 50px;
 }
 
 h4 {
@@ -13801,8 +13801,9 @@ p {
 }
 
 .sub-logo {
-  font-size: 54px;
+  font-size: 45px;
   margin-bottom: 5px;
+  font-family: "Roboto", sans-serif;
 }
 
 hr.divider {
@@ -13959,7 +13960,6 @@ footer .fondy-logo {
 
 .blue-title {
   color: #003366;
-  font-size: 35px;
 }
 
 .oracle-title {
