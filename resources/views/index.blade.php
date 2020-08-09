@@ -87,7 +87,7 @@
         <hr class="divider"/>
         <div class="row info-block" id="oracle-tarot">
             <div class="col-12">
-                <h2 class="text-center blue-title">{{ ('main-page.main-block-6-title') }}</h2>
+                <h2 class="text-center blue-title">{{ __('main-page.main-block-6-title') }}</h2>
 
                 <p class="text-center font-weight-bold">
                     {!!  __('main-page.main-block-6-subtitle') !!}
