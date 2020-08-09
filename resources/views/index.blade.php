@@ -5,9 +5,9 @@
         <div class="col-xl-12 col-lg-12 col-md-12">
             <div class="top-block">
                 <h1 class="display-3 logo">{{ trans('menu.name') }}</h1>
-                <p class="lead font-weight-bold">
-                    {!!  __('main-page.top-block-1') !!}
-                </p>
+                <h2 class="sub-logo">
+                    {{  __('main-page.top-block-1') }}
+                </h2>
             </div>
         </div>
     </div>
@@ -87,7 +87,7 @@
         <hr class="divider"/>
         <div class="row text-center mt-3">
             <div class="col-12">
-                <h4>{{ __('random-card.taro-title') }}</h4>
+                <h2>{{ __('random-card.taro-title') }}</h2>
                 <div class="text-small text-center">{{ __('random-card.tarot-small') }} </div>
                 <div class="row mt-md-2">
                     <div class="col-sm-12 col-md-4">
@@ -123,7 +123,7 @@
 
         <div class="row text-center mt-3">
             <div class="col-12">
-                <h4>{{ __('random-card.lenormand-title') }}</h4>
+                <h2>{{ __('random-card.lenormand-title') }}</h2>
                 <div class="text-small text-center mb-2">{{ __('random-card.lenormand-small') }}</div>
                 <p>
                     {!! __('random-card.lenormand-intro') !!}

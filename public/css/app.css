@@ -13759,8 +13759,7 @@ h3 {
 }
 
 .logo {
-  margin-bottom: 11px;
-  min-height: 78px;
+  min-height: 60px;
   line-height: 65px;
   font-size: 54px;
 }
@@ -13801,8 +13800,8 @@ p {
   min-height: calc(80vh - 58px);
 }
 
-.lead {
-  color: #8d1818;
+.sub-logo {
+  font-size: 45px;
   margin-bottom: 5px;
 }
 
