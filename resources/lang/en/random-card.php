@@ -12,5 +12,5 @@ return [
     'empty-deck' => 'The deck is empty',
     'tarot-small' => 'Cards\' interpretation for this oracle is made by the author of this website',
     'lenormand-small' => 'Cards\' interpretation for this oracle is made by the author of this website',
-    'lenormand-intro' => 'Maria Lenormand’s Cards unveil your nearest future'
+    'lenormand-intro' => 'Maria Lenormand’s Cards unveil your future'
 ];
