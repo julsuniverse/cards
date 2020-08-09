@@ -85,10 +85,19 @@
 
         <!-- ORACLE -->
         <hr class="divider"/>
+        <div class="row info-block" id="oracle-tarot">
+            <div class="col-12">
+                <h2 class="text-center blue-title">{{ ('main-page.main-block-6-title') }}</h2>
+
+                <p class="text-center font-weight-bold">
+                    {!!  __('main-page.main-block-6-subtitle') !!}
+                </p>
+            </div>
+        </div>
         <div class="row text-center mt-3">
             <div class="col-12">
-                <h2>{{ __('random-card.taro-title') }}</h2>
-                <div class="text-small text-center">{{ __('random-card.tarot-small') }} </div>
+                <h2 class="oracle-title">{{ __('random-card.taro-title') }}</h2>
+                <div class="text-small text-center font-weight-bold">{{ __('random-card.tarot-small') }} </div>
                 <div class="row mt-md-2">
                     <div class="col-sm-12 col-md-4">
                         <span class="text-center">
@@ -123,8 +132,8 @@
 
         <div class="row text-center mt-3">
             <div class="col-12">
-                <h2>{{ __('random-card.lenormand-title') }}</h2>
-                <div class="text-small text-center mb-2">{{ __('random-card.lenormand-small') }}</div>
+                <h2 class="oracle-title">{{ __('random-card.lenormand-title') }}</h2>
+                <div class="text-small text-center font-weight-bold mb-2">{{ __('random-card.lenormand-small') }}</div>
                 <p>
                     {!! __('random-card.lenormand-intro') !!}
                 </p>
@@ -142,9 +151,9 @@
 
         <div class="row text-center">
             <div class="col-12">
-                <h2>{!! __('main-page.main-block-11-title') !!}</h2>
+                <h2 class="oracle-title">{!! __('main-page.main-block-11-title') !!}</h2>
                 <h4>{!! __('main-page.main-block-11-subtitle')  !!}</h4>
-                <div class="text-small">{!! __('main-page.main-block-11-small') !!}  </div>
+                <div class="text-small font-weight-bold">{!! __('main-page.main-block-11-small') !!}  </div>
                 {!!  __('main-page.main-block-11-text') !!}
             </div>
         </div>
@@ -188,16 +197,6 @@
         </div>
 
         <hr class="divider"/>
-
-        <div class="row info-block" id="oracle-tarot">
-            <div class="col-12">
-                <h2 class="text-center">{!!  __('main-page.main-block-6-title') !!}</h2>
-
-                <p class="text-center font-weight-bold">
-                    {!!  __('main-page.main-block-6-subtitle') !!}
-                </p>
-            </div>
-        </div>
 
         <div class="row info-block" id="future">
             <div class="col-12">

@@ -13957,6 +13957,15 @@ footer .fondy-logo {
   margin-bottom: 8px;
 }
 
+.blue-title {
+  color: #003366;
+  font-size: 35px;
+}
+
+.oracle-title {
+  font-size: 37px;
+}
+
 @media (max-width: 1200px) {
   .main-page-content .text-justify-mobile,
   .main-page-content .text-justify-mobile p,

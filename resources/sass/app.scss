@@ -231,6 +231,15 @@ footer {
     margin-bottom: 8px;
 }
 
+.blue-title {
+    color: $dark-blue;
+    font-size: 35px;
+}
+
+.oracle-title {
+    font-size: 37px;
+}
+
 @media(max-width:1200px) {
   .main-page-content {
     .text-justify-mobile,
