@@ -85,7 +85,7 @@
 
         <!-- ORACLE -->
         <hr class="divider"/>
-        <div class="row info-block" id="oracle-tarot">
+        <div class="row info-block">
             <div class="col-12">
                 <h2 class="text-center blue-title">{{ __('main-page.main-block-6-title') }}</h2>
 
@@ -130,7 +130,7 @@
 
         <hr class="divider"/>
 
-        <div class="row text-center mt-3">
+        <div class="row text-center mt-3" id="oracle-lenormand">
             <div class="col-12">
                 <h2>{{ __('random-card.lenormand-title') }}</h2>
                 <div class="text-small text-center font-weight-bold mb-2">{{ __('random-card.lenormand-small') }}</div>
@@ -149,7 +149,7 @@
         </div>
         <hr class="divider"/>
 
-        <div class="row text-center">
+        <div class="row text-center" id="oracle-runes>
             <div class="col-12">
                 <h2>{!! __('main-page.main-block-11-title') !!}</h2>
                 <h4>{!! __('main-page.main-block-11-subtitle')  !!}</h4>
