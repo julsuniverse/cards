@@ -13802,13 +13802,7 @@ p {
 }
 
 .sub-logo {
-  font-size: 37px;
-  margin-bottom: 5px;
   font-family: "Roboto", sans-serif;
-}
-
-.sub-logo p {
-  line-height: 32px;
 }
 
 hr.divider {
