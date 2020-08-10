@@ -176,6 +176,8 @@
             </div>
         </div>
 
+        <hr class="divider"/>
+
         <div class="row info-block" id="lenorman">
             <div class="col-12">
                 <h2 class="text-center">{!!  __('main-page.main-block-3-title') !!}</h2>
@@ -184,6 +186,8 @@
                 </p>
             </div>
         </div>
+
+        <hr class="divider"/>
 
         <div class="row info-block" id="consultation">
             <div class="col-12">
