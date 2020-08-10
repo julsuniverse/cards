@@ -157,7 +157,7 @@
                 {!!  __('main-page.main-block-11-text') !!}
             </div>
         </div>
-        <div class="mx-auto text-center mb-2 mt-3">
+        <div class="mx-auto text-center mb-3 mt-3">
             <a href="{{ route('daily-card', ['type' => 'runes']) }}" class="btn btn-danger" target="_blank"><b>{!! __('main-page.main-block-11-btn') !!}</b>  </a>
         </div>
 
