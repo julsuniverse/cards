@@ -130,7 +130,7 @@
 
         <hr class="divider"/>
 
-        <div class="row text-center mt-3" id="oracle-lenormand">
+        <div class="row text-center mt-2" id="oracle-lenormand">
             <div class="col-12">
                 <h2>{{ __('random-card.lenormand-title') }}</h2>
                 <div class="text-small text-center font-weight-bold mb-2">{{ __('random-card.lenormand-small') }}</div>
@@ -157,7 +157,7 @@
                 {!!  __('main-page.main-block-11-text') !!}
             </div>
         </div>
-        <div class="mx-auto text-center mb-4 mt-3">
+        <div class="mx-auto text-center mb-2 mt-3">
             <a href="{{ route('daily-card', ['type' => 'runes']) }}" class="btn btn-danger" target="_blank"><b>{!! __('main-page.main-block-11-btn') !!}</b>  </a>
         </div>
 
