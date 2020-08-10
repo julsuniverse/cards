@@ -207,6 +207,9 @@
 
                 {!!  __('main-page.main-block-8') !!}
             </div>
+        </div>
+        <hr class="divider"/>
+        <div class="row info-block">
             <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 order-xl-1 order-lg-2 order-md-2 order-sm-2 order-2 mt-lg-2">
                 {!!  __('main-page.main-block-9') !!}
             </div>
