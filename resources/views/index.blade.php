@@ -138,7 +138,7 @@
                     {!! __('random-card.lenormand-intro') !!}
                 </p>
                 <p class="text-center">
-                    <a href="{{ route('daily-card', ['type' => 'lenormand']) }}" class="btn btn-danger mt-3" target="_blank">
+                    <a href="{{ route('daily-card', ['type' => 'lenormand']) }}" class="btn btn-danger mt-3 mb-1" target="_blank">
                         <b>
                             {{ __('random-card.lenormand') }}
                         </b>
@@ -191,7 +191,7 @@
 
         <div class="row info-block" id="consultation">
             <div class="col-12">
-                <h2 class="text-center mt-3">{!!  __('main-page.main-block-5-title') !!}</h2>
+                <h2 class="text-center">{!!  __('main-page.main-block-5-title') !!}</h2>
                 {!!  __('main-page.main-block-5') !!}
 
                 <div class="mx-auto text-center mb-3 mt-3">
