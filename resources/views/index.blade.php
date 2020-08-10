@@ -209,7 +209,9 @@
                 <h2 class="text-center">{!!  __('main-page.main-block-7-title') !!}</h2>
                 {!!  __('main-page.main-block-7') !!}
 
-                {!!  __('main-page.main-block-8') !!}
+                @if(__('main-page.main-block-8') !== 'main-page.main-block-8')
+                    {!!  __('main-page.main-block-8') !!}
+                @endif
             </div>
         </div>
         <hr class="divider"/>
