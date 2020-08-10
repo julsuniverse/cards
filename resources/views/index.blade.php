@@ -117,7 +117,7 @@
                     </div>
                     <div class="col-sm-12 col-md-4">
                         <span class="text-center">
-                            <a href="{{ route('daily-card', ['type' => 'tarot-love']) }}" class="btn btn-danger random-card-btn" target="_blank">
+                            <a href="{{ route('daily-card', ['type' => 'tarot-love']) }}" class="btn btn-danger random-card-btn random-card-btn-last" target="_blank">
                                 <b>
                                     {{ __('random-card.tarot3') }}
                                 </b>

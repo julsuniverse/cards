@@ -318,10 +318,16 @@ footer {
       margin-top: 0px;
       width: 185px;
   }
+
+    .random-card-btn.random-card-btn-last {
+        margin-bottom: 0 !important;
+    }
     .random-card-btn {
         width: 100%;
         margin-bottom: 10px;
+
     }
+
     /*btn-consultation {
         font-size: 12px;
         width: 180px;
