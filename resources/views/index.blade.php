@@ -97,7 +97,7 @@
         <div class="row text-center mt-2">
             <div class="col-12 mb-1">
                 <h2>{{ __('random-card.taro-title') }}</h2>
-                <div class="text-small text-center font-weight-bold">{{ __('random-card.tarot-small') }} </div>
+                <div class="text-small text-center font-weight-bold mb-1">{{ __('random-card.tarot-small') }} </div>
                 <div class="row mt-md-2">
                     <div class="col-sm-12 col-md-4">
                         <span class="text-center">
