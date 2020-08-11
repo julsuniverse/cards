@@ -33,10 +33,10 @@
                     </div>
                     <div class="row mt-1 text-center">
                         <div class="col-xl-6 col-lg-6 col-md-12">
-                            <a href="{{ route('order.text-order') }}" class="btn btn-outline-danger mb-2"><b>{{ __('order.btn-order-simple') }}</b></a>
+                            <a href="{{ route('order.text-order') }}" class="btn btn-danger mb-2"><b>{{ __('order.btn-order-simple') }}</b></a>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12">
-                            <a href="{{ route('order.select-order') }}" class="btn btn-outline-danger"><b>{{ __('order.btn-order-select') }}</b></a>
+                            <a href="{{ route('order.select-order') }}" class="btn btn-danger"><b>{{ __('order.btn-order-select') }}</b></a>
                         </div>
                     </div>
                     <div class="row">
@@ -52,13 +52,17 @@
                         {!! __('order.part1') !!}
                     </div>
 
-                    <a href="{{ route('order.text-order') }}" class="btn btn-outline-danger mb-2"><b>{{ __('order.btn-order-simple') }}</b></a>
+                    <div class="text-lg-left text-center">
+                        <a href="{{ route('order.text-order') }}" class="btn btn-danger mb-2"><b>{{ __('order.btn-order-simple') }}</b></a>
+                    </div>
 
                     <div>
                         {!! __('order.part2') !!}
                     </div>
 
-                    <a href="{{ route('order.select-order') }}" class="btn btn-outline-danger"><b>{{ __('order.btn-order-select') }}</b></a>
+                    <div class="text-lg-left text-center">
+                        <a href="{{ route('order.select-order') }}" class="btn btn-danger"><b>{{ __('order.btn-order-select') }}</b></a>
+                    </div>
 
                     <img src="{{ asset('images/cards-4.jpg') }}" style="max-width: 100%; margin-top: 20px;"/>
                 </div>
