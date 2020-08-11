@@ -22,9 +22,9 @@
         </div>
         <div class="col-12 text-center top-block-info">
             <div id="youtube" class="text-center mt-2">
-                <a href="https://www.youtube.com/channel/UC_DHLqSbI0pJah8HUiEfx5g" target="_blank">
-                    <img src="{{ asset('images/youtube.png') }}" alt="youtube" style="width: 180px;"/>
-                </a>
+                <youtube-button
+                    image-link="{{ asset('images/youtube.png') }}"
+                ></youtube-button>
             </div>
         </div>
 
@@ -238,4 +238,3 @@
 
     <img src="{{ asset('images/cat.jpg') }}" style="max-width: 100%" />
 @endsection
-

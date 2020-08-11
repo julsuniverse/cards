@@ -1,8 +1,6 @@
 var froalaConfig = {
     methods: {
         getFroalaConfig(id, folder) {
-            console.log(this.id);
-            console.log(this.folder);
             return {
                 toolbarButtons: {
                     'moreText': {

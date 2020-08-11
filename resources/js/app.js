@@ -1,6 +1,5 @@
 require('./bootstrap');
 window.allowCopy = false;
-console.log('in app.js', window.allowCopy);
 // Require Froala Editor js file.
 require('froala-editor/js/froala_editor.pkgd.min.js');
 require('./froala-plugins');
@@ -13,6 +12,7 @@ window.Vue = require('vue');
 
 Vue.component('editor', require('./components/Editor').default);
 Vue.component('random-card', require('./components/RandomCard').default);
+Vue.component('youtube-button', require('./components/YoutubeButton').default);
 
 import VueFroala from 'vue-froala-wysiwyg'
 Vue.use(VueFroala);

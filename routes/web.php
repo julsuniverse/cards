@@ -14,6 +14,8 @@ Route::get('/order/success', 'OrderController@success')->name('order.success');
 Route::post('/get-card', 'RandomCard\RandomCard@getCard');
 Route::get('/daily-card/{type}', 'RandomCard\RandomCard@dailyCard')->name('daily-card');
 
+Route::post('/save-click', 'ClickController@saveClick');
+
 Route::group([
     'middleware' => 'auth',
     'prefix' => 'cabinet'

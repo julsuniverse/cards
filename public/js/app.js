@@ -1817,8 +1817,6 @@ __webpack_require__.r(__webpack_exports__);
     getRandomCard: function getRandomCard(type) {
       var _this = this;
 
-      console.log('clicks');
-
       if (this.clicks > 1) {
         alert('Вы уже гадали сегодня');
         return;
@@ -1836,6 +1834,38 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         _this.error = error.response.data.error;
       })["finally"](function (response) {//loader.hide()
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/YoutubeButton.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/YoutubeButton.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "YoutubeButton",
+  props: ['imageLink'],
+  methods: {
+    click: function click() {
+      axios({
+        method: 'POST',
+        url: '/save-click'
       });
     }
   }
@@ -38857,6 +38887,49 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/YoutubeButton.vue?vue&type=template&id=f16ddd4c&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/YoutubeButton.vue?vue&type=template&id=f16ddd4c&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "a",
+    {
+      attrs: {
+        href: "https://www.youtube.com/channel/UC_DHLqSbI0pJah8HUiEfx5g",
+        target: "_blank"
+      }
+    },
+    [
+      _c("img", {
+        staticStyle: { width: "180px" },
+        attrs: { src: _vm.imageLink, alt: "youtube" },
+        on: {
+          click: function($event) {
+            return _vm.click()
+          }
+        }
+      })
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -51006,8 +51079,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_0__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-window.allowCopy = false;
-console.log('in app.js', window.allowCopy); // Require Froala Editor js file.
+window.allowCopy = false; // Require Froala Editor js file.
 
 __webpack_require__(/*! froala-editor/js/froala_editor.pkgd.min.js */ "./node_modules/froala-editor/js/froala_editor.pkgd.min.js");
 
@@ -51021,6 +51093,7 @@ __webpack_require__(/*! froala-editor/css/froala_style.min.css */ "./node_module
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 Vue.component('editor', __webpack_require__(/*! ./components/Editor */ "./resources/js/components/Editor.vue")["default"]);
 Vue.component('random-card', __webpack_require__(/*! ./components/RandomCard */ "./resources/js/components/RandomCard.vue")["default"]);
+Vue.component('youtube-button', __webpack_require__(/*! ./components/YoutubeButton */ "./resources/js/components/YoutubeButton.vue")["default"]);
 
 Vue.use(vue_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_0___default.a);
 var app = new Vue({
@@ -51255,6 +51328,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/YoutubeButton.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/components/YoutubeButton.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _YoutubeButton_vue_vue_type_template_id_f16ddd4c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./YoutubeButton.vue?vue&type=template&id=f16ddd4c&scoped=true& */ "./resources/js/components/YoutubeButton.vue?vue&type=template&id=f16ddd4c&scoped=true&");
+/* harmony import */ var _YoutubeButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./YoutubeButton.vue?vue&type=script&lang=js& */ "./resources/js/components/YoutubeButton.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _YoutubeButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _YoutubeButton_vue_vue_type_template_id_f16ddd4c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _YoutubeButton_vue_vue_type_template_id_f16ddd4c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "f16ddd4c",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/YoutubeButton.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/YoutubeButton.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/YoutubeButton.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_YoutubeButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./YoutubeButton.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/YoutubeButton.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_YoutubeButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/YoutubeButton.vue?vue&type=template&id=f16ddd4c&scoped=true&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/YoutubeButton.vue?vue&type=template&id=f16ddd4c&scoped=true& ***!
+  \**********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_YoutubeButton_vue_vue_type_template_id_f16ddd4c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./YoutubeButton.vue?vue&type=template&id=f16ddd4c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/YoutubeButton.vue?vue&type=template&id=f16ddd4c&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_YoutubeButton_vue_vue_type_template_id_f16ddd4c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_YoutubeButton_vue_vue_type_template_id_f16ddd4c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/froala-plugins.js":
 /*!****************************************!*\
   !*** ./resources/js/froala-plugins.js ***!
@@ -51306,8 +51448,6 @@ __webpack_require__.r(__webpack_exports__);
 var froalaConfig = {
   methods: {
     getFroalaConfig: function getFroalaConfig(id, folder) {
-      console.log(this.id);
-      console.log(this.folder);
       return {
         toolbarButtons: {
           'moreText': {

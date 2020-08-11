@@ -25,7 +25,6 @@
         },
         methods: {
             getRandomCard(type) {
-                console.log('clicks');
                 if (this.clicks > 1) {
                     alert('Вы уже гадали сегодня');
                     return;
