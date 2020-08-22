@@ -41,9 +41,14 @@ class OrderAcceptedEmail extends Mailable
     public function build()
     {
         if (App::getLocale() == 'en') {
-            return $this->subject('You order is accepted!')->view('emails.en.order-accepted')->with(['user' => $this->user, 'price' => $this->order->price]);
+            return $this->subject('You order is accepted!')
+                ->view('emails.en.order-accepted')
+                ->with(['user' => $this->user, 'price' => $this->order->price]);
         } else {
-            return $this->subject('Ваш заказ принят')->view('emails.ru.order-accepted')->with(['user' => $this->user, 'price' => $this->order->price]);
+            return $this->subject('Ваш заказ принят')
+                ->view('emails.ru.order-accepted')
+                ->with(['user' => $this->user, 'price' => $this->order->price])
+                ->from('info@tarot-light.space', 'Свет Таро');
         }
     }
 }

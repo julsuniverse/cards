@@ -42,7 +42,8 @@ class OrderIsReadyEmail extends Mailable
             return $this
                 ->subject('Ваш заказ готов')
                 ->view('emails.ru.order-is-ready')
-                ->with('user', $this->user);
+                ->with('user', $this->user)
+                ->from('info@tarot-light.space', 'Свет Таро');
         }
     }
 }

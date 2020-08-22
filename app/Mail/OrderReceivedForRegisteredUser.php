@@ -36,7 +36,7 @@ class OrderReceivedForRegisteredUser extends Mailable
         if (App::getLocale() == 'en') {
             return $this->subject('Thank you for registration!')->view('emails.en.order-received')->with(['user' => $this->user]);
         } else {
-            return $this->subject(' Ваш заказ получен')->view('emails.ru.order-received')->with(['user' => $this->user]);
+            return $this->subject(' Ваш заказ получен')->view('emails.ru.order-received')->with(['user' => $this->user]) ->from('info@tarot-light.space', 'Свет Таро');
         }
     }
 }

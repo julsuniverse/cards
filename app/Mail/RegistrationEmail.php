@@ -40,7 +40,7 @@ class RegistrationEmail extends Mailable
         if (App::getLocale() == 'en') {
             return $this->subject('Thank you for registration!')->view('emails.en.registration')->with(['user' => $this->user, 'password' => $this->password]);
         } else {
-            return $this->subject('Спасибо за регистрацию')->view('emails.ru.registration')->with(['user' => $this->user, 'password' => $this->password]);
+            return $this->subject('Спасибо за регистрацию')->view('emails.ru.registration')->with(['user' => $this->user, 'password' => $this->password])->from('info@tarot-light.space', 'Свет Таро');;
         }
     }
 }

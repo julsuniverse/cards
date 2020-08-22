@@ -1,4 +1,4 @@
-@extends('emails.layout')
+@extends('emails.en.layout')
 
 @section('content')
     <div class="content">

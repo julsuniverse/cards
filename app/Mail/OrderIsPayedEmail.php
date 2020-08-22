@@ -44,7 +44,8 @@ class OrderIsPayedEmail extends Mailable
             return $this
                 ->subject('Спасибо, Ваша оплата получена')
                 ->view('emails.ru.order-is-payed')
-                ->with(['order' => $this->order, 'user' => $this->user]);
+                ->with(['order' => $this->order, 'user' => $this->user])
+                ->from('info@tarot-light.space', 'Свет Таро');
         }
     }
 }

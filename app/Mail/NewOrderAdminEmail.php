@@ -31,6 +31,7 @@ class NewOrderAdminEmail extends Mailable
         return $this
             ->subject('Новый заказ!')
             ->view('emails.ru.new-order')
-            ->with('order', $this->order);
+            ->with('order', $this->order)
+            ->from('info@tarot-light.space', 'Свет Таро');
     }
 }
