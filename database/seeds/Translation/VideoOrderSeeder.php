@@ -10,160 +10,186 @@ class VideoOrderSeeder extends \Illuminate\Database\Seeder
     {
         // Order index
         LanguageLine::create([
-            'group' => 'order.video',
+            'group' => 'order-video',
             'key' => 'title',
             'text' => [
                 'en' => 'Пожалуйста, обратите внимание:',
                 'ru' => 'Пожалуйста, обратите внимание:'
             ],
+            'name' => 'Видео гадание'
         ]);
         LanguageLine::create([
-            'group' => 'order.video',
+            'group' => 'order-video',
             'key' => 'part1',
             'text' => [
                 'en' => '',
                 'ru' => ''
             ],
-            'is_html' => true
+            'is_html' => true,
+            'name' => 'Видео гадание'
         ]);
 
         LanguageLine::create([
-            'group' => 'order.video',
+            'group' => 'order-video',
             'key' => 'btn-order-simple',
             'text' => [
                 'en' => 'Заказать консультацию на картах',
                 'ru' => 'Заказать консультацию на картах'
             ],
+            'name' => 'Видео гадание'
         ]);
         LanguageLine::create([
-            'group' => 'order.video',
+            'group' => 'order-video',
             'key' => 'btn-order-select',
             'text' => [
                 'en' => 'Выбрать расклад на картах и Заказать консультацию',
                 'ru' => 'Выбрать расклад на картах и Заказать консультацию'
             ],
+            'name' => 'Видео гадание'
         ]);
 
         LanguageLine::create([
-            'group' => 'order.video',
+            'group' => 'order-video',
             'key' => 'btn-order-instructions',
             'text' => [
                 'en' => 'Нажмите, чтобы посмотреть подробную инструкцию',
                 'ru' => 'Нажмите, чтобы посмотреть подробную инструкцию'
             ],
+            'name' => 'Видео гадание'
         ]);
         LanguageLine::create([
-            'group' => 'order.video',
+            'group' => 'order-video',
             'key' => 'order-instructions',
             'text' => [
                 'en' => '',
                 'ru' => ''
             ],
-            'is_html' => true
+            'is_html' => true,
+            'name' => 'Видео гадание'
         ]);
 
         LanguageLine::create([
-            'group' => 'order.video',
+            'group' => 'order-video',
             'key' => 'text-before-btns',
             'text' => ['en' => '', 'ru' => ''],
-            'is_html' => true
+            'is_html' => true,
+            'name' => 'Видео гадание'
         ]);
 
         LanguageLine::create([
-            'group' => 'order.video',
+            'group' => 'order-video',
             'key' => 'adult',
             'text' => [
                 'en' => 'Консультации предлагаются и выполняются только для совершеннолетних.',
                 'ru' => 'Консультации предлагаются и выполняются только для совершеннолетних.'
             ],
             'is_html' => true,
-            'name' => 'Для совершеннолетних'
+            'name' => 'Для совершеннолетних',
         ]);
 
         //Order form
         LanguageLine::create([
-            'group' => 'order.video',
+            'group' => 'order-video',
             'key' => 'price',
             'text' => [
                 'en' => 'Стоимость заказа 700 грн.',
                 'ru' => 'Стоимость заказа 700 грн.'
             ],
             'is_html' => true,
-            'name' => 'Стоимость заказа'
+            'name' => 'Стоимость заказа',
         ]);
 
         LanguageLine::create([
-            'group' => 'order-form.video',
+            'group' => 'order-form-video',
             'key' => 'title',
             'text' => [
                 'en' => 'Заказ консультации',
                 'ru' => 'Заказ консультации'
             ],
+            'name' => 'Видео гадание'
         ]);
         LanguageLine::create([
-            'group' => 'order-form.video',
+            'group' => 'order-form-video',
             'key' => 'name',
             'text' => [
                 'en' => 'Введите Ваше имя',
                 'ru' => 'Введите Ваше имя'
             ],
+            'name' => 'Видео гадание'
         ]);
         LanguageLine::create([
-            'group' => 'order-form.video',
+            'group' => 'order-form-video',
             'key' => 'name-help',
             'text' => [
                 'en' => 'Ваше имя должно быть настоящим, иначе смысл того что покажут карты не будет соответствовать Вашей личности. ',
                 'ru' => 'Ваше имя должно быть настоящим, иначе смысл того что покажут карты не будет соответствовать Вашей личности. '
             ],
+            'name' => 'Видео гадание'
         ]);
         LanguageLine::create([
-            'group' => 'order-form.video',
+            'group' => 'order-form-video',
             'key' => 'email',
             'text' => [
                 'en' => 'Email',
                 'ru' => 'Email'
             ],
+            'name' => 'Видео гадание'
         ]);
         LanguageLine::create([
-            'group' => 'order-form.video',
+            'group' => 'order-form-video',
             'key' => 'email-help',
             'text' => [
                 'en' => 'Ваш email не будет разглашаться.',
                 'ru' => 'Ваш email не будет разглашаться.'
             ],
+            'name' => 'Видео гадание'
         ]);
         LanguageLine::create([
-            'group' => 'order-form.video',
+            'group' => 'order-form-video',
             'key' => 'date',
             'text' => [
                 'en' => 'Введите дату рождения',
                 'ru' => 'Введите дату рождения'
             ],
+            'name' => 'Видео гадание'
         ]);
         LanguageLine::create([
-            'group' => 'order-form.video',
+            'group' => 'order-form-video',
             'key' => 'date-help',
             'text' => [
                 'en' => 'Ваша дата рождения должна быть настоящей, иначе смысл того что покажут карты не будет соответствовать Вашей личности.',
                 'ru' => 'Ваша дата рождения должна быть настоящей, иначе смысл того что покажут карты не будет соответствовать Вашей личности.'
             ],
+            'name' => 'Видео гадание'
         ]);
         LanguageLine::create([
-            'group' => 'order-form.video',
+            'group' => 'order-form-video',
             'key' => 'text',
             'text' => [
                 'en' => 'Опишите (понятно) ситуацию, о которой хотите получить консультацию.',
                 'ru' => 'Опишите (понятно) ситуацию, о которой хотите получить консультацию.'
             ],
+            'name' => 'Видео гадание'
         ]);
         LanguageLine::create([
-            'group' => 'order-form.video',
+            'group' => 'order-form-video',
             'key' => 'example',
             'text' => [
                 'en' => '',
                 'ru' => ''
             ],
-            'is_html' => true
+            'is_html' => true,
+            'name' => 'Видео гадание'
+        ]);
+        LanguageLine::create([
+            'group' => 'menu',
+            'key' => 'order-video',
+            'text' => [
+                'en' => '',
+                'ru' => ''
+            ],
+            'is_html' => false,
+            'name' => 'Видео гадание МЕНЮ'
         ]);
     }
 }

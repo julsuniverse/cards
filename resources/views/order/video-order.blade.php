@@ -10,7 +10,7 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            <h1>{{ __('order-form.video.title') }}</h1>
+            <h1>{{ __('order-form-video.title') }}</h1>
             @isset($layout)
                 <p class="text-center sub-title mb-3">
                     @if(app()->getLocale() == 'en')
@@ -40,7 +40,7 @@
                 @method('PUT')
 
                 <div class="form-group">
-                    <label class="form-check-label" for="text">{!! __('order-form.video.text') !!}  </label>
+                    <label class="form-check-label" for="text">{!! __('order-form-video.text') !!}  </label>
                     <textarea class="form-control @if ($errors->has('text')) is-invalid @endif" name="text" id="text" rows="6">{{ old('text') }}</textarea>
                     @if ($errors->has('text'))
                         <div class="invalid-feedback">
@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="cards">{!! __('order-form.video.choose-cards') !!}</label>
+                    <label for="cards">{!! __('order-form-video.choose-cards') !!}</label>
                     <select class="form-control" id="cards" name="cards">
                         <option value="tarot" @if(old('cards', $cards) == 'tarot') selected @endif>{{ __('order-form.tarot') }}</option>
                         <option value="lenormand" @if(old('cards', $cards) == 'lenormand') selected @endif>{{ __('order-form.lenormand') }}</option>
@@ -64,9 +64,9 @@
 
                 @if(!$user)
                     <div class="form-group">
-                        <label for="name">{!! __('order-form.video.name')  !!} </label>
+                        <label for="name">{!! __('order-form-video.name')  !!} </label>
                         <input type="text" class="form-control @if ($errors->has('name')) is-invalid @endif" id="name" name="name" placeholder="{{ __('order.order.name') }}" value="{{ old('name') }}">
-                        <small id="emailHelp" class="form-text text-muted">{!! __('order-form.video.name-help') !!}</small>
+                        <small id="emailHelp" class="form-text text-muted">{!! __('order-form-video.name-help') !!}</small>
                         @if ($errors->has('name'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('name') }}
@@ -75,9 +75,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="date">{!! __('order-form.video.date') !!}</label>
+                        <label for="date">{!! __('order-form-video.date') !!}</label>
                         <input class="form-control @if ($errors->has('date')) is-invalid @endif" id="date" name="date" placeholder="Дата рождения" value="{{ old('date') }}">
-                        <small id="dateHelp" class="form-text text-muted">{!! __('order-form.video.date-help') !!}  </small>
+                        <small id="dateHelp" class="form-text text-muted">{!! __('order-form-video.date-help') !!}  </small>
                         @if ($errors->has('date'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('date') }}
@@ -86,9 +86,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="email">{!! __('order-form.video.email')  !!}</label>
+                        <label for="email">{!! __('order-form-video.email')  !!}</label>
                         <input type="email" class="form-control @if ($errors->has('email')) is-invalid @endif" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" value="{{ old('email') }}">
-                        <small id="emailHelp" class="form-text text-muted">{!! __('order-form.video.email-help') !!}</small>
+                        <small id="emailHelp" class="form-text text-muted">{!! __('order-form-video.email-help') !!}</small>
                         @if ($errors->has('email'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('email') }}
@@ -125,7 +125,7 @@
         <div class="col-md-4 col-sm-12 order-md-2 order-sm-1">
             <div>
                 <hr class="divider" />
-                {!! __('order-form.video.example') !!}
+                {!! __('order-form-video.example') !!}
                 <hr class="divider" />
             </div>
         </div>

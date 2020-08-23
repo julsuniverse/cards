@@ -15,13 +15,13 @@
     <hr class="divider"/>
 
     <div class="row">
-        <div class="col-12 text-center top-block-info mt-2">
+        <div class="col-12 text-center top-block-info mt-1">
             <p class="mb-0 font-weight-bold">
                 {!!  __('main-page.top-block-2') !!}
             </p>
         </div>
         <div class="col-12 text-center top-block-info">
-            <div id="youtube" class="text-center mt-2">
+            <div id="youtube" class="text-center mt-1">
                 <youtube-button
                     image-link="{{ asset('images/youtube.png') }}"
                 ></youtube-button>
@@ -61,9 +61,17 @@
         <div class="row info-block">
             <div class="col-12">
                 <div class="text-center">
-                    <p>{!!  __('main-page.main-block-4') !!}</p>
-                    <div class="mx-auto text-center mb-3 mt-3">
+                   {{-- <p>{!!  __('main-page.main-block-4') !!}</p>--}}
+                    <div class="mx-auto text-center mb-1 mt-0">
                         <a href="{{ route('order.index') }}" class="btn btn-danger"><b>{!!  __('order.btn-order-simple') !!}</b></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="text-center">
+                   {{-- <p>{!!  __('main-page.main-block-4') !!}</p>--}}
+                    <div class="mx-auto text-center mb-2">
+                        <a href="{{ route('order.video') }}" class="btn btn-danger"><b>{!!  __('order-video.btn-order-simple') !!}</b></a>
                     </div>
                 </div>
             </div>
