@@ -22,6 +22,11 @@ class OrderController
         return view('order.index');
     }
 
+    public function video()
+    {
+        return view('order.video');
+    }
+
     public function textOrder(Layout $layout = null)
     {
         $user = Auth::user();
@@ -35,10 +40,28 @@ class OrderController
         return view('order.select-order')->with(compact('layouts'));
     }
 
+    public function videoOrder(Layout $layout = null)
+    {
+        $user = Auth::user();
+        $cards =  session('cards', 'tarot');
+        return view('order.video-order')->with(compact('user', 'cards'));
+    }
+
     public function store(OrderRequest $request)
     {
         try {
             $user = $this->orderService->create($request);
+            Auth::login($user);
+        } catch (\DomainException $e){
+            return redirect()->back()->with('error', $e->getMessage());
+        }
+        return redirect()->route('order.success');
+    }
+
+    public function storeVideo(OrderRequest $request)
+    {
+        try {
+            $user = $this->orderService->create($request, true);
             Auth::login($user);
         } catch (\DomainException $e){
             return redirect()->back()->with('error', $e->getMessage());

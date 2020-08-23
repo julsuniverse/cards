@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 
 class OrderService
 {
-    public function create(OrderRequest $request): User
+    public function create(OrderRequest $request, bool $isVideo = false): User
     {
         try {
             $password = str_random(8);
@@ -35,7 +35,8 @@ class OrderService
                 'layout_id' => $request->layout ?? null,
                 'description' =>$request->text,
                 'price' => $request->price,
-                'cards' => $request->cards
+                'cards' => $request->cards,
+                'video' => $isVideo
             ]);
             $adminEmail = env('ADMIN_EMAIL_PERSONAL');
 

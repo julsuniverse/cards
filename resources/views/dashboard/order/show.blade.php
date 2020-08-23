@@ -60,6 +60,15 @@
                             </tr>
 
                             <tr>
+                                <th>Видео</th>
+                                <td>
+                                    @if($order->isVideo)
+                                        <span class="fa fa-check"></span>
+                                    @endif
+                                </td>
+                            </tr>
+
+                            <tr>
                                 <th>Цена</th>
                                 <td>{{ $order->price }}</td>
                             </tr>

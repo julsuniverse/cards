@@ -6,9 +6,12 @@ Route::get('/terms', 'PageController@terms')->name('terms');
 Route::post('/set-cards', 'HomeController@setCards')->name('set-cards');
 
 Route::get('/order', 'OrderController@index')->name('order.index');
+Route::get('/video-order', 'OrderController@video')->name('order.video');
 Route::get('/order/custom/{layout?}', 'OrderController@textOrder')->name('order.text-order');
 Route::get('/order/select', 'OrderController@selectOrder')->name('order.select-order');
+Route::get('/order/video', 'OrderController@videoOrder')->name('order.video-order');
 Route::put('/order/store', 'OrderController@store')->name('order.store');
+Route::put('/order/store-video', 'OrderController@storeVideo')->name('order.store-video');
 Route::get('/order/success', 'OrderController@success')->name('order.success');
 
 Route::post('/get-card', 'RandomCard\RandomCard@getCard');
