@@ -20,7 +20,7 @@
                     @endif
                 </p>
             @else
-                <div class="mb-2">{!! __('order.video.price') !!}  </div>
+                <div class="mb-2">{!! __('order-video.price') !!}  </div>
             @endisset
         </div>
 
