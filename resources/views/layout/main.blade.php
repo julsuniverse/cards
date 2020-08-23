@@ -49,9 +49,9 @@
                 <li class="nav-item active nav-item-custom">
                         <a class="nav-link " href="{{ route('change-locale') }}">
                             @if(App::getLocale() == 'en')
-                                <span class="badge badge-danger mt-1">ru</span>
+                                <span class="badge badge-danger mt-1">RU</span>
                             @elseif(App::getLocale() == 'ru')
-                                <span class="badge badge-danger mt-1">en</span>
+                                <span class="badge badge-danger mt-1">EN</span>
                             @endif
                         </a>
                 </li>
