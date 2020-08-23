@@ -13,7 +13,7 @@ class AddIsVideoFieldToOrderTable extends Migration
      */
     public function up()
     {
-        Schema::table('order', function (Blueprint $table) {
+        Schema::table('orders', function (Blueprint $table) {
             $table->tinyInteger('isVideo')->default(0);
         });
     }
@@ -25,7 +25,7 @@ class AddIsVideoFieldToOrderTable extends Migration
      */
     public function down()
     {
-        Schema::table('order', function (Blueprint $table) {
+        Schema::table('orders', function (Blueprint $table) {
             $table->dropColumn('isVideo');
         });
     }
