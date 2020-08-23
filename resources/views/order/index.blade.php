@@ -9,7 +9,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-12">
+        <div class="">
             <div class="mt-1">
                 <p class="text-center">
                     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card card-content mt-1">
+            <div class="card card-content mt-1 pl-0 pr-0">
                 <div class="card-header">
 
                     <h4 class="text-center mb-1">{{ __('order.title') }}</h4>

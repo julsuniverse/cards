@@ -9,7 +9,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-12">
+        <div class="">
             <div class="mt-1">
                 <p class="text-center">
                     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
