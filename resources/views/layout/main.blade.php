@@ -82,9 +82,12 @@
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order') }}</a>
                 </li>
-                <li class="nav-item nav-item-custom">
-                    <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order-video') }}</a>
-                </li>
+                @if(App::getLocale() == 'ru')
+                    <li class="nav-item nav-item-custom">
+                        <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order-video') }}</a>
+                    </li>
+                @endif
+
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link font-weight-bold" href="{{ route('terms') }}">{{ trans('menu.terms') }}</a>
                 </li>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\User\OrderRequest;
 use App\Models\Layout;
 use App\Services\OrderService;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 
 class OrderController
@@ -24,6 +25,9 @@ class OrderController
 
     public function video()
     {
+        if (App::getLocale() == 'en') {
+            return redirect()->route('home');
+        }
         return view('order.video');
     }
 
@@ -42,6 +46,9 @@ class OrderController
 
     public function videoOrder(Layout $layout = null)
     {
+        if (App::getLocale() == 'en') {
+            return redirect()->route('home');
+        }
         $user = Auth::user();
         $cards =  session('cards', 'tarot');
         return view('order.video-order')->with(compact('user', 'cards'));
