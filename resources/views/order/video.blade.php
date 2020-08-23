@@ -25,19 +25,19 @@
             <div class="card card-content mt-1">
                 <div class="card-header">
 
-                    <h4 class="text-center mb-0">{{ __('order-video.title') }}</h4>
+                    <h4 class="text-center mb-1">{{ __('order-video.title') }}</h4>
                     <div class="row">
                         <div class="col-12 text-center">
                             {!! __('order-video.text-before-btns') !!}
                         </div>
                     </div>
-                    <div class="row mt-1 text-center">
+                    <div class="row mt-2 text-center">
                         <div class="col-xl-12 col-lg-12 col-md-12">
                             <a href="{{ route('order.video-order') }}" class="btn btn-danger mb-2"><b>{{ __('order-video.btn-order-simple') }}</b></a>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 text-center mt-2 mt-lg-0">
+                        <div class="col-12 mt-2 mt-lg-2">
                             {!! __('order-video.adult') !!}
                         </div>
                     </div>

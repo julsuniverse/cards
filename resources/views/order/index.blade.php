@@ -25,13 +25,13 @@
             <div class="card card-content mt-1">
                 <div class="card-header">
 
-                    <h4 class="text-center mb-0">{{ __('order.title') }}</h4>
+                    <h4 class="text-center mb-1">{{ __('order.title') }}</h4>
                     <div class="row">
                         <div class="col-12 text-center">
                             {!! __('order.text-before-btns') !!}
                         </div>
                     </div>
-                    <div class="row mt-1 text-center">
+                    <div class="row mt-2 text-center">
                         <div class="col-xl-6 col-lg-6 col-md-12">
                             <a href="{{ route('order.text-order') }}" class="btn btn-danger mb-2 mb-lg-0"><b>{{ __('order.btn-order-simple') }}</b></a>
                         </div>
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 text-center mt-2 mt-lg-0">
+                        <div class="col-12 mt-2 mt-lg-2">
                             {!! __('order.adult') !!}
                         </div>
                     </div>
