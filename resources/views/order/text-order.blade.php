@@ -50,7 +50,9 @@
                 </div>
 
                 <div class="form-group">
+{{--
                     <label for="cards">{!! __('order-form.choose-cards') !!}</label>
+--}}
                     <select class="form-control" id="cards" name="cards">
                         <option value="tarot" @if(old('cards', $cards) == 'tarot') selected @endif>{{ __('order-form.tarot') }}</option>
                         <option value="lenormand" @if(old('cards', $cards) == 'lenormand') selected @endif>{{ __('order-form.lenormand') }}</option>
