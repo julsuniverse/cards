@@ -101,9 +101,9 @@
                     <input type="hidden" name="agree" value="0">
                     <input type="checkbox" class="custom-control-input" id="agree" name="agree" value="1">
                     @if(app()->getLocale() == 'en')
-                        <label class="custom-control-label" for="agree">{{ __('order.order.agree', ['price' => isset($layout->price_uah) ? '$' . $layout->price_uah : '$' . __('price.video.value')]) }}</label>
+                        <label class="custom-control-label" for="agree">{{ __('order.order.agree', ['price' => isset($layout->price_uah) ? '$' . $layout->price_uah : '$' . __('price-video.value')]) }}</label>
                     @else
-                        <label class="custom-control-label" for="agree">{{ __('order.order.agree', ['price' => isset($layout->price_uah) ? $layout->price_uah . ' грн.': __('price.video.value') . ' грн.']) }}</label>
+                        <label class="custom-control-label" for="agree">{{ __('order.order.agree', ['price' => isset($layout->price_uah) ? $layout->price_uah . ' грн.': __('price-video.value') . ' грн.']) }}</label>
                     @endif
                     @if ($errors->has('agree'))
                         <div class="invalid-feedback font-weight-bold">
