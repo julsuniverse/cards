@@ -10,7 +10,7 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            <h1>{{ __('order-form-video.title') }}</h1>
+            <h3>{{ __('order-form-video.title') }}</h3>
             @isset($layout)
                 <p class="text-center sub-title mb-3">
                     @if(app()->getLocale() == 'en')
