@@ -87,7 +87,7 @@
         </div>
 
         <div class="row info-block">
-            <div class="col-xl-12 col-lg-12 col-md-12 text-center position-relative">
+            <div class="col-xl-12 col-lg-12 col-md-12 text-center position-relative mt-2">
                 <img id="header-img" src="{{ asset('images/top-img.gif') }}" style="max-width: 100%" />
             </div>
         </div>
