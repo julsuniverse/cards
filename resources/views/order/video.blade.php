@@ -25,7 +25,7 @@
             <div class="card card-content mt-1">
                 <div class="card-header">
 
-                    <h1 class="text-center mb-1">{{ __('order-video.title') }}</h1>
+                    <h3 class="text-center mb-1">{{ __('order-video.title') }}</h3>
                     <div class="row">
                         <div class="col-12 text-center">
                             {!! __('order-video.text-before-btns') !!}
