@@ -10,7 +10,7 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            <h1>{{ __('order-select.title') }}</h1>
+            <h3>{{ __('order-select.title') }}</h3>
             <p class="font-weight-light text-center">{!! __('order-select.select-theme') !!}  </p>
 
             <div class="text-center mt-2 layouts-list">
