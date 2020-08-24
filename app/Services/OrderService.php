@@ -49,7 +49,7 @@ class OrderService
             \Mail::to($adminEmail)->send(new NewOrderAdminEmail($order));
 
         } catch (\Exception $e) {
-            \Log::error($e->getMessage(), ['error' => $e->getTrace(), 'user' => $request->user]);
+            \Log::error($e->getMessage(), ['error' => $e->getMessage(), 'user' => $request->user]);
             throw new \DomainException('Order creating error');
         }
 

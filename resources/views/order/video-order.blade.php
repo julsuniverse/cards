@@ -117,7 +117,7 @@
                 @isset($layout)
                     <input type="hidden" name="layout" value="{{ $layout->id }}">
                 @endisset
-                <input type="hidden" name="price" value="@isset($layout->price_uah) {{ $layout->price_uah }} @else {{ __('price.video.value') }} @endisset">
+                <input type="hidden" name="price" value="@isset($layout->price_uah) {{ $layout->price_uah }} @else {{ __('price-video.value') }} @endisset">
                 <input type="hidden" name="user" value="@isset($user) {{ $user->id }} @else {{ null }} @endisset">
 
                 <button type="submit" class="btn btn-outline-danger" onclick="gtag_report_conversion()">{{ __('order.btn-order') }}</button>
