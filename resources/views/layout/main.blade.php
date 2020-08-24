@@ -84,7 +84,7 @@
                 </li>
                 @if(App::getLocale() == 'ru')
                     <li class="nav-item nav-item-custom">
-                        <a class="nav-link font-weight-bold" href="{{ route('order.index') }}">{{ trans('menu.order-video') }}</a>
+                        <a class="nav-link font-weight-bold" href="{{ route('order.video') }}">{{ trans('menu.order-video') }}</a>
                     </li>
                 @endif
 
