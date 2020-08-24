@@ -36,7 +36,7 @@ class OrderService
                 'description' =>$request->text,
                 'price' => $request->price,
                 'cards' => $request->cards,
-                'video' => $isVideo
+                'isVideo' => $isVideo
             ]);
             $adminEmail = env('ADMIN_EMAIL_PERSONAL');
 
