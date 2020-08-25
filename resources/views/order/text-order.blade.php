@@ -35,7 +35,7 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{ route('order.store') }}">
+            <form method="POST" action="{{ route('order.store') }}" class="order-form">
                 @csrf
                 @method('PUT')
 
@@ -49,7 +49,7 @@
                     @endif
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-2">
 {{--
                     <label for="cards">{!! __('order-form.choose-cards') !!}</label>
 --}}
@@ -68,7 +68,7 @@
                     <div class="form-group">
                         <label for="name">{!! __('order-form.name')  !!} </label>
                         <input type="text" class="form-control @if ($errors->has('name')) is-invalid @endif" id="name" name="name" placeholder="{{ __('order.order.name') }}" value="{{ old('name') }}">
-                        <small id="emailHelp" class="form-text text-muted">{!! __('order-form.name-help') !!}</small>
+                        {{--<small id="emailHelp" class="form-text text-muted">{!! __('order-form.name-help') !!}</small>--}}
                         @if ($errors->has('name'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('name') }}
@@ -79,7 +79,9 @@
                     <div class="form-group">
                         <label for="date">{!! __('order-form.date') !!}</label>
                         <input class="form-control @if ($errors->has('date')) is-invalid @endif" id="date" name="date" placeholder="Дата рождения" value="{{ old('date') }}">
+{{--
                         <small id="dateHelp" class="form-text text-muted">{!! __('order-form.date-help') !!}  </small>
+--}}
                         @if ($errors->has('date'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('date') }}
@@ -120,7 +122,7 @@
                 <input type="hidden" name="price" value="@isset($layout->price_uah) {{ $layout->price_uah }} @else {{ __('price.value') }} @endisset">
                 <input type="hidden" name="user" value="@isset($user) {{ $user->id }} @else {{ null }} @endisset">
 
-                <button type="submit" class="btn btn-outline-danger" onclick="gtag_report_conversion()">{{ __('order.btn-order') }}</button>
+                <button type="submit" class="btn btn-danger" onclick="gtag_report_conversion()"><b>{{ __('order.btn-order') }}</b></button>
             </form>
         </div>
 

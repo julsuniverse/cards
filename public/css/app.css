@@ -13965,6 +13965,14 @@ footer .fondy-logo {
   font-size: 37px;
 }
 
+.order-form .form-group {
+  margin-bottom: 5px;
+}
+
+.order-form .form-group label {
+  margin-bottom: 3px;
+}
+
 @media (max-width: 1200px) {
   .main-page-content .text-justify-mobile,
   .main-page-content .text-justify-mobile p,
