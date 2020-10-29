@@ -203,8 +203,23 @@
                 <h2 class="text-center">{!!  __('main-page.main-block-5-title') !!}</h2>
                 {!!  __('main-page.main-block-5') !!}
 
-                <div class="mx-auto text-center mb-3 mt-3">
-                    <a href="{{ route('order.index') }}" class="btn btn-danger"><b>{!!  __('order.btn-order-simple') !!}</b></a>
+                <div class="row info-block mb-3 mt-3">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <div class="mx-auto text-center mb-1 mt-0">
+                                <a href="{{ route('order.index') }}" class="btn btn-danger"><b>{!!  __('order.btn-order-simple') !!}</b></a>
+                            </div>
+                        </div>
+                    </div>
+                    @if(App::getLocale() == 'ru')
+                        <div class="col-12">
+                            <div class="text-center">
+                                <div class="mx-auto text-center mb-2">
+                                    <a href="{{ route('order.video') }}" class="btn btn-danger"><b>{!!  __('order-video.btn-order-simple') !!}</b></a>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
                 </div>
 
                 {!!  __('main-page.main-block-6') !!}
