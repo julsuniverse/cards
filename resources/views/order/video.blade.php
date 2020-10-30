@@ -53,7 +53,7 @@
                         <a href="{{ route('order.video-order') }}" class="btn btn-danger mb-2"><b>{{ __('order-video.btn-order-simple') }}</b></a>
                     </div>--}}
 
-                    <img src="{{ asset('images/cards-4.jpg') }}" style="max-width: 100%; margin-top: 20px;"/>
+                    <img src="{{ asset('images/cards-4.jpg') }}" style="max-width: 100%;"/>
                 </div>
             </div>
         </div>
