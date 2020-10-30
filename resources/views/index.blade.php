@@ -85,13 +85,13 @@
             @endif
         </div>
 
-        <div class="row info-block">
+        {{--<div class="row info-block">
             <div class="col-12">
                 <div class="text-center">
                     <p>{!!  __('main-page.main-block-12') !!}</p>
                 </div>
             </div>
-        </div>
+        </div>--}}
 
         <div class="row info-block">
             <div class="col-xl-12 col-lg-12 col-md-12 text-center position-relative mt-2">
