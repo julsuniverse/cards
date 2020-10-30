@@ -59,7 +59,7 @@
 @section('content')
     <div class="main-content main-page-content">
         <div class="row info-block">
-            <div class="col-12">
+            <div class="col-xl-4 col-md-12">
                 <div class="text-center">
                    {{-- <p>{!!  __('main-page.main-block-4') !!}</p>--}}
                     <div class="mx-auto text-center mb-1 mt-0">
@@ -67,8 +67,15 @@
                     </div>
                 </div>
             </div>
+            <div class="col-xl-4 col-md-12">
+                <div class="text-center">
+                    <div class="mx-auto text-center mb-1 mt-0">
+                        <a href="{{ route('terms') }}" class="btn btn-primary"><b>{!!  __('menu.terms') !!}</b></a>
+                    </div>
+                </div>
+            </div>
             @if(App::getLocale() == 'ru')
-                <div class="col-12">
+                <div class="col-xl-4 col-md-12">
                     <div class="text-center">
                         <div class="mx-auto text-center mb-2">
                             <a href="{{ route('order.video') }}" class="btn btn-danger"><b>{!!  __('order-video.btn-order-simple') !!}</b></a>
@@ -204,15 +211,22 @@
                 {!!  __('main-page.main-block-5') !!}
 
                 <div class="row info-block mb-3 mt-3">
-                    <div class="col-12">
+                    <div class="col-xl-4 col-md-12">
                         <div class="text-center">
                             <div class="mx-auto text-center mb-1 mt-0">
                                 <a href="{{ route('order.index') }}" class="btn btn-danger"><b>{!!  __('order.btn-order-simple') !!}</b></a>
                             </div>
                         </div>
                     </div>
+                    <div class="col-xl-4 col-md-12">
+                        <div class="text-center">
+                            <div class="mx-auto text-center mb-1 mt-0">
+                                <a href="{{ route('terms') }}" class="btn btn-primary"><b>{!!  __('menu.terms') !!}</b></a>
+                            </div>
+                        </div>
+                    </div>
                     @if(App::getLocale() == 'ru')
-                        <div class="col-12">
+                        <div class="col-xl-4 col-md-12">
                             <div class="text-center">
                                 <div class="mx-auto text-center mb-2">
                                     <a href="{{ route('order.video') }}" class="btn btn-danger"><b>{!!  __('order-video.btn-order-simple') !!}</b></a>
